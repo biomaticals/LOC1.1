@@ -1,0 +1,5 @@
+C:\Users\bioma\Documents\Unreal Projects\LOC\Intermediate\Build\Win64\UE4Editor\Development\LOC\Definitions.LOC.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+C:\Users\bioma\Documents\Unreal Projects\LOC\Source\LOC/Public/MeleeHitboxData.h
+C:\Users\bioma\Documents\Unreal Projects\LOC\Intermediate\Build\Win64\UE4Editor\Inc\LOC\MeleeHitboxData.generated.h

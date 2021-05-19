@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\LOC.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{AF1D19AD-F4DB-4480-9FD6-2579D103B0D8}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\LOC.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\LOCEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{1487FDBA-B6CB-404C-BA1E-6A87B9A31CCE}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGameplayTags.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Config\Tags">
+      <UniqueIdentifier>{E6625C91-8C18-47C5-8BE2-9CDC44B93000}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\Tags\Experience">
+      <Filter>Config\Tags</Filter>
+    </None>
+    <Filter Include="Source\LOC">
+      <UniqueIdentifier>{025DA0D5-E631-4320-BE9E-E13634286F38}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\LOC\LOC.Build.cs">
+      <Filter>Source\LOC</Filter>
+    </None>
+    <Filter Include="Source\LOC\Private">
+      <UniqueIdentifier>{64EE29CE-EEF0-4746-A30F-8001244349C3}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\LOC\Private\GECMeleeDamageExecution.cpp">
+      <Filter>Source\LOC\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\LOC\Private\GECMonsterExpExecution.cpp">
+      <Filter>Source\LOC\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\LOC\Private\LOC.cpp">
+      <Filter>Source\LOC\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\LOC\Private\LOCAttributeSet.cpp">
+      <Filter>Source\LOC\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\LOC\Private\LOCCharacter.cpp">
+      <Filter>Source\LOC\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\LOC\Private\MeleeHitboxData.cpp">
+      <Filter>Source\LOC\Private</Filter>
+    </ClCompile>
+    <Filter Include="Source\LOC\Private\Zone">
+      <UniqueIdentifier>{9C51499D-A459-4C0C-A585-3BC423728936}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\LOC\Private\Zone\DangerZone.cpp">
+      <Filter>Source\LOC\Private\Zone</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\LOC\Private\Zone\ProhibitedZone.cpp">
+      <Filter>Source\LOC\Private\Zone</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\LOC\Private\Zone\SafetyZone.cpp">
+      <Filter>Source\LOC\Private\Zone</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\LOC\Private\Zone\Zone.cpp">
+      <Filter>Source\LOC\Private\Zone</Filter>
+    </ClCompile>
+    <Filter Include="Source\LOC\Public">
+      <UniqueIdentifier>{AE036C40-2176-4519-A44F-B980F048D030}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\LOC\Public\GECMeleeDamageExecution.h">
+      <Filter>Source\LOC\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\LOC\Public\GECMonsterExpExecution.h">
+      <Filter>Source\LOC\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\LOC\Public\LOC.h">
+      <Filter>Source\LOC\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\LOC\Public\LOCAttributeSet.h">
+      <Filter>Source\LOC\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\LOC\Public\LOCCharacter.h">
+      <Filter>Source\LOC\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\LOC\Public\MeleeHitboxData.h">
+      <Filter>Source\LOC\Public</Filter>
+    </ClInclude>
+    <Filter Include="Source\LOC\Public\Zone">
+      <UniqueIdentifier>{C80785BE-C2CD-4D4C-8FA5-45519AE8AB14}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\LOC\Public\Zone\DangerZone.h">
+      <Filter>Source\LOC\Public\Zone</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\LOC\Public\Zone\ProhibitedZone.h">
+      <Filter>Source\LOC\Public\Zone</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\LOC\Public\Zone\SafetyZone.h">
+      <Filter>Source\LOC\Public\Zone</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\LOC\Public\Zone\Zone.h">
+      <Filter>Source\LOC\Public\Zone</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

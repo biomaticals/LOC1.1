@@ -1,0 +1,2 @@
+C:\Users\bioma\Documents\Unreal Projects\LOC\Intermediate\Build\Win64\UE4Editor\DebugGame\LOC\Definitions.LOC.h
+C:\Users\bioma\Documents\Unreal Projects\LOC\Source\LOC\Public\LOC.h
