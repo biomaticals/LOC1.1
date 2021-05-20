@@ -1062,15 +1062,6 @@ void ALOCCharacter::SetMaxArmor(float NewValue)
 		AbilitySystemComponent->ApplyModToAttribute(AttributeSet->GetMaxArmorAttribute(), EGameplayModOp::Override, NewValue);
 }
 
-FLOCAttributeSetStruct ALOCCharacter::GetAllAttributes() const
-{
-	return FLOCAttributeSetStruct();
-}
-
-void ALOCCharacter::SetAllAttributes(FLOCAttributeSetStruct NewAttributeSetStruct)
-{
-}
-
 //Create an instance of an Ability and add it to the Ability System Component.
 void ALOCCharacter::GrantAbility(TSubclassOf<UGameplayAbility> AbilityClass, int32 Level, int32 InputCode)
 {

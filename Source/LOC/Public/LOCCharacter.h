@@ -302,11 +302,6 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Abilities|Attributes")
 		void SetMaxArmor(float NewValue);
 
-	UFUNCTION(BlueprintPure, Category = "Abilities|Attributes")
-		FLOCAttributeSetStruct GetAllAttributes() const;
-	UFUNCTION(BlueprintCallable, Category = "Abilities|Attributes")
-		void SetAllAttributes(FLOCAttributeSetStruct NewAttributeSetStruct);
-
 	/** Ability System Interface getter. */
 	virtual UAbilitySystemComponent* GetAbilitySystemComponent() const override
 	{
