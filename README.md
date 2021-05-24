@@ -20,7 +20,7 @@ It would be really nice to give me a help for better codes anytime. Thakns.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-1.1.1 버전
+1.1.1 Ver - 2종의 신규 스킬과 스킬 레벨 커브테이블
 
 기존의 일반 공격 3종류의 구조를 개선합니다. 이제 같은 GameplayAbility ; GA 이 아닌 개별의 GA 및 GE를 사용합니다. 부모는 같습니다.
 
@@ -35,3 +35,14 @@ It would be really nice to give me a help for better codes anytime. Thakns.
 마치 롤에서의 공속원딜, 공격력원딜, 치명타원딜처럼 자신의 아이덴티티를 표현할 수 있습니다.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1.1.2 Ver - 7개의 신규 편의성 함수
+
+GameplayAbilitySysem 관련 신규 함수
+
+CancelAbilityWithWithoutTags, InitializeAbilityMulti, RemoveAbilitWithTags, ChangeAbilityLevelWithTags, AddLooseGameplayTag, RemoveLooseGameplayTags, ApplyGEToTargetData 를 추가합니다.
+
+플러그인 내부 함수에 비슷한 기능을 하는 함수가 이미 존재하나, 그 함수의 인자를 넣는 과정이 꽤 까다롭습니다.
+
+또한 좀 더 간결하고 명시적인 함수들을 만들어서 편의성을 개선합니다.
+  

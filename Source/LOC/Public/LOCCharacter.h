@@ -40,8 +40,8 @@ class ALOCCharacter : public ACharacter, public IAbilitySystemInterface
 {
 	GENERATED_BODY()
 
-	/** Camera boom positioning the camera behind the character */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Camera, meta = (AllowPrivateAccess = "true"))
+		/** Camera boom positioning the camera behind the character */
+		UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Camera, meta = (AllowPrivateAccess = "true"))
 		class USpringArmComponent* CameraBoom;
 
 	/** Follow camera */
@@ -68,15 +68,69 @@ public:
 
 	virtual void BeginPlay() override;
 
+
+
+	////////////////////////////////////////
+	/** 이하 Gameplay Ability System 함수 */
+	////////////////////////////////////////
+
+	/** Ability System Interface getter. */
+	virtual UAbilitySystemComponent* GetAbilitySystemComponent() const override
+	{
+		return AbilitySystemComponent;
+	}
+
+	/** Grants an ability at the given level, with an input code used to pick and choose which ability should be triggered. */
+	UFUNCTION(BlueprintCallable, Category = "Abilities")
+		void GrantAbility(TSubclassOf<UGameplayAbility> AbilityClass, int32 Level, int32 InputCode);
+
+	/** Activates an ability with a matching input code */
+	UFUNCTION(BlueprintCallable, Category = "Abilities")
+		void ActivateAbility(int32 InputCode);
+
+	/** Cancels abilities with specific Gameplay Tags applied to them.*/
+	UFUNCTION(BlueprintCallable, Category = "Abilities")
+		void CancelAbilityWithTags(const FGameplayTagContainer CancelWithTags);
+
+	/** Cancels abilities with specific Gameplay Tags and without specific Gameplay Tags */
+	UFUNCTION(BlueprintCallable, Category = "Abilities")
+		void CancelAbilityWithWithoutTags(const FGameplayTagContainer WithTags, FGameplayTagContainer WithoutTags);
+
+	/** initialize Ability with level*/
+	UFUNCTION(BlueprintCallable, Category = "Abilities")
+		void InitializeAbility(TSubclassOf<UGameplayAbility> AbilityToGet, int32 AbilityLevel);
+
+	/** Initialize Multiple Abilities with level*/
+	UFUNCTION(BlueprintCallable, Category = "Abilities")
+		void InitializeAbilityMulti(TArray<TSubclassOf<UGameplayAbility>> AbilitiesToAcquire, int32 AbilityLevel);
+
+	/** Remove Multiple Abilities with Tag*/
+	UFUNCTION(BlueprintCallable, Category = "Abilities")
+		void RemoveAbilityWithTags(FGameplayTagContainer TagContainer);
+
+	/** Change Ability Level with Tag, which is already acquire or initialized */
+	UFUNCTION(BlueprintCallable, Category = "Abilities")
+		void ChangeAbilityLevelWithTags(FGameplayTagContainer TagContainer, int32 NewLevel);
+
+	/** Add Loose Gameplay Tag */
+	UFUNCTION(BlueprintCallable, Category = "Abilities")
+		void AddLooseGameplayTag(FGameplayTag TagsToAdd);
+
+	/** Remove Loose Gamplay Tag */
+	UFUNCTION(BlueprintCallable, Category = "Abilities")
+		void RemoveLooseGameplayTags(FGameplayTag TagsToRemove);
+
+	/** Apply GameplayEffect To Target Data*/
+	UFUNCTION(BlueprintCallable, Category = "Abilities")
+		void ApplyGETOTargetData(const FGameplayEffectSpecHandle& GESpec, const FGameplayAbilityTargetDataHandle& TargetData);
+
 	UFUNCTION(BlueprintCallable, Category = Json)
 		void SaveAttributeSetToJson();
 
 	UFUNCTION(BlueprintCallable, Category = Json)
 		void LoadAttributeSetFromJson();
 
-	////////////////////////////////////////
-	/** 이하 Gameplay Ability System 함수 */
-	////////////////////////////////////////
+
 
 	/** On#Property#ChangedInternal Function. */
 	void OnLevelChangedInternal(const FOnAttributeChangeData& Data);
@@ -301,28 +355,6 @@ public:
 		void SetArmor(float NewValue);
 	UFUNCTION(BlueprintCallable, Category = "Abilities|Attributes")
 		void SetMaxArmor(float NewValue);
-
-	/** Ability System Interface getter. */
-	virtual UAbilitySystemComponent* GetAbilitySystemComponent() const override
-	{
-		return AbilitySystemComponent;
-	}
-
-	/** Grants an ability at the given level, with an input code used to pick and choose which ability should be triggered. */
-	UFUNCTION(BlueprintCallable, Category = "Abilities")
-		void GrantAbility(TSubclassOf<UGameplayAbility> AbilityClass, int32 Level, int32 InputCode);
-
-	/** Activates an ability with a matching input code */
-	UFUNCTION(BlueprintCallable, Category = "Abilities")
-		void ActivateAbility(int32 InputCode);
-
-	/** Cancels abilities with specific Gameplay Tags applied to them.*/
-	UFUNCTION(BlueprintCallable, Category = "Abilities")
-		void CancelAbilityWithTags(const FGameplayTagContainer CancelWithTags);
-	
-	/** initialize Ability with level*/
-	void InitializeAbility(TSubclassOf<UGameplayAbility> AbilityToGet, int32 AbilityLevel);
-	
 
 	/** 이상 Gameplay Ability System 함수 */
 	////////////////////////////////////////

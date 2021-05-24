@@ -19,6 +19,9 @@ void EmptyLinkFunctionForGeneratedCodeLOCCharacter() {}
 	LOC_API UClass* Z_Construct_UClass_ALOCCharacter_NoRegister();
 	LOC_API UClass* Z_Construct_UClass_ALOCCharacter();
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
+	GAMEPLAYTAGS_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayTag();
+	GAMEPLAYABILITIES_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayEffectSpecHandle();
+	GAMEPLAYABILITIES_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayAbilityTargetDataHandle();
 	GAMEPLAYTAGS_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayTagContainer();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UGameplayAbility_NoRegister();
@@ -211,32 +214,6 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 		return ReturnStruct;
 	}
 	uint32 Get_Z_Construct_UScriptStruct_FLOCAttributeDetailData_Hash() { return 2288009752U; }
-	DEFINE_FUNCTION(ALOCCharacter::execCancelAbilityWithTags)
-	{
-		P_GET_STRUCT(FGameplayTagContainer,Z_Param_CancelWithTags);
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		P_THIS->CancelAbilityWithTags(Z_Param_CancelWithTags);
-		P_NATIVE_END;
-	}
-	DEFINE_FUNCTION(ALOCCharacter::execActivateAbility)
-	{
-		P_GET_PROPERTY(FIntProperty,Z_Param_InputCode);
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		P_THIS->ActivateAbility(Z_Param_InputCode);
-		P_NATIVE_END;
-	}
-	DEFINE_FUNCTION(ALOCCharacter::execGrantAbility)
-	{
-		P_GET_OBJECT(UClass,Z_Param_AbilityClass);
-		P_GET_PROPERTY(FIntProperty,Z_Param_Level);
-		P_GET_PROPERTY(FIntProperty,Z_Param_InputCode);
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		P_THIS->GrantAbility(Z_Param_AbilityClass,Z_Param_Level,Z_Param_InputCode);
-		P_NATIVE_END;
-	}
 	DEFINE_FUNCTION(ALOCCharacter::execSetMaxArmor)
 	{
 		P_GET_PROPERTY(FFloatProperty,Z_Param_NewValue);
@@ -716,6 +693,101 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 		P_THIS->SaveAttributeSetToJson();
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(ALOCCharacter::execApplyGETOTargetData)
+	{
+		P_GET_STRUCT_REF(FGameplayEffectSpecHandle,Z_Param_Out_GESpec);
+		P_GET_STRUCT_REF(FGameplayAbilityTargetDataHandle,Z_Param_Out_TargetData);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->ApplyGETOTargetData(Z_Param_Out_GESpec,Z_Param_Out_TargetData);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ALOCCharacter::execRemoveLooseGameplayTags)
+	{
+		P_GET_STRUCT(FGameplayTag,Z_Param_TagsToRemove);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->RemoveLooseGameplayTags(Z_Param_TagsToRemove);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ALOCCharacter::execAddLooseGameplayTag)
+	{
+		P_GET_STRUCT(FGameplayTag,Z_Param_TagsToAdd);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->AddLooseGameplayTag(Z_Param_TagsToAdd);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ALOCCharacter::execChangeAbilityLevelWithTags)
+	{
+		P_GET_STRUCT(FGameplayTagContainer,Z_Param_TagContainer);
+		P_GET_PROPERTY(FIntProperty,Z_Param_NewLevel);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->ChangeAbilityLevelWithTags(Z_Param_TagContainer,Z_Param_NewLevel);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ALOCCharacter::execRemoveAbilityWithTags)
+	{
+		P_GET_STRUCT(FGameplayTagContainer,Z_Param_TagContainer);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->RemoveAbilityWithTags(Z_Param_TagContainer);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ALOCCharacter::execInitializeAbilityMulti)
+	{
+		P_GET_TARRAY(TSubclassOf<UGameplayAbility> ,Z_Param_AbilitiesToAcquire);
+		P_GET_PROPERTY(FIntProperty,Z_Param_AbilityLevel);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->InitializeAbilityMulti(Z_Param_AbilitiesToAcquire,Z_Param_AbilityLevel);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ALOCCharacter::execInitializeAbility)
+	{
+		P_GET_OBJECT(UClass,Z_Param_AbilityToGet);
+		P_GET_PROPERTY(FIntProperty,Z_Param_AbilityLevel);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->InitializeAbility(Z_Param_AbilityToGet,Z_Param_AbilityLevel);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ALOCCharacter::execCancelAbilityWithWithoutTags)
+	{
+		P_GET_STRUCT(FGameplayTagContainer,Z_Param_WithTags);
+		P_GET_STRUCT(FGameplayTagContainer,Z_Param_WithoutTags);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->CancelAbilityWithWithoutTags(Z_Param_WithTags,Z_Param_WithoutTags);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ALOCCharacter::execCancelAbilityWithTags)
+	{
+		P_GET_STRUCT(FGameplayTagContainer,Z_Param_CancelWithTags);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->CancelAbilityWithTags(Z_Param_CancelWithTags);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ALOCCharacter::execActivateAbility)
+	{
+		P_GET_PROPERTY(FIntProperty,Z_Param_InputCode);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->ActivateAbility(Z_Param_InputCode);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ALOCCharacter::execGrantAbility)
+	{
+		P_GET_OBJECT(UClass,Z_Param_AbilityClass);
+		P_GET_PROPERTY(FIntProperty,Z_Param_Level);
+		P_GET_PROPERTY(FIntProperty,Z_Param_InputCode);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->GrantAbility(Z_Param_AbilityClass,Z_Param_Level,Z_Param_InputCode);
+		P_NATIVE_END;
+	}
 	static FName NAME_ALOCCharacter_OnArmorChanged = FName(TEXT("OnArmorChanged"));
 	void ALOCCharacter::OnArmorChanged(float oldValue, float newValue)
 	{
@@ -969,7 +1041,11 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 		UClass* Class = ALOCCharacter::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "ActivateAbility", &ALOCCharacter::execActivateAbility },
+			{ "AddLooseGameplayTag", &ALOCCharacter::execAddLooseGameplayTag },
+			{ "ApplyGETOTargetData", &ALOCCharacter::execApplyGETOTargetData },
 			{ "CancelAbilityWithTags", &ALOCCharacter::execCancelAbilityWithTags },
+			{ "CancelAbilityWithWithoutTags", &ALOCCharacter::execCancelAbilityWithWithoutTags },
+			{ "ChangeAbilityLevelWithTags", &ALOCCharacter::execChangeAbilityLevelWithTags },
 			{ "GetArmor", &ALOCCharacter::execGetArmor },
 			{ "GetCritical", &ALOCCharacter::execGetCritical },
 			{ "GetCriticalProb", &ALOCCharacter::execGetCriticalProb },
@@ -1002,7 +1078,11 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 			{ "GetStrength", &ALOCCharacter::execGetStrength },
 			{ "GetWeaponDamage", &ALOCCharacter::execGetWeaponDamage },
 			{ "GrantAbility", &ALOCCharacter::execGrantAbility },
+			{ "InitializeAbility", &ALOCCharacter::execInitializeAbility },
+			{ "InitializeAbilityMulti", &ALOCCharacter::execInitializeAbilityMulti },
 			{ "LoadAttributeSetFromJson", &ALOCCharacter::execLoadAttributeSetFromJson },
+			{ "RemoveAbilityWithTags", &ALOCCharacter::execRemoveAbilityWithTags },
+			{ "RemoveLooseGameplayTags", &ALOCCharacter::execRemoveLooseGameplayTags },
 			{ "SaveAttributeSetToJson", &ALOCCharacter::execSaveAttributeSetToJson },
 			{ "SetArmor", &ALOCCharacter::execSetArmor },
 			{ "SetCritical", &ALOCCharacter::execSetCritical },
@@ -1073,6 +1153,96 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_ALOCCharacter_AddLooseGameplayTag_Statics
+	{
+		struct LOCCharacter_eventAddLooseGameplayTag_Parms
+		{
+			FGameplayTag TagsToAdd;
+		};
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_TagsToAdd;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ALOCCharacter_AddLooseGameplayTag_Statics::NewProp_TagsToAdd = { "TagsToAdd", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(LOCCharacter_eventAddLooseGameplayTag_Parms, TagsToAdd), Z_Construct_UScriptStruct_FGameplayTag, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ALOCCharacter_AddLooseGameplayTag_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ALOCCharacter_AddLooseGameplayTag_Statics::NewProp_TagsToAdd,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_AddLooseGameplayTag_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Abilities" },
+		{ "Comment", "/** Add Loose Gameplay Tag */" },
+		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ToolTip", "Add Loose Gameplay Tag" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_AddLooseGameplayTag_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "AddLooseGameplayTag", nullptr, nullptr, sizeof(LOCCharacter_eventAddLooseGameplayTag_Parms), Z_Construct_UFunction_ALOCCharacter_AddLooseGameplayTag_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_AddLooseGameplayTag_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_AddLooseGameplayTag_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_AddLooseGameplayTag_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ALOCCharacter_AddLooseGameplayTag()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ALOCCharacter_AddLooseGameplayTag_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ALOCCharacter_ApplyGETOTargetData_Statics
+	{
+		struct LOCCharacter_eventApplyGETOTargetData_Parms
+		{
+			FGameplayEffectSpecHandle GESpec;
+			FGameplayAbilityTargetDataHandle TargetData;
+		};
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_GESpec_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_GESpec;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TargetData_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_TargetData;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_ApplyGETOTargetData_Statics::NewProp_GESpec_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ALOCCharacter_ApplyGETOTargetData_Statics::NewProp_GESpec = { "GESpec", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(LOCCharacter_eventApplyGETOTargetData_Parms, GESpec), Z_Construct_UScriptStruct_FGameplayEffectSpecHandle, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_ApplyGETOTargetData_Statics::NewProp_GESpec_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_ApplyGETOTargetData_Statics::NewProp_GESpec_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_ApplyGETOTargetData_Statics::NewProp_TargetData_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ALOCCharacter_ApplyGETOTargetData_Statics::NewProp_TargetData = { "TargetData", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(LOCCharacter_eventApplyGETOTargetData_Parms, TargetData), Z_Construct_UScriptStruct_FGameplayAbilityTargetDataHandle, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_ApplyGETOTargetData_Statics::NewProp_TargetData_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_ApplyGETOTargetData_Statics::NewProp_TargetData_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ALOCCharacter_ApplyGETOTargetData_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ALOCCharacter_ApplyGETOTargetData_Statics::NewProp_GESpec,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ALOCCharacter_ApplyGETOTargetData_Statics::NewProp_TargetData,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_ApplyGETOTargetData_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Abilities" },
+		{ "Comment", "/** Apply GameplayEffect To Target Data*/" },
+		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ToolTip", "Apply GameplayEffect To Target Data" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_ApplyGETOTargetData_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "ApplyGETOTargetData", nullptr, nullptr, sizeof(LOCCharacter_eventApplyGETOTargetData_Parms), Z_Construct_UFunction_ALOCCharacter_ApplyGETOTargetData_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_ApplyGETOTargetData_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04420401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_ApplyGETOTargetData_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_ApplyGETOTargetData_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ALOCCharacter_ApplyGETOTargetData()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ALOCCharacter_ApplyGETOTargetData_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_ALOCCharacter_CancelAbilityWithTags_Statics
 	{
 		struct LOCCharacter_eventCancelAbilityWithTags_Parms
@@ -1113,6 +1283,92 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ALOCCharacter_CancelAbilityWithTags_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ALOCCharacter_CancelAbilityWithWithoutTags_Statics
+	{
+		struct LOCCharacter_eventCancelAbilityWithWithoutTags_Parms
+		{
+			FGameplayTagContainer WithTags;
+			FGameplayTagContainer WithoutTags;
+		};
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_WithTags_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_WithTags;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_WithoutTags;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_CancelAbilityWithWithoutTags_Statics::NewProp_WithTags_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ALOCCharacter_CancelAbilityWithWithoutTags_Statics::NewProp_WithTags = { "WithTags", nullptr, (EPropertyFlags)0x0010000000000082, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(LOCCharacter_eventCancelAbilityWithWithoutTags_Parms, WithTags), Z_Construct_UScriptStruct_FGameplayTagContainer, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_CancelAbilityWithWithoutTags_Statics::NewProp_WithTags_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_CancelAbilityWithWithoutTags_Statics::NewProp_WithTags_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ALOCCharacter_CancelAbilityWithWithoutTags_Statics::NewProp_WithoutTags = { "WithoutTags", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(LOCCharacter_eventCancelAbilityWithWithoutTags_Parms, WithoutTags), Z_Construct_UScriptStruct_FGameplayTagContainer, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ALOCCharacter_CancelAbilityWithWithoutTags_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ALOCCharacter_CancelAbilityWithWithoutTags_Statics::NewProp_WithTags,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ALOCCharacter_CancelAbilityWithWithoutTags_Statics::NewProp_WithoutTags,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_CancelAbilityWithWithoutTags_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Abilities" },
+		{ "Comment", "/** Cancels abilities with specific Gameplay Tags and without specific Gameplay Tags */" },
+		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ToolTip", "Cancels abilities with specific Gameplay Tags and without specific Gameplay Tags" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_CancelAbilityWithWithoutTags_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "CancelAbilityWithWithoutTags", nullptr, nullptr, sizeof(LOCCharacter_eventCancelAbilityWithWithoutTags_Parms), Z_Construct_UFunction_ALOCCharacter_CancelAbilityWithWithoutTags_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_CancelAbilityWithWithoutTags_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_CancelAbilityWithWithoutTags_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_CancelAbilityWithWithoutTags_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ALOCCharacter_CancelAbilityWithWithoutTags()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ALOCCharacter_CancelAbilityWithWithoutTags_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ALOCCharacter_ChangeAbilityLevelWithTags_Statics
+	{
+		struct LOCCharacter_eventChangeAbilityLevelWithTags_Parms
+		{
+			FGameplayTagContainer TagContainer;
+			int32 NewLevel;
+		};
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_TagContainer;
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_NewLevel;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ALOCCharacter_ChangeAbilityLevelWithTags_Statics::NewProp_TagContainer = { "TagContainer", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(LOCCharacter_eventChangeAbilityLevelWithTags_Parms, TagContainer), Z_Construct_UScriptStruct_FGameplayTagContainer, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UFunction_ALOCCharacter_ChangeAbilityLevelWithTags_Statics::NewProp_NewLevel = { "NewLevel", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(LOCCharacter_eventChangeAbilityLevelWithTags_Parms, NewLevel), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ALOCCharacter_ChangeAbilityLevelWithTags_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ALOCCharacter_ChangeAbilityLevelWithTags_Statics::NewProp_TagContainer,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ALOCCharacter_ChangeAbilityLevelWithTags_Statics::NewProp_NewLevel,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_ChangeAbilityLevelWithTags_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Abilities" },
+		{ "Comment", "/** Change Ability Level with Tag, which is already acquire or initialized */" },
+		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ToolTip", "Change Ability Level with Tag, which is already acquire or initialized" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_ChangeAbilityLevelWithTags_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "ChangeAbilityLevelWithTags", nullptr, nullptr, sizeof(LOCCharacter_eventChangeAbilityLevelWithTags_Parms), Z_Construct_UFunction_ALOCCharacter_ChangeAbilityLevelWithTags_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_ChangeAbilityLevelWithTags_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_ChangeAbilityLevelWithTags_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_ChangeAbilityLevelWithTags_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ALOCCharacter_ChangeAbilityLevelWithTags()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ALOCCharacter_ChangeAbilityLevelWithTags_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -2184,6 +2440,87 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_ALOCCharacter_InitializeAbility_Statics
+	{
+		struct LOCCharacter_eventInitializeAbility_Parms
+		{
+			TSubclassOf<UGameplayAbility>  AbilityToGet;
+			int32 AbilityLevel;
+		};
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_AbilityToGet;
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_AbilityLevel;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UFunction_ALOCCharacter_InitializeAbility_Statics::NewProp_AbilityToGet = { "AbilityToGet", nullptr, (EPropertyFlags)0x0014000000000080, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(LOCCharacter_eventInitializeAbility_Parms, AbilityToGet), Z_Construct_UClass_UGameplayAbility_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UFunction_ALOCCharacter_InitializeAbility_Statics::NewProp_AbilityLevel = { "AbilityLevel", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(LOCCharacter_eventInitializeAbility_Parms, AbilityLevel), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ALOCCharacter_InitializeAbility_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ALOCCharacter_InitializeAbility_Statics::NewProp_AbilityToGet,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ALOCCharacter_InitializeAbility_Statics::NewProp_AbilityLevel,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_InitializeAbility_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Abilities" },
+		{ "Comment", "/** initialize Ability with level*/" },
+		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ToolTip", "initialize Ability with level" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_InitializeAbility_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "InitializeAbility", nullptr, nullptr, sizeof(LOCCharacter_eventInitializeAbility_Parms), Z_Construct_UFunction_ALOCCharacter_InitializeAbility_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_InitializeAbility_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_InitializeAbility_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_InitializeAbility_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ALOCCharacter_InitializeAbility()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ALOCCharacter_InitializeAbility_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ALOCCharacter_InitializeAbilityMulti_Statics
+	{
+		struct LOCCharacter_eventInitializeAbilityMulti_Parms
+		{
+			TArray<TSubclassOf<UGameplayAbility> > AbilitiesToAcquire;
+			int32 AbilityLevel;
+		};
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_AbilitiesToAcquire_Inner;
+		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_AbilitiesToAcquire;
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_AbilityLevel;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UFunction_ALOCCharacter_InitializeAbilityMulti_Statics::NewProp_AbilitiesToAcquire_Inner = { "AbilitiesToAcquire", nullptr, (EPropertyFlags)0x0004000000000000, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_UGameplayAbility_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_ALOCCharacter_InitializeAbilityMulti_Statics::NewProp_AbilitiesToAcquire = { "AbilitiesToAcquire", nullptr, (EPropertyFlags)0x0014000000000080, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(LOCCharacter_eventInitializeAbilityMulti_Parms, AbilitiesToAcquire), EArrayPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UFunction_ALOCCharacter_InitializeAbilityMulti_Statics::NewProp_AbilityLevel = { "AbilityLevel", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(LOCCharacter_eventInitializeAbilityMulti_Parms, AbilityLevel), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ALOCCharacter_InitializeAbilityMulti_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ALOCCharacter_InitializeAbilityMulti_Statics::NewProp_AbilitiesToAcquire_Inner,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ALOCCharacter_InitializeAbilityMulti_Statics::NewProp_AbilitiesToAcquire,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ALOCCharacter_InitializeAbilityMulti_Statics::NewProp_AbilityLevel,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_InitializeAbilityMulti_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Abilities" },
+		{ "Comment", "/** Initialize Multiple Abilities with level*/" },
+		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ToolTip", "Initialize Multiple Abilities with level" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_InitializeAbilityMulti_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "InitializeAbilityMulti", nullptr, nullptr, sizeof(LOCCharacter_eventInitializeAbilityMulti_Parms), Z_Construct_UFunction_ALOCCharacter_InitializeAbilityMulti_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_InitializeAbilityMulti_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_InitializeAbilityMulti_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_InitializeAbilityMulti_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ALOCCharacter_InitializeAbilityMulti()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ALOCCharacter_InitializeAbilityMulti_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_ALOCCharacter_LoadAttributeSetFromJson_Statics
 	{
 #if WITH_METADATA
@@ -3198,6 +3535,76 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ALOCCharacter_OnWeaponDamageChanged_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ALOCCharacter_RemoveAbilityWithTags_Statics
+	{
+		struct LOCCharacter_eventRemoveAbilityWithTags_Parms
+		{
+			FGameplayTagContainer TagContainer;
+		};
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_TagContainer;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ALOCCharacter_RemoveAbilityWithTags_Statics::NewProp_TagContainer = { "TagContainer", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(LOCCharacter_eventRemoveAbilityWithTags_Parms, TagContainer), Z_Construct_UScriptStruct_FGameplayTagContainer, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ALOCCharacter_RemoveAbilityWithTags_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ALOCCharacter_RemoveAbilityWithTags_Statics::NewProp_TagContainer,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_RemoveAbilityWithTags_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Abilities" },
+		{ "Comment", "/** Remove Multiple Abilities with Tag*/" },
+		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ToolTip", "Remove Multiple Abilities with Tag" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_RemoveAbilityWithTags_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "RemoveAbilityWithTags", nullptr, nullptr, sizeof(LOCCharacter_eventRemoveAbilityWithTags_Parms), Z_Construct_UFunction_ALOCCharacter_RemoveAbilityWithTags_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_RemoveAbilityWithTags_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_RemoveAbilityWithTags_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_RemoveAbilityWithTags_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ALOCCharacter_RemoveAbilityWithTags()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ALOCCharacter_RemoveAbilityWithTags_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ALOCCharacter_RemoveLooseGameplayTags_Statics
+	{
+		struct LOCCharacter_eventRemoveLooseGameplayTags_Parms
+		{
+			FGameplayTag TagsToRemove;
+		};
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_TagsToRemove;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ALOCCharacter_RemoveLooseGameplayTags_Statics::NewProp_TagsToRemove = { "TagsToRemove", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(LOCCharacter_eventRemoveLooseGameplayTags_Parms, TagsToRemove), Z_Construct_UScriptStruct_FGameplayTag, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ALOCCharacter_RemoveLooseGameplayTags_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ALOCCharacter_RemoveLooseGameplayTags_Statics::NewProp_TagsToRemove,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_RemoveLooseGameplayTags_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Abilities" },
+		{ "Comment", "/** Remove Loose Gamplay Tag */" },
+		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ToolTip", "Remove Loose Gamplay Tag" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_RemoveLooseGameplayTags_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "RemoveLooseGameplayTags", nullptr, nullptr, sizeof(LOCCharacter_eventRemoveLooseGameplayTags_Parms), Z_Construct_UFunction_ALOCCharacter_RemoveLooseGameplayTags_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_RemoveLooseGameplayTags_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_RemoveLooseGameplayTags_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_RemoveLooseGameplayTags_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ALOCCharacter_RemoveLooseGameplayTags()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ALOCCharacter_RemoveLooseGameplayTags_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -4297,7 +4704,11 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_ALOCCharacter_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_ALOCCharacter_ActivateAbility, "ActivateAbility" }, // 2424603490
+		{ &Z_Construct_UFunction_ALOCCharacter_AddLooseGameplayTag, "AddLooseGameplayTag" }, // 3490378323
+		{ &Z_Construct_UFunction_ALOCCharacter_ApplyGETOTargetData, "ApplyGETOTargetData" }, // 3762275441
 		{ &Z_Construct_UFunction_ALOCCharacter_CancelAbilityWithTags, "CancelAbilityWithTags" }, // 2161355275
+		{ &Z_Construct_UFunction_ALOCCharacter_CancelAbilityWithWithoutTags, "CancelAbilityWithWithoutTags" }, // 2163409287
+		{ &Z_Construct_UFunction_ALOCCharacter_ChangeAbilityLevelWithTags, "ChangeAbilityLevelWithTags" }, // 2585780996
 		{ &Z_Construct_UFunction_ALOCCharacter_GetArmor, "GetArmor" }, // 2257130418
 		{ &Z_Construct_UFunction_ALOCCharacter_GetCritical, "GetCritical" }, // 4289406002
 		{ &Z_Construct_UFunction_ALOCCharacter_GetCriticalProb, "GetCriticalProb" }, // 2598414596
@@ -4330,6 +4741,8 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 		{ &Z_Construct_UFunction_ALOCCharacter_GetStrength, "GetStrength" }, // 486135151
 		{ &Z_Construct_UFunction_ALOCCharacter_GetWeaponDamage, "GetWeaponDamage" }, // 4019116984
 		{ &Z_Construct_UFunction_ALOCCharacter_GrantAbility, "GrantAbility" }, // 2525985727
+		{ &Z_Construct_UFunction_ALOCCharacter_InitializeAbility, "InitializeAbility" }, // 3186162872
+		{ &Z_Construct_UFunction_ALOCCharacter_InitializeAbilityMulti, "InitializeAbilityMulti" }, // 2647394673
 		{ &Z_Construct_UFunction_ALOCCharacter_LoadAttributeSetFromJson, "LoadAttributeSetFromJson" }, // 732895929
 		{ &Z_Construct_UFunction_ALOCCharacter_OnArmorChanged, "OnArmorChanged" }, // 946013964
 		{ &Z_Construct_UFunction_ALOCCharacter_OnCriticalChanged, "OnCriticalChanged" }, // 170623266
@@ -4362,6 +4775,8 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 		{ &Z_Construct_UFunction_ALOCCharacter_OnStaminaRegenChanged, "OnStaminaRegenChanged" }, // 2411126125
 		{ &Z_Construct_UFunction_ALOCCharacter_OnStrengthChanged, "OnStrengthChanged" }, // 3158230859
 		{ &Z_Construct_UFunction_ALOCCharacter_OnWeaponDamageChanged, "OnWeaponDamageChanged" }, // 3671174912
+		{ &Z_Construct_UFunction_ALOCCharacter_RemoveAbilityWithTags, "RemoveAbilityWithTags" }, // 2532061753
+		{ &Z_Construct_UFunction_ALOCCharacter_RemoveLooseGameplayTags, "RemoveLooseGameplayTags" }, // 3786983648
 		{ &Z_Construct_UFunction_ALOCCharacter_SaveAttributeSetToJson, "SaveAttributeSetToJson" }, // 81321986
 		{ &Z_Construct_UFunction_ALOCCharacter_SetArmor, "SetArmor" }, // 713798790
 		{ &Z_Construct_UFunction_ALOCCharacter_SetCritical, "SetCritical" }, // 3392287827
@@ -4510,7 +4925,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ALOCCharacter, 4125222097);
+	IMPLEMENT_CLASS(ALOCCharacter, 2888112149);
 	template<> LOC_API UClass* StaticClass<ALOCCharacter>()
 	{
 		return ALOCCharacter::StaticClass();

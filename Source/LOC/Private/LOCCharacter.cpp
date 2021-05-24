@@ -62,28 +62,6 @@ ALOCCharacter::ALOCCharacter()
 	// AbilitySystem 컴포넌트를 추가해줍니다.
 	AbilitySystemComponent = CreateDefaultSubobject<UAbilitySystemComponent>(TEXT("Ability System Componenet"));
 }
-
-////////////////////////////////////////////////////////////////////////////////////
-//////////////////////// 이하 Gameplay Ability System 함수 /////////////////////////
-////////////////////////////////////////////////////////////////////////////////////
-void ALOCCharacter::CancelAbilityWithTags(const FGameplayTagContainer CancelWithTags)
-{
-	//The Ability System Component has multiple ways of cancelling and activating abilities. Using tags provides a generic means of categorizing different types of abilities without knowing what specific ability is active.
-	AbilitySystemComponent->CancelAbilities(&CancelWithTags);
-}
-
-void ALOCCharacter::InitializeAbility(TSubclassOf<UGameplayAbility> AbilityToGet, int32 AbilityLevel)
-{
-	if (AbilitySystemComponent)
-	{
-		if (HasAuthority() && AbilityToGet)
-		{
-			AbilitySystemComponent->GiveAbility(FGameplayAbilitySpec(AbilityToGet, AbilityLevel, 0));
-		}
-		AbilitySystemComponent->InitAbilityActorInfo(this, this);
-	}
-}
-
 void ALOCCharacter::BeginPlay()
 {
 	Super::BeginPlay();
@@ -125,6 +103,109 @@ void ALOCCharacter::BeginPlay()
 		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetMaxWeaponDamageAttribute()).AddUObject(this, &ALOCCharacter::OnMaxWeaponDamageChangedInternal);
 		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetArmorAttribute()).AddUObject(this, &ALOCCharacter::OnArmorChangedInternal);
 		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetMaxArmorAttribute()).AddUObject(this, &ALOCCharacter::OnMaxArmorChangedInternal);
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////////
+//////////////////////// 이하 Gameplay Ability System 함수 /////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+
+//Create an instance of an Ability and add it to the Ability System Component.
+void ALOCCharacter::GrantAbility(TSubclassOf<UGameplayAbility> AbilityClass, int32 Level, int32 InputCode)
+{
+	if (GetLocalRole() == ROLE_Authority && IsValid(AbilitySystemComponent) && IsValid(AbilityClass))
+	{
+		UGameplayAbility* Ability = AbilityClass->GetDefaultObject<UGameplayAbility>();
+
+		if (IsValid(Ability))
+		{
+			// create the new ability spec struct. Ability specs contain metadata about the ability, like what level they're set to, as well as a reference to the ability.
+			FGameplayAbilitySpec AbilitySpec(
+				Ability,
+				Level,
+				InputCode
+			);
+
+			AbilitySystemComponent->GiveAbility(AbilitySpec);
+		}
+	}
+}
+
+void ALOCCharacter::ActivateAbility(int32 InputCode)
+{
+	if (IsValid(AbilitySystemComponent))
+	{
+		AbilitySystemComponent->AbilityLocalInputPressed(InputCode);
+	}
+}
+
+void ALOCCharacter::CancelAbilityWithTags(const FGameplayTagContainer CancelWithTags)
+{
+	AbilitySystemComponent->CancelAbilities(&CancelWithTags);
+}
+
+void ALOCCharacter::CancelAbilityWithWithoutTags(const FGameplayTagContainer WithTags, FGameplayTagContainer WithoutTags)
+{
+	AbilitySystemComponent->CancelAbilities(&WithTags, &WithoutTags, nullptr);
+}
+
+void ALOCCharacter::InitializeAbility(TSubclassOf<UGameplayAbility> AbilityToGet, int32 AbilityLevel)
+{
+	if (AbilitySystemComponent)
+	{
+		if (HasAuthority() && AbilityToGet)
+		{
+			AbilitySystemComponent->GiveAbility(FGameplayAbilitySpec(AbilityToGet, AbilityLevel, 0));
+		}
+		AbilitySystemComponent->InitAbilityActorInfo(this, this);
+	}
+}
+
+void ALOCCharacter::InitializeAbilityMulti(TArray<TSubclassOf<UGameplayAbility>> AbilitiesToAcquire, int32 AbilityLevel)
+{
+	for (TSubclassOf<UGameplayAbility> AbilitiItem : AbilitiesToAcquire)
+	{
+		InitializeAbility(AbilitiItem, AbilityLevel);
+	}
+}
+
+void ALOCCharacter::RemoveAbilityWithTags(FGameplayTagContainer TagContainer)
+{
+	TArray<FGameplayAbilitySpec*> MatchingAbilties;
+	AbilitySystemComponent->GetActivatableGameplayAbilitySpecsByAllMatchingTags(TagContainer, MatchingAbilties, true);
+	for (FGameplayAbilitySpec* Spec : MatchingAbilties)
+	{
+		AbilitySystemComponent->ClearAbility(Spec->Handle);
+	}
+}
+
+void ALOCCharacter::ChangeAbilityLevelWithTags(FGameplayTagContainer TagContainer, int32 NewLevel)
+{
+	TArray<FGameplayAbilitySpec*> MatchingAbilties;
+	AbilitySystemComponent->GetActivatableGameplayAbilitySpecsByAllMatchingTags(TagContainer, MatchingAbilties, true);
+	for (FGameplayAbilitySpec* Spec : MatchingAbilties)
+	{
+		Spec->Level = NewLevel;
+	}
+	
+}
+
+void ALOCCharacter::AddLooseGameplayTag(FGameplayTag TagToAdd)
+{
+	GetAbilitySystemComponent()->AddLooseGameplayTag(TagToAdd);
+	GetAbilitySystemComponent()->SetTagMapCount(TagToAdd,1);
+}
+
+void ALOCCharacter::RemoveLooseGameplayTags(FGameplayTag TagsToRemove)
+{
+	GetAbilitySystemComponent()->RemoveLooseGameplayTag(TagsToRemove);
+}
+
+void ALOCCharacter::ApplyGETOTargetData(const FGameplayEffectSpecHandle& GESpec, const FGameplayAbilityTargetDataHandle& TargetData)
+{
+	for (TSharedPtr<FGameplayAbilityTargetData> Data : TargetData.Data)
+	{
+		Data->ApplyGameplayEffectSpec(*GESpec.Data.Get());
 	}
 }
 
@@ -1062,34 +1143,6 @@ void ALOCCharacter::SetMaxArmor(float NewValue)
 		AbilitySystemComponent->ApplyModToAttribute(AttributeSet->GetMaxArmorAttribute(), EGameplayModOp::Override, NewValue);
 }
 
-//Create an instance of an Ability and add it to the Ability System Component.
-void ALOCCharacter::GrantAbility(TSubclassOf<UGameplayAbility> AbilityClass, int32 Level, int32 InputCode)
-{
-	if (GetLocalRole() == ROLE_Authority && IsValid(AbilitySystemComponent) && IsValid(AbilityClass))
-	{
-		UGameplayAbility* Ability = AbilityClass->GetDefaultObject<UGameplayAbility>();
-
-		if (IsValid(Ability))
-		{
-			// create the new ability spec struct. Ability specs contain metadata about the ability, like what level they're set to, as well as a reference to the ability.
-			FGameplayAbilitySpec AbilitySpec(
-				Ability,
-				Level,
-				InputCode
-			);
-
-			AbilitySystemComponent->GiveAbility(AbilitySpec);
-		}
-	}
-}
-
-void ALOCCharacter::ActivateAbility(int32 InputCode)
-{
-	if (IsValid(AbilitySystemComponent))
-	{
-		AbilitySystemComponent->AbilityLocalInputPressed(InputCode);
-	}
-}
 
 	/** 이상 Gameplay Ability System 함수 */
 	////////////////////////////////////////

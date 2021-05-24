@@ -8,6 +8,9 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+struct FGameplayEffectSpecHandle;
+struct FGameplayAbilityTargetDataHandle;
+struct FGameplayTag;
 struct FGameplayTagContainer;
 class UGameplayAbility;
 #ifdef LOC_LOCCharacter_generated_h
@@ -32,9 +35,6 @@ template<> LOC_API UScriptStruct* StaticStruct<struct FLOCAttributeDetailData>()
 #define LOC_Source_LOC_Public_LOCCharacter_h_41_SPARSE_DATA
 #define LOC_Source_LOC_Public_LOCCharacter_h_41_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execCancelAbilityWithTags); \
-	DECLARE_FUNCTION(execActivateAbility); \
-	DECLARE_FUNCTION(execGrantAbility); \
 	DECLARE_FUNCTION(execSetMaxArmor); \
 	DECLARE_FUNCTION(execSetArmor); \
 	DECLARE_FUNCTION(execSetMaxWeaponDamage); \
@@ -98,14 +98,22 @@ template<> LOC_API UScriptStruct* StaticStruct<struct FLOCAttributeDetailData>()
 	DECLARE_FUNCTION(execGetExperience); \
 	DECLARE_FUNCTION(execGetLevel); \
 	DECLARE_FUNCTION(execLoadAttributeSetFromJson); \
-	DECLARE_FUNCTION(execSaveAttributeSetToJson);
+	DECLARE_FUNCTION(execSaveAttributeSetToJson); \
+	DECLARE_FUNCTION(execApplyGETOTargetData); \
+	DECLARE_FUNCTION(execRemoveLooseGameplayTags); \
+	DECLARE_FUNCTION(execAddLooseGameplayTag); \
+	DECLARE_FUNCTION(execChangeAbilityLevelWithTags); \
+	DECLARE_FUNCTION(execRemoveAbilityWithTags); \
+	DECLARE_FUNCTION(execInitializeAbilityMulti); \
+	DECLARE_FUNCTION(execInitializeAbility); \
+	DECLARE_FUNCTION(execCancelAbilityWithWithoutTags); \
+	DECLARE_FUNCTION(execCancelAbilityWithTags); \
+	DECLARE_FUNCTION(execActivateAbility); \
+	DECLARE_FUNCTION(execGrantAbility);
 
 
 #define LOC_Source_LOC_Public_LOCCharacter_h_41_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execCancelAbilityWithTags); \
-	DECLARE_FUNCTION(execActivateAbility); \
-	DECLARE_FUNCTION(execGrantAbility); \
 	DECLARE_FUNCTION(execSetMaxArmor); \
 	DECLARE_FUNCTION(execSetArmor); \
 	DECLARE_FUNCTION(execSetMaxWeaponDamage); \
@@ -169,7 +177,18 @@ template<> LOC_API UScriptStruct* StaticStruct<struct FLOCAttributeDetailData>()
 	DECLARE_FUNCTION(execGetExperience); \
 	DECLARE_FUNCTION(execGetLevel); \
 	DECLARE_FUNCTION(execLoadAttributeSetFromJson); \
-	DECLARE_FUNCTION(execSaveAttributeSetToJson);
+	DECLARE_FUNCTION(execSaveAttributeSetToJson); \
+	DECLARE_FUNCTION(execApplyGETOTargetData); \
+	DECLARE_FUNCTION(execRemoveLooseGameplayTags); \
+	DECLARE_FUNCTION(execAddLooseGameplayTag); \
+	DECLARE_FUNCTION(execChangeAbilityLevelWithTags); \
+	DECLARE_FUNCTION(execRemoveAbilityWithTags); \
+	DECLARE_FUNCTION(execInitializeAbilityMulti); \
+	DECLARE_FUNCTION(execInitializeAbility); \
+	DECLARE_FUNCTION(execCancelAbilityWithWithoutTags); \
+	DECLARE_FUNCTION(execCancelAbilityWithTags); \
+	DECLARE_FUNCTION(execActivateAbility); \
+	DECLARE_FUNCTION(execGrantAbility);
 
 
 #define LOC_Source_LOC_Public_LOCCharacter_h_41_EVENT_PARMS \
