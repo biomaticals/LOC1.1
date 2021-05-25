@@ -52,4 +52,14 @@ C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\Runtime\GameplayAbilities\Int
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Net\Core\Public\Net/Core/PushModel/PushModel.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\Runtime\GameplayAbilities\Intermediate\Build\Win64\UE4Editor\Inc\GameplayAbilities\AbilitySystemComponent.generated.h
 C:\Users\bioma\Documents\Unreal Projects\LOC\Intermediate\Build\Win64\UE4Editor\Inc\LOC\LOCAttributeSet.generated.h
+C:\Users\bioma\Documents\Unreal Projects\LOC\Source\LOC\Public\LOCCharacter.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/CharacterMovementReplication.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CharacterMovementReplication.generated.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public\AbilitySystemInterface.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\Runtime\GameplayAbilities\Intermediate\Build\Win64\UE4Editor\Inc\GameplayAbilities\AbilitySystemInterface.generated.h
+C:\Users\bioma\Documents\Unreal Projects\LOC\Intermediate\Build\Win64\UE4Editor\Inc\LOC\LOCCharacter.generated.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public\GameplayEffectExtension.h

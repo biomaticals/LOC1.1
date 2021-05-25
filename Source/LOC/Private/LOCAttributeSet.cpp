@@ -3,6 +3,7 @@
 
 #include "LOCAttributeSet.h"
 #include "GameplayEffect.h"
+#include "LOCCharacter.h"
 #include "GameplayEffectExtension.h"
 
 // 이 함수는 이 Attribute를 소유하고 있는 액터가 Gameplay Effect가 AbilitySystem에 적용된 뒤 일어나는 이벤트를 구현할 수 있습니다. 
@@ -10,7 +11,10 @@ void ULOCAttributeSet::PostGameplayEffectExecute(const struct FGameplayEffectMod
 {
 	Super::PostGameplayEffectExecute(Data);
 
-	//Clamping Property based on it's MaxProperty.
+	ALOCCharacter* OwnerCharacter = Cast<ALOCCharacter>(GetOwningActor());
+	FGameplayTag FullHealthTag = FGameplayTag::RequestGameplayTag(FName("Attributes.FullHealth"));
+
+
 	if (Data.EvaluatedData.Attribute == GetExperienceAttribute())
 	{
 		SetExperience(FMath::Clamp(GetExperience(), 0.f, GetMaxExperience()));
@@ -18,6 +22,14 @@ void ULOCAttributeSet::PostGameplayEffectExecute(const struct FGameplayEffectMod
 	if (Data.EvaluatedData.Attribute == GetHealthAttribute())
 	{
 		SetHealth(FMath::Clamp(GetHealth(), 0.f, GetMaxHealth()));
+		if (GetHealth() >= GetMaxHealth())
+		{
+			OwnerCharacter->AddLooseGameplayTag(FullHealthTag);
+		}
+		else
+		{
+			OwnerCharacter->RemoveLooseGameplayTags(FullHealthTag);
+		}
 	}
 	if (Data.EvaluatedData.Attribute == GetHealthRegenAttribute())
 	{

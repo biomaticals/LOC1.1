@@ -271,5 +271,6 @@ public:
 	GAMEPLAYATTRIBUTE_VALUE_INITTER(MaxArmor);
 	GAMEPLAYATTRIBUTE_PROPERTY_GETTER(ULOCAttributeSet, MaxArmor);
 
-
+	UFUNCTION(BlueprintCallable, Category = " Abilties|Tag")
+		void CheckAndGrantTag();
 };
