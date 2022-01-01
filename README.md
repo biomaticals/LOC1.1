@@ -51,6 +51,15 @@ PostGameplayEffectExecute의 역할 추가
 
 이후 체력이 일정량 이하일 때 분노 태그, 스태미너가 0일 때 탈진 태그를 붙히는 것은 위의 PostGameplayEffectExecute와 TryToGrantTags에서 이뤄집니다.
 
+# 프로젝트 규칙
+
+https://organized-soldier-bc0.notion.site/707a10aaf29e4e49b5cb20a6c161787d 를 따릅니다.
+
+# 참고 문헌 및 사이트
+
+1. https://www.unrealengine.com/en-US/onlinelearning-courses?lang=en_US&state=%2F4.26%2Fko%2F
+2. https://docs.unrealengine.com/4.26/ko/
+3. https://cafe.naver.com/unrealenginekr
 
 
 
