@@ -1,6 +1,8 @@
 # LOC ; Land Of Cataclysm
 
  『 격변의 땅 』 ( 약칭 LOC ) 은 언리얼 엔진 4.26버전의 3인칭 템플릿에서 시작하여 저의 개성을 넣어 만든 RPG입니다. 에픽 게임즈의 에셋과 플러그인들을 활용하고 있으며 블루프린트와 C++ 코드를 병행하여 제작하였습니다.
+ 
+ 웹 사이트 : https://organized-soldier-bc0.notion.site/Land-Of-Cataclysm-961321839e25457cb4424777cce7d0d6
 
 ## RPG
 
