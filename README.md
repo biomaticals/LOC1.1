@@ -1,22 +1,17 @@
-# LOC1.1 
+# LOC ; Land Of Cataclysm
 
-이 리포지터리는 저의 언리얼 엔진 4 기반의 게임 ; 격변의 땅을 위해 만들었습니다. ( LOC1.0은 프라이빗 입니다 )
+ 『 격변의 땅 』 ( 약칭 LOC ) 은 언리얼 엔진 4.26버전의 3인칭 템플릿에서 시작하여 저의 개성을 넣어 만든 RPG입니다. 에픽 게임즈의 에셋과 플러그인들을 활용하고 있으며 블루프린트와 C++ 코드를 병행하여 제작하였습니다.
 
-비록 다른 사람은 게임을 대충 여길 수 있고, 이 코드들이 뛰어난 스킬들을 갖고 있진 않지만 저는 열렬히 애정합니다. 제 첫번째 프로젝트이기 때문입니다.
+## RPG
 
-그 이유로, 누구든지 볼 수 있지만 이 코드 일부분을 복제하거나 수정해서는 안됩니다. 자칫 의도치 않은 충돌을 일으킬 수 있습니다.
+1. 월드 컴포지션을 이용한 심리스 방식을 사용합니다.
+2. 아이템 획득, 제작 기능을 위해 Inventory System 플러그인을 사용합니다.
+3. 체력, 마나, 스태미너, 레벨, 공격, 마법등의 기능을 위해 Gameplay Ability System등의 플러그인을 사용합니다.
+4. 각 블루프린트마다 독립성을 유지하고, 확장에 열려있는 체계적인 구조로 설계합니다.  
+5. 그 외에 애니메이션 블루프린트, 스켈레톤의 소켓, AI 비해이비어트리, 카메라 연출을 위한 시퀀서등을 사용합니다.
+6. 마켓플레이스의 컨텐츠와 무료 에셋들을 사용합니다.
 
-더 좋은 코드를 위한 도움은 언제든지 환영합니다. 감사합니다.
-
-# LOC1.1 
-
-This repositery is made for my game based on Unreal Engine 4 ; Land Of Cataclysm. ( LOC1.0 is private )
-
-Although you can take the game roughly and these codes have no such of high level of skills, I have strong passion. Because this is my first project.
-
-For the reason, anyone can see this but cannot duplicate or modify any part of this code. It may occur unintended crash.
-
-It would be really nice to give me a help for better codes anytime. Thakns.
+## Version 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
