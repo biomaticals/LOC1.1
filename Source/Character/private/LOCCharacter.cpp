@@ -1,4 +1,4 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
+ // Copyright Epic Games, Inc. All Rights Reserved.
 
 #include "..\Public\LOCCharacter.h"
 #include "HeadMountedDisplayFunctionLibrary.h"

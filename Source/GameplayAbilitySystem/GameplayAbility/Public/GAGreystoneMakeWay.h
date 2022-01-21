@@ -15,7 +15,8 @@ class LOC_API UGAGreystoneMakeWay : public UGASelfCastBase
 public:
 	UGAGreystoneMakeWay();
 
-	virtual void K2_ActivateAbility();
+	virtual void ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData);
+
 
 public:
 	UPROPERTY(BlueprintReadWrite, Category = "Default")

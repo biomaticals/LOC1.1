@@ -11,7 +11,11 @@ UGAGreystoneMakeWay::UGAGreystoneMakeWay()
 	SkillMontage = obj.Object;
 }
 
-void UGAGreystoneMakeWay::K2_ActivateAbility()
+void UGAGreystoneMakeWay::ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData)
 {
-	GetCharacterInfo();
+	//ALOCCharacter* Owner = GetCharacterInfo();
+	//FGameplayAbilityActivationInfo a;
+	//Owner->AbilitySystemComponent->PlayMontage(nullptr,a,SkillMontage,1.0,"none",0.0);
+	if (GEngine)
+		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Some debug message!"));
 }
