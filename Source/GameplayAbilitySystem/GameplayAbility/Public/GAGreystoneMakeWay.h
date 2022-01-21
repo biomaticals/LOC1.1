@@ -15,19 +15,23 @@ class LOC_API UGAGreystoneMakeWay : public UGASelfCastBase
 public:
 	UGAGreystoneMakeWay();
 
+	virtual void K2_ActivateAbility();
+
+public:
 	UPROPERTY(BlueprintReadWrite, Category = "Default")
 		int32 CurrentHitCount;
 
-	UPROPERTY(BlueprintReadWrite, Category = "Default")
+	UPROPERTY(EditAnywhere, Category = "Default")
 		int32 TotalHitCount;
 
-	UPROPERTY(BlueprintReadWrite, Category = "Default")
+	UPROPERTY(VisibleDefaultsOnly, Category = "Default")
+		UAnimMontage* SkillMontage;
+
+	UPROPERTY(EditAnywhere, Category = "Default")
 		UGameplayEffect* GEforTaget;
 
-	UPROPERTY(BlueprintReadWrite, Category = "Default")
+	UPROPERTY(EditAnywhere, Category = "Default")
 		float GELevelforTaget;
 
-private:
-	UPROPERTY(VisibleAnywhere, Category = "Default")
-		UAnimMontage* SkillMontage;
+
 };

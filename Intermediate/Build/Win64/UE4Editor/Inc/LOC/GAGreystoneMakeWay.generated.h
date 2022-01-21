@@ -58,10 +58,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UGAGreystoneMakeWay); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UGAGreystoneMakeWay)
 
 
-#define LOC_Source_GameplayAbilitySystem_GameplayAbility_Public_GAGreystoneMakeWay_h_13_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__SkillMontage() { return STRUCT_OFFSET(UGAGreystoneMakeWay, SkillMontage); }
-
-
+#define LOC_Source_GameplayAbilitySystem_GameplayAbility_Public_GAGreystoneMakeWay_h_13_PRIVATE_PROPERTY_OFFSET
 #define LOC_Source_GameplayAbilitySystem_GameplayAbility_Public_GAGreystoneMakeWay_h_10_PROLOG
 #define LOC_Source_GameplayAbilitySystem_GameplayAbility_Public_GAGreystoneMakeWay_h_13_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
