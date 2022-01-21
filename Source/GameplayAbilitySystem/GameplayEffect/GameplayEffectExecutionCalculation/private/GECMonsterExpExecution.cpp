@@ -1,8 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "GECMonsterExpExecution.h"
-#include "LOCAttributeSet.h"
+#include "..\public\GECMonsterExpExecution.h"
+#include "..\..\..\AttributeSet\public\LOCAttributeSet.h"
 #include "AbilitySystemComponent.h"
 
 struct FMonsterExpStatics

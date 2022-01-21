@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "Zone/SafetyZone.h"
+#include "..\public\SafetyZone.h"
 
 ASafetyZone::ASafetyZone()
 {

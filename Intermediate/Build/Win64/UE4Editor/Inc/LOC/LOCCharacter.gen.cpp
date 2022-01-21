@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "LOC/Public/LOCCharacter.h"
+#include "Source/Character/Public/LOCCharacter.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -70,7 +70,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FLOCAttributeData_Statics::Struct_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	void* Z_Construct_UScriptStruct_FLOCAttributeData_Statics::NewStructOps()
@@ -81,7 +81,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FLOCAttributeData_Statics::NewProp_Details_MetaData[] = {
 		{ "Category", "JsonData" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FLOCAttributeData_Statics::NewProp_Details = { "Details", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FLOCAttributeData, Details), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FLOCAttributeData_Statics::NewProp_Details_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FLOCAttributeData_Statics::NewProp_Details_MetaData)) };
@@ -117,7 +117,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FLOCAttributeData_Hash() { return 3570647487U; }
+	uint32 Get_Z_Construct_UScriptStruct_FLOCAttributeData_Hash() { return 686514935U; }
 class UScriptStruct* FLOCAttributeDetailData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -160,7 +160,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FLOCAttributeDetailData_Statics::Struct_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	void* Z_Construct_UScriptStruct_FLOCAttributeDetailData_Statics::NewStructOps()
@@ -170,14 +170,14 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FLOCAttributeDetailData_Statics::NewProp_AttributeName_MetaData[] = {
 		{ "Category", "JsonData" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FLOCAttributeDetailData_Statics::NewProp_AttributeName = { "AttributeName", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FLOCAttributeDetailData, AttributeName), METADATA_PARAMS(Z_Construct_UScriptStruct_FLOCAttributeDetailData_Statics::NewProp_AttributeName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FLOCAttributeDetailData_Statics::NewProp_AttributeName_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FLOCAttributeDetailData_Statics::NewProp_AttributeValue_MetaData[] = {
 		{ "Category", "JsonData" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FLOCAttributeDetailData_Statics::NewProp_AttributeValue = { "AttributeValue", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FLOCAttributeDetailData, AttributeValue), METADATA_PARAMS(Z_Construct_UScriptStruct_FLOCAttributeDetailData_Statics::NewProp_AttributeValue_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FLOCAttributeDetailData_Statics::NewProp_AttributeValue_MetaData)) };
@@ -213,7 +213,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FLOCAttributeDetailData_Hash() { return 2288009752U; }
+	uint32 Get_Z_Construct_UScriptStruct_FLOCAttributeDetailData_Hash() { return 1730563274U; }
 	DEFINE_FUNCTION(ALOCCharacter::execSetMaxArmor)
 	{
 		P_GET_PROPERTY(FFloatProperty,Z_Param_NewValue);
@@ -1139,7 +1139,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_ActivateAbility_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities" },
 		{ "Comment", "/** Activates an ability with a matching input code */" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 		{ "ToolTip", "Activates an ability with a matching input code" },
 	};
 #endif
@@ -1174,7 +1174,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_AddLooseGameplayTag_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities" },
 		{ "Comment", "/** Add Loose Gameplay Tag */" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 		{ "ToolTip", "Add Loose Gameplay Tag" },
 	};
 #endif
@@ -1229,7 +1229,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_ApplyGETOTargetData_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities" },
 		{ "Comment", "/** Apply GameplayEffect To Target Data*/" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 		{ "ToolTip", "Apply GameplayEffect To Target Data" },
 	};
 #endif
@@ -1272,7 +1272,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_CancelAbilityWithTags_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities" },
 		{ "Comment", "/** Cancels abilities with specific Gameplay Tags applied to them.*/" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 		{ "ToolTip", "Cancels abilities with specific Gameplay Tags applied to them." },
 	};
 #endif
@@ -1319,7 +1319,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_CancelAbilityWithWithoutTags_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities" },
 		{ "Comment", "/** Cancels abilities with specific Gameplay Tags and without specific Gameplay Tags */" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 		{ "ToolTip", "Cancels abilities with specific Gameplay Tags and without specific Gameplay Tags" },
 	};
 #endif
@@ -1358,7 +1358,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_ChangeAbilityLevelWithTags_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities" },
 		{ "Comment", "/** Change Ability Level with Tag, which is already acquire or initialized */" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 		{ "ToolTip", "Change Ability Level with Tag, which is already acquire or initialized" },
 	};
 #endif
@@ -1392,7 +1392,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_GetArmor_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_GetArmor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "GetArmor", nullptr, nullptr, sizeof(LOCCharacter_eventGetArmor_Parms), Z_Construct_UFunction_ALOCCharacter_GetArmor_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetArmor_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_GetArmor_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetArmor_Statics::Function_MetaDataParams)) };
@@ -1425,7 +1425,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_GetCritical_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_GetCritical_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "GetCritical", nullptr, nullptr, sizeof(LOCCharacter_eventGetCritical_Parms), Z_Construct_UFunction_ALOCCharacter_GetCritical_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetCritical_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_GetCritical_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetCritical_Statics::Function_MetaDataParams)) };
@@ -1458,7 +1458,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_GetCriticalProb_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_GetCriticalProb_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "GetCriticalProb", nullptr, nullptr, sizeof(LOCCharacter_eventGetCriticalProb_Parms), Z_Construct_UFunction_ALOCCharacter_GetCriticalProb_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetCriticalProb_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_GetCriticalProb_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetCriticalProb_Statics::Function_MetaDataParams)) };
@@ -1491,7 +1491,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_GetEndurance_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_GetEndurance_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "GetEndurance", nullptr, nullptr, sizeof(LOCCharacter_eventGetEndurance_Parms), Z_Construct_UFunction_ALOCCharacter_GetEndurance_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetEndurance_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_GetEndurance_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetEndurance_Statics::Function_MetaDataParams)) };
@@ -1524,7 +1524,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_GetExperience_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_GetExperience_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "GetExperience", nullptr, nullptr, sizeof(LOCCharacter_eventGetExperience_Parms), Z_Construct_UFunction_ALOCCharacter_GetExperience_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetExperience_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_GetExperience_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetExperience_Statics::Function_MetaDataParams)) };
@@ -1557,7 +1557,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_GetHealth_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_GetHealth_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "GetHealth", nullptr, nullptr, sizeof(LOCCharacter_eventGetHealth_Parms), Z_Construct_UFunction_ALOCCharacter_GetHealth_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetHealth_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_GetHealth_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetHealth_Statics::Function_MetaDataParams)) };
@@ -1590,7 +1590,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_GetHealthRegen_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_GetHealthRegen_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "GetHealthRegen", nullptr, nullptr, sizeof(LOCCharacter_eventGetHealthRegen_Parms), Z_Construct_UFunction_ALOCCharacter_GetHealthRegen_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetHealthRegen_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_GetHealthRegen_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetHealthRegen_Statics::Function_MetaDataParams)) };
@@ -1623,7 +1623,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_GetIntellect_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_GetIntellect_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "GetIntellect", nullptr, nullptr, sizeof(LOCCharacter_eventGetIntellect_Parms), Z_Construct_UFunction_ALOCCharacter_GetIntellect_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetIntellect_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_GetIntellect_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetIntellect_Statics::Function_MetaDataParams)) };
@@ -1657,7 +1657,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_GetLevel_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
 		{ "Comment", "//????????\xc6\xae???? ?\xd8\xb4? ?\xc9\xb7?\xc4\xa1?? ???????? ???? ?\xd4\xbc??\xd4\xb4\xcf\xb4?.\n" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 		{ "ToolTip", "????????\xc6\xae???? ?\xd8\xb4? ?\xc9\xb7?\xc4\xa1?? ???????? ???? ?\xd4\xbc??\xd4\xb4\xcf\xb4?." },
 	};
 #endif
@@ -1691,7 +1691,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_GetMana_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_GetMana_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "GetMana", nullptr, nullptr, sizeof(LOCCharacter_eventGetMana_Parms), Z_Construct_UFunction_ALOCCharacter_GetMana_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetMana_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_GetMana_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetMana_Statics::Function_MetaDataParams)) };
@@ -1724,7 +1724,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_GetManaRegen_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_GetManaRegen_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "GetManaRegen", nullptr, nullptr, sizeof(LOCCharacter_eventGetManaRegen_Parms), Z_Construct_UFunction_ALOCCharacter_GetManaRegen_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetManaRegen_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_GetManaRegen_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetManaRegen_Statics::Function_MetaDataParams)) };
@@ -1757,7 +1757,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_GetMaxArmor_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_GetMaxArmor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "GetMaxArmor", nullptr, nullptr, sizeof(LOCCharacter_eventGetMaxArmor_Parms), Z_Construct_UFunction_ALOCCharacter_GetMaxArmor_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetMaxArmor_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_GetMaxArmor_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetMaxArmor_Statics::Function_MetaDataParams)) };
@@ -1790,7 +1790,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_GetMaxCritical_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_GetMaxCritical_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "GetMaxCritical", nullptr, nullptr, sizeof(LOCCharacter_eventGetMaxCritical_Parms), Z_Construct_UFunction_ALOCCharacter_GetMaxCritical_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetMaxCritical_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_GetMaxCritical_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetMaxCritical_Statics::Function_MetaDataParams)) };
@@ -1823,7 +1823,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_GetMaxCriticalProb_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_GetMaxCriticalProb_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "GetMaxCriticalProb", nullptr, nullptr, sizeof(LOCCharacter_eventGetMaxCriticalProb_Parms), Z_Construct_UFunction_ALOCCharacter_GetMaxCriticalProb_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetMaxCriticalProb_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_GetMaxCriticalProb_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetMaxCriticalProb_Statics::Function_MetaDataParams)) };
@@ -1856,7 +1856,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_GetMaxEndurance_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_GetMaxEndurance_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "GetMaxEndurance", nullptr, nullptr, sizeof(LOCCharacter_eventGetMaxEndurance_Parms), Z_Construct_UFunction_ALOCCharacter_GetMaxEndurance_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetMaxEndurance_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_GetMaxEndurance_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetMaxEndurance_Statics::Function_MetaDataParams)) };
@@ -1889,7 +1889,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_GetMaxExperience_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_GetMaxExperience_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "GetMaxExperience", nullptr, nullptr, sizeof(LOCCharacter_eventGetMaxExperience_Parms), Z_Construct_UFunction_ALOCCharacter_GetMaxExperience_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetMaxExperience_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_GetMaxExperience_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetMaxExperience_Statics::Function_MetaDataParams)) };
@@ -1922,7 +1922,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_GetMaxHealth_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_GetMaxHealth_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "GetMaxHealth", nullptr, nullptr, sizeof(LOCCharacter_eventGetMaxHealth_Parms), Z_Construct_UFunction_ALOCCharacter_GetMaxHealth_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetMaxHealth_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_GetMaxHealth_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetMaxHealth_Statics::Function_MetaDataParams)) };
@@ -1955,7 +1955,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_GetMaxHealthRegen_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_GetMaxHealthRegen_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "GetMaxHealthRegen", nullptr, nullptr, sizeof(LOCCharacter_eventGetMaxHealthRegen_Parms), Z_Construct_UFunction_ALOCCharacter_GetMaxHealthRegen_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetMaxHealthRegen_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_GetMaxHealthRegen_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetMaxHealthRegen_Statics::Function_MetaDataParams)) };
@@ -1988,7 +1988,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_GetMaxIntellect_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_GetMaxIntellect_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "GetMaxIntellect", nullptr, nullptr, sizeof(LOCCharacter_eventGetMaxIntellect_Parms), Z_Construct_UFunction_ALOCCharacter_GetMaxIntellect_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetMaxIntellect_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_GetMaxIntellect_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetMaxIntellect_Statics::Function_MetaDataParams)) };
@@ -2021,7 +2021,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_GetMaxMana_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_GetMaxMana_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "GetMaxMana", nullptr, nullptr, sizeof(LOCCharacter_eventGetMaxMana_Parms), Z_Construct_UFunction_ALOCCharacter_GetMaxMana_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetMaxMana_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_GetMaxMana_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetMaxMana_Statics::Function_MetaDataParams)) };
@@ -2054,7 +2054,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_GetMaxManaRegen_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_GetMaxManaRegen_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "GetMaxManaRegen", nullptr, nullptr, sizeof(LOCCharacter_eventGetMaxManaRegen_Parms), Z_Construct_UFunction_ALOCCharacter_GetMaxManaRegen_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetMaxManaRegen_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_GetMaxManaRegen_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetMaxManaRegen_Statics::Function_MetaDataParams)) };
@@ -2087,7 +2087,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_GetMaxSpeed_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_GetMaxSpeed_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "GetMaxSpeed", nullptr, nullptr, sizeof(LOCCharacter_eventGetMaxSpeed_Parms), Z_Construct_UFunction_ALOCCharacter_GetMaxSpeed_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetMaxSpeed_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_GetMaxSpeed_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetMaxSpeed_Statics::Function_MetaDataParams)) };
@@ -2120,7 +2120,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_GetMaxStamina_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_GetMaxStamina_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "GetMaxStamina", nullptr, nullptr, sizeof(LOCCharacter_eventGetMaxStamina_Parms), Z_Construct_UFunction_ALOCCharacter_GetMaxStamina_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetMaxStamina_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_GetMaxStamina_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetMaxStamina_Statics::Function_MetaDataParams)) };
@@ -2153,7 +2153,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_GetMaxStaminaRegen_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_GetMaxStaminaRegen_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "GetMaxStaminaRegen", nullptr, nullptr, sizeof(LOCCharacter_eventGetMaxStaminaRegen_Parms), Z_Construct_UFunction_ALOCCharacter_GetMaxStaminaRegen_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetMaxStaminaRegen_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_GetMaxStaminaRegen_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetMaxStaminaRegen_Statics::Function_MetaDataParams)) };
@@ -2186,7 +2186,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_GetMaxStrength_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_GetMaxStrength_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "GetMaxStrength", nullptr, nullptr, sizeof(LOCCharacter_eventGetMaxStrength_Parms), Z_Construct_UFunction_ALOCCharacter_GetMaxStrength_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetMaxStrength_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_GetMaxStrength_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetMaxStrength_Statics::Function_MetaDataParams)) };
@@ -2219,7 +2219,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_GetMaxWeaponDamage_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_GetMaxWeaponDamage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "GetMaxWeaponDamage", nullptr, nullptr, sizeof(LOCCharacter_eventGetMaxWeaponDamage_Parms), Z_Construct_UFunction_ALOCCharacter_GetMaxWeaponDamage_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetMaxWeaponDamage_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_GetMaxWeaponDamage_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetMaxWeaponDamage_Statics::Function_MetaDataParams)) };
@@ -2252,7 +2252,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_GetSpeed_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_GetSpeed_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "GetSpeed", nullptr, nullptr, sizeof(LOCCharacter_eventGetSpeed_Parms), Z_Construct_UFunction_ALOCCharacter_GetSpeed_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetSpeed_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_GetSpeed_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetSpeed_Statics::Function_MetaDataParams)) };
@@ -2285,7 +2285,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_GetStamina_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_GetStamina_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "GetStamina", nullptr, nullptr, sizeof(LOCCharacter_eventGetStamina_Parms), Z_Construct_UFunction_ALOCCharacter_GetStamina_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetStamina_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_GetStamina_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetStamina_Statics::Function_MetaDataParams)) };
@@ -2318,7 +2318,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_GetStaminaRegen_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_GetStaminaRegen_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "GetStaminaRegen", nullptr, nullptr, sizeof(LOCCharacter_eventGetStaminaRegen_Parms), Z_Construct_UFunction_ALOCCharacter_GetStaminaRegen_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetStaminaRegen_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_GetStaminaRegen_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetStaminaRegen_Statics::Function_MetaDataParams)) };
@@ -2351,7 +2351,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_GetStrength_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_GetStrength_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "GetStrength", nullptr, nullptr, sizeof(LOCCharacter_eventGetStrength_Parms), Z_Construct_UFunction_ALOCCharacter_GetStrength_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetStrength_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_GetStrength_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetStrength_Statics::Function_MetaDataParams)) };
@@ -2384,7 +2384,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_GetWeaponDamage_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_GetWeaponDamage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "GetWeaponDamage", nullptr, nullptr, sizeof(LOCCharacter_eventGetWeaponDamage_Parms), Z_Construct_UFunction_ALOCCharacter_GetWeaponDamage_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetWeaponDamage_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_GetWeaponDamage_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_GetWeaponDamage_Statics::Function_MetaDataParams)) };
@@ -2426,7 +2426,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_GrantAbility_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities" },
 		{ "Comment", "/** Grants an ability at the given level, with an input code used to pick and choose which ability should be triggered. */" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 		{ "ToolTip", "Grants an ability at the given level, with an input code used to pick and choose which ability should be triggered." },
 	};
 #endif
@@ -2465,7 +2465,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_InitializeAbility_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities" },
 		{ "Comment", "/** initialize Ability with level*/" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 		{ "ToolTip", "initialize Ability with level" },
 	};
 #endif
@@ -2507,7 +2507,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_InitializeAbilityMulti_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities" },
 		{ "Comment", "/** Initialize Multiple Abilities with level*/" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 		{ "ToolTip", "Initialize Multiple Abilities with level" },
 	};
 #endif
@@ -2531,7 +2531,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_LoadAttributeSetFromJson_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Json" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_LoadAttributeSetFromJson_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "LoadAttributeSetFromJson", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_LoadAttributeSetFromJson_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_LoadAttributeSetFromJson_Statics::Function_MetaDataParams)) };
@@ -2563,7 +2563,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_OnArmorChanged_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_OnArmorChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "OnArmorChanged", nullptr, nullptr, sizeof(LOCCharacter_eventOnArmorChanged_Parms), Z_Construct_UFunction_ALOCCharacter_OnArmorChanged_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnArmorChanged_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_OnArmorChanged_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnArmorChanged_Statics::Function_MetaDataParams)) };
@@ -2595,7 +2595,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_OnCriticalChanged_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_OnCriticalChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "OnCriticalChanged", nullptr, nullptr, sizeof(LOCCharacter_eventOnCriticalChanged_Parms), Z_Construct_UFunction_ALOCCharacter_OnCriticalChanged_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnCriticalChanged_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_OnCriticalChanged_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnCriticalChanged_Statics::Function_MetaDataParams)) };
@@ -2627,7 +2627,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_OnCriticalProbChanged_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_OnCriticalProbChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "OnCriticalProbChanged", nullptr, nullptr, sizeof(LOCCharacter_eventOnCriticalProbChanged_Parms), Z_Construct_UFunction_ALOCCharacter_OnCriticalProbChanged_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnCriticalProbChanged_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_OnCriticalProbChanged_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnCriticalProbChanged_Statics::Function_MetaDataParams)) };
@@ -2659,7 +2659,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_OnEnduranceChanged_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_OnEnduranceChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "OnEnduranceChanged", nullptr, nullptr, sizeof(LOCCharacter_eventOnEnduranceChanged_Parms), Z_Construct_UFunction_ALOCCharacter_OnEnduranceChanged_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnEnduranceChanged_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_OnEnduranceChanged_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnEnduranceChanged_Statics::Function_MetaDataParams)) };
@@ -2691,7 +2691,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_OnExperienceChanged_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_OnExperienceChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "OnExperienceChanged", nullptr, nullptr, sizeof(LOCCharacter_eventOnExperienceChanged_Parms), Z_Construct_UFunction_ALOCCharacter_OnExperienceChanged_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnExperienceChanged_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_OnExperienceChanged_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnExperienceChanged_Statics::Function_MetaDataParams)) };
@@ -2723,7 +2723,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_OnHealthChanged_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_OnHealthChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "OnHealthChanged", nullptr, nullptr, sizeof(LOCCharacter_eventOnHealthChanged_Parms), Z_Construct_UFunction_ALOCCharacter_OnHealthChanged_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnHealthChanged_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_OnHealthChanged_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnHealthChanged_Statics::Function_MetaDataParams)) };
@@ -2755,7 +2755,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_OnHealthRegenChanged_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_OnHealthRegenChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "OnHealthRegenChanged", nullptr, nullptr, sizeof(LOCCharacter_eventOnHealthRegenChanged_Parms), Z_Construct_UFunction_ALOCCharacter_OnHealthRegenChanged_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnHealthRegenChanged_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_OnHealthRegenChanged_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnHealthRegenChanged_Statics::Function_MetaDataParams)) };
@@ -2787,7 +2787,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_OnIntellectChanged_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_OnIntellectChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "OnIntellectChanged", nullptr, nullptr, sizeof(LOCCharacter_eventOnIntellectChanged_Parms), Z_Construct_UFunction_ALOCCharacter_OnIntellectChanged_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnIntellectChanged_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_OnIntellectChanged_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnIntellectChanged_Statics::Function_MetaDataParams)) };
@@ -2820,7 +2820,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_OnLevelChanged_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
 		{ "Comment", "/** On\"Property\"Changed Function */" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 		{ "ToolTip", "On\"Property\"Changed Function" },
 	};
 #endif
@@ -2853,7 +2853,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_OnManaChanged_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_OnManaChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "OnManaChanged", nullptr, nullptr, sizeof(LOCCharacter_eventOnManaChanged_Parms), Z_Construct_UFunction_ALOCCharacter_OnManaChanged_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnManaChanged_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_OnManaChanged_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnManaChanged_Statics::Function_MetaDataParams)) };
@@ -2885,7 +2885,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_OnManaRegenChanged_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_OnManaRegenChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "OnManaRegenChanged", nullptr, nullptr, sizeof(LOCCharacter_eventOnManaRegenChanged_Parms), Z_Construct_UFunction_ALOCCharacter_OnManaRegenChanged_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnManaRegenChanged_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_OnManaRegenChanged_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnManaRegenChanged_Statics::Function_MetaDataParams)) };
@@ -2917,7 +2917,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_OnMaxArmorChanged_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_OnMaxArmorChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "OnMaxArmorChanged", nullptr, nullptr, sizeof(LOCCharacter_eventOnMaxArmorChanged_Parms), Z_Construct_UFunction_ALOCCharacter_OnMaxArmorChanged_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnMaxArmorChanged_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_OnMaxArmorChanged_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnMaxArmorChanged_Statics::Function_MetaDataParams)) };
@@ -2949,7 +2949,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_OnMaxCriticalChanged_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_OnMaxCriticalChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "OnMaxCriticalChanged", nullptr, nullptr, sizeof(LOCCharacter_eventOnMaxCriticalChanged_Parms), Z_Construct_UFunction_ALOCCharacter_OnMaxCriticalChanged_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnMaxCriticalChanged_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_OnMaxCriticalChanged_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnMaxCriticalChanged_Statics::Function_MetaDataParams)) };
@@ -2981,7 +2981,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_OnMaxCriticalProbChanged_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_OnMaxCriticalProbChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "OnMaxCriticalProbChanged", nullptr, nullptr, sizeof(LOCCharacter_eventOnMaxCriticalProbChanged_Parms), Z_Construct_UFunction_ALOCCharacter_OnMaxCriticalProbChanged_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnMaxCriticalProbChanged_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_OnMaxCriticalProbChanged_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnMaxCriticalProbChanged_Statics::Function_MetaDataParams)) };
@@ -3013,7 +3013,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_OnMaxEnduranceChanged_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_OnMaxEnduranceChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "OnMaxEnduranceChanged", nullptr, nullptr, sizeof(LOCCharacter_eventOnMaxEnduranceChanged_Parms), Z_Construct_UFunction_ALOCCharacter_OnMaxEnduranceChanged_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnMaxEnduranceChanged_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_OnMaxEnduranceChanged_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnMaxEnduranceChanged_Statics::Function_MetaDataParams)) };
@@ -3045,7 +3045,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_OnMaxExperienceChanged_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_OnMaxExperienceChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "OnMaxExperienceChanged", nullptr, nullptr, sizeof(LOCCharacter_eventOnMaxExperienceChanged_Parms), Z_Construct_UFunction_ALOCCharacter_OnMaxExperienceChanged_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnMaxExperienceChanged_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_OnMaxExperienceChanged_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnMaxExperienceChanged_Statics::Function_MetaDataParams)) };
@@ -3077,7 +3077,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_OnMaxHealthChanged_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_OnMaxHealthChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "OnMaxHealthChanged", nullptr, nullptr, sizeof(LOCCharacter_eventOnMaxHealthChanged_Parms), Z_Construct_UFunction_ALOCCharacter_OnMaxHealthChanged_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnMaxHealthChanged_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_OnMaxHealthChanged_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnMaxHealthChanged_Statics::Function_MetaDataParams)) };
@@ -3109,7 +3109,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_OnMaxHealthRegenChanged_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_OnMaxHealthRegenChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "OnMaxHealthRegenChanged", nullptr, nullptr, sizeof(LOCCharacter_eventOnMaxHealthRegenChanged_Parms), Z_Construct_UFunction_ALOCCharacter_OnMaxHealthRegenChanged_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnMaxHealthRegenChanged_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_OnMaxHealthRegenChanged_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnMaxHealthRegenChanged_Statics::Function_MetaDataParams)) };
@@ -3141,7 +3141,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_OnMaxIntellectChanged_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_OnMaxIntellectChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "OnMaxIntellectChanged", nullptr, nullptr, sizeof(LOCCharacter_eventOnMaxIntellectChanged_Parms), Z_Construct_UFunction_ALOCCharacter_OnMaxIntellectChanged_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnMaxIntellectChanged_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_OnMaxIntellectChanged_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnMaxIntellectChanged_Statics::Function_MetaDataParams)) };
@@ -3173,7 +3173,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_OnMaxManaChanged_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_OnMaxManaChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "OnMaxManaChanged", nullptr, nullptr, sizeof(LOCCharacter_eventOnMaxManaChanged_Parms), Z_Construct_UFunction_ALOCCharacter_OnMaxManaChanged_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnMaxManaChanged_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_OnMaxManaChanged_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnMaxManaChanged_Statics::Function_MetaDataParams)) };
@@ -3205,7 +3205,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_OnMaxManaRegenChanged_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_OnMaxManaRegenChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "OnMaxManaRegenChanged", nullptr, nullptr, sizeof(LOCCharacter_eventOnMaxManaRegenChanged_Parms), Z_Construct_UFunction_ALOCCharacter_OnMaxManaRegenChanged_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnMaxManaRegenChanged_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_OnMaxManaRegenChanged_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnMaxManaRegenChanged_Statics::Function_MetaDataParams)) };
@@ -3237,7 +3237,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_OnMaxSpeedChanged_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_OnMaxSpeedChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "OnMaxSpeedChanged", nullptr, nullptr, sizeof(LOCCharacter_eventOnMaxSpeedChanged_Parms), Z_Construct_UFunction_ALOCCharacter_OnMaxSpeedChanged_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnMaxSpeedChanged_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_OnMaxSpeedChanged_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnMaxSpeedChanged_Statics::Function_MetaDataParams)) };
@@ -3269,7 +3269,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_OnMaxStaminaChanged_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_OnMaxStaminaChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "OnMaxStaminaChanged", nullptr, nullptr, sizeof(LOCCharacter_eventOnMaxStaminaChanged_Parms), Z_Construct_UFunction_ALOCCharacter_OnMaxStaminaChanged_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnMaxStaminaChanged_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_OnMaxStaminaChanged_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnMaxStaminaChanged_Statics::Function_MetaDataParams)) };
@@ -3301,7 +3301,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_OnMaxStaminaRegenChanged_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_OnMaxStaminaRegenChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "OnMaxStaminaRegenChanged", nullptr, nullptr, sizeof(LOCCharacter_eventOnMaxStaminaRegenChanged_Parms), Z_Construct_UFunction_ALOCCharacter_OnMaxStaminaRegenChanged_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnMaxStaminaRegenChanged_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_OnMaxStaminaRegenChanged_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnMaxStaminaRegenChanged_Statics::Function_MetaDataParams)) };
@@ -3333,7 +3333,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_OnMaxStrengthChanged_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_OnMaxStrengthChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "OnMaxStrengthChanged", nullptr, nullptr, sizeof(LOCCharacter_eventOnMaxStrengthChanged_Parms), Z_Construct_UFunction_ALOCCharacter_OnMaxStrengthChanged_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnMaxStrengthChanged_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_OnMaxStrengthChanged_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnMaxStrengthChanged_Statics::Function_MetaDataParams)) };
@@ -3365,7 +3365,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_OnMaxWeaponDamageChanged_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_OnMaxWeaponDamageChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "OnMaxWeaponDamageChanged", nullptr, nullptr, sizeof(LOCCharacter_eventOnMaxWeaponDamageChanged_Parms), Z_Construct_UFunction_ALOCCharacter_OnMaxWeaponDamageChanged_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnMaxWeaponDamageChanged_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_OnMaxWeaponDamageChanged_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnMaxWeaponDamageChanged_Statics::Function_MetaDataParams)) };
@@ -3397,7 +3397,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_OnSpeedChanged_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_OnSpeedChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "OnSpeedChanged", nullptr, nullptr, sizeof(LOCCharacter_eventOnSpeedChanged_Parms), Z_Construct_UFunction_ALOCCharacter_OnSpeedChanged_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnSpeedChanged_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_OnSpeedChanged_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnSpeedChanged_Statics::Function_MetaDataParams)) };
@@ -3429,7 +3429,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_OnStaminaChanged_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_OnStaminaChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "OnStaminaChanged", nullptr, nullptr, sizeof(LOCCharacter_eventOnStaminaChanged_Parms), Z_Construct_UFunction_ALOCCharacter_OnStaminaChanged_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnStaminaChanged_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_OnStaminaChanged_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnStaminaChanged_Statics::Function_MetaDataParams)) };
@@ -3461,7 +3461,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_OnStaminaRegenChanged_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_OnStaminaRegenChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "OnStaminaRegenChanged", nullptr, nullptr, sizeof(LOCCharacter_eventOnStaminaRegenChanged_Parms), Z_Construct_UFunction_ALOCCharacter_OnStaminaRegenChanged_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnStaminaRegenChanged_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_OnStaminaRegenChanged_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnStaminaRegenChanged_Statics::Function_MetaDataParams)) };
@@ -3493,7 +3493,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_OnStrengthChanged_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_OnStrengthChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "OnStrengthChanged", nullptr, nullptr, sizeof(LOCCharacter_eventOnStrengthChanged_Parms), Z_Construct_UFunction_ALOCCharacter_OnStrengthChanged_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnStrengthChanged_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_OnStrengthChanged_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnStrengthChanged_Statics::Function_MetaDataParams)) };
@@ -3525,7 +3525,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_OnWeaponDamageChanged_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_OnWeaponDamageChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "OnWeaponDamageChanged", nullptr, nullptr, sizeof(LOCCharacter_eventOnWeaponDamageChanged_Parms), Z_Construct_UFunction_ALOCCharacter_OnWeaponDamageChanged_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnWeaponDamageChanged_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_OnWeaponDamageChanged_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_OnWeaponDamageChanged_Statics::Function_MetaDataParams)) };
@@ -3559,7 +3559,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_RemoveAbilityWithTags_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities" },
 		{ "Comment", "/** Remove Multiple Abilities with Tag*/" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 		{ "ToolTip", "Remove Multiple Abilities with Tag" },
 	};
 #endif
@@ -3594,7 +3594,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_RemoveLooseGameplayTags_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities" },
 		{ "Comment", "/** Remove Loose Gamplay Tag */" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 		{ "ToolTip", "Remove Loose Gamplay Tag" },
 	};
 #endif
@@ -3618,7 +3618,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_SaveAttributeSetToJson_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Json" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_SaveAttributeSetToJson_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "SaveAttributeSetToJson", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_SaveAttributeSetToJson_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SaveAttributeSetToJson_Statics::Function_MetaDataParams)) };
@@ -3651,7 +3651,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_SetArmor_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_SetArmor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "SetArmor", nullptr, nullptr, sizeof(LOCCharacter_eventSetArmor_Parms), Z_Construct_UFunction_ALOCCharacter_SetArmor_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetArmor_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_SetArmor_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetArmor_Statics::Function_MetaDataParams)) };
@@ -3684,7 +3684,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_SetCritical_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_SetCritical_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "SetCritical", nullptr, nullptr, sizeof(LOCCharacter_eventSetCritical_Parms), Z_Construct_UFunction_ALOCCharacter_SetCritical_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetCritical_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_SetCritical_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetCritical_Statics::Function_MetaDataParams)) };
@@ -3717,7 +3717,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_SetCriticalProb_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_SetCriticalProb_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "SetCriticalProb", nullptr, nullptr, sizeof(LOCCharacter_eventSetCriticalProb_Parms), Z_Construct_UFunction_ALOCCharacter_SetCriticalProb_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetCriticalProb_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_SetCriticalProb_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetCriticalProb_Statics::Function_MetaDataParams)) };
@@ -3750,7 +3750,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_SetEndurance_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_SetEndurance_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "SetEndurance", nullptr, nullptr, sizeof(LOCCharacter_eventSetEndurance_Parms), Z_Construct_UFunction_ALOCCharacter_SetEndurance_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetEndurance_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_SetEndurance_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetEndurance_Statics::Function_MetaDataParams)) };
@@ -3783,7 +3783,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_SetExperience_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_SetExperience_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "SetExperience", nullptr, nullptr, sizeof(LOCCharacter_eventSetExperience_Parms), Z_Construct_UFunction_ALOCCharacter_SetExperience_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetExperience_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_SetExperience_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetExperience_Statics::Function_MetaDataParams)) };
@@ -3816,7 +3816,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_SetHealth_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_SetHealth_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "SetHealth", nullptr, nullptr, sizeof(LOCCharacter_eventSetHealth_Parms), Z_Construct_UFunction_ALOCCharacter_SetHealth_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetHealth_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_SetHealth_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetHealth_Statics::Function_MetaDataParams)) };
@@ -3849,7 +3849,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_SetHealthRegen_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_SetHealthRegen_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "SetHealthRegen", nullptr, nullptr, sizeof(LOCCharacter_eventSetHealthRegen_Parms), Z_Construct_UFunction_ALOCCharacter_SetHealthRegen_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetHealthRegen_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_SetHealthRegen_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetHealthRegen_Statics::Function_MetaDataParams)) };
@@ -3882,7 +3882,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_SetIntellect_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_SetIntellect_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "SetIntellect", nullptr, nullptr, sizeof(LOCCharacter_eventSetIntellect_Parms), Z_Construct_UFunction_ALOCCharacter_SetIntellect_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetIntellect_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_SetIntellect_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetIntellect_Statics::Function_MetaDataParams)) };
@@ -3915,7 +3915,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_SetLevel_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_SetLevel_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "SetLevel", nullptr, nullptr, sizeof(LOCCharacter_eventSetLevel_Parms), Z_Construct_UFunction_ALOCCharacter_SetLevel_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetLevel_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_SetLevel_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetLevel_Statics::Function_MetaDataParams)) };
@@ -3948,7 +3948,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_SetMana_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_SetMana_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "SetMana", nullptr, nullptr, sizeof(LOCCharacter_eventSetMana_Parms), Z_Construct_UFunction_ALOCCharacter_SetMana_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetMana_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_SetMana_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetMana_Statics::Function_MetaDataParams)) };
@@ -3981,7 +3981,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_SetManaRegen_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_SetManaRegen_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "SetManaRegen", nullptr, nullptr, sizeof(LOCCharacter_eventSetManaRegen_Parms), Z_Construct_UFunction_ALOCCharacter_SetManaRegen_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetManaRegen_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_SetManaRegen_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetManaRegen_Statics::Function_MetaDataParams)) };
@@ -4014,7 +4014,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_SetMaxArmor_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_SetMaxArmor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "SetMaxArmor", nullptr, nullptr, sizeof(LOCCharacter_eventSetMaxArmor_Parms), Z_Construct_UFunction_ALOCCharacter_SetMaxArmor_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetMaxArmor_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_SetMaxArmor_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetMaxArmor_Statics::Function_MetaDataParams)) };
@@ -4047,7 +4047,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_SetMaxCritical_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_SetMaxCritical_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "SetMaxCritical", nullptr, nullptr, sizeof(LOCCharacter_eventSetMaxCritical_Parms), Z_Construct_UFunction_ALOCCharacter_SetMaxCritical_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetMaxCritical_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_SetMaxCritical_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetMaxCritical_Statics::Function_MetaDataParams)) };
@@ -4080,7 +4080,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_SetMaxCriticalProb_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_SetMaxCriticalProb_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "SetMaxCriticalProb", nullptr, nullptr, sizeof(LOCCharacter_eventSetMaxCriticalProb_Parms), Z_Construct_UFunction_ALOCCharacter_SetMaxCriticalProb_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetMaxCriticalProb_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_SetMaxCriticalProb_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetMaxCriticalProb_Statics::Function_MetaDataParams)) };
@@ -4113,7 +4113,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_SetMaxEndurance_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_SetMaxEndurance_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "SetMaxEndurance", nullptr, nullptr, sizeof(LOCCharacter_eventSetMaxEndurance_Parms), Z_Construct_UFunction_ALOCCharacter_SetMaxEndurance_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetMaxEndurance_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_SetMaxEndurance_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetMaxEndurance_Statics::Function_MetaDataParams)) };
@@ -4146,7 +4146,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_SetMaxExperience_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_SetMaxExperience_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "SetMaxExperience", nullptr, nullptr, sizeof(LOCCharacter_eventSetMaxExperience_Parms), Z_Construct_UFunction_ALOCCharacter_SetMaxExperience_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetMaxExperience_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_SetMaxExperience_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetMaxExperience_Statics::Function_MetaDataParams)) };
@@ -4179,7 +4179,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_SetMaxHealth_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_SetMaxHealth_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "SetMaxHealth", nullptr, nullptr, sizeof(LOCCharacter_eventSetMaxHealth_Parms), Z_Construct_UFunction_ALOCCharacter_SetMaxHealth_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetMaxHealth_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_SetMaxHealth_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetMaxHealth_Statics::Function_MetaDataParams)) };
@@ -4212,7 +4212,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_SetMaxHealthRegen_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_SetMaxHealthRegen_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "SetMaxHealthRegen", nullptr, nullptr, sizeof(LOCCharacter_eventSetMaxHealthRegen_Parms), Z_Construct_UFunction_ALOCCharacter_SetMaxHealthRegen_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetMaxHealthRegen_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_SetMaxHealthRegen_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetMaxHealthRegen_Statics::Function_MetaDataParams)) };
@@ -4245,7 +4245,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_SetMaxIntellect_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_SetMaxIntellect_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "SetMaxIntellect", nullptr, nullptr, sizeof(LOCCharacter_eventSetMaxIntellect_Parms), Z_Construct_UFunction_ALOCCharacter_SetMaxIntellect_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetMaxIntellect_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_SetMaxIntellect_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetMaxIntellect_Statics::Function_MetaDataParams)) };
@@ -4278,7 +4278,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_SetMaxMana_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_SetMaxMana_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "SetMaxMana", nullptr, nullptr, sizeof(LOCCharacter_eventSetMaxMana_Parms), Z_Construct_UFunction_ALOCCharacter_SetMaxMana_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetMaxMana_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_SetMaxMana_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetMaxMana_Statics::Function_MetaDataParams)) };
@@ -4311,7 +4311,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_SetMaxManaRegen_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_SetMaxManaRegen_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "SetMaxManaRegen", nullptr, nullptr, sizeof(LOCCharacter_eventSetMaxManaRegen_Parms), Z_Construct_UFunction_ALOCCharacter_SetMaxManaRegen_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetMaxManaRegen_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_SetMaxManaRegen_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetMaxManaRegen_Statics::Function_MetaDataParams)) };
@@ -4344,7 +4344,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_SetMaxSpeed_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_SetMaxSpeed_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "SetMaxSpeed", nullptr, nullptr, sizeof(LOCCharacter_eventSetMaxSpeed_Parms), Z_Construct_UFunction_ALOCCharacter_SetMaxSpeed_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetMaxSpeed_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_SetMaxSpeed_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetMaxSpeed_Statics::Function_MetaDataParams)) };
@@ -4377,7 +4377,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_SetMaxStamina_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_SetMaxStamina_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "SetMaxStamina", nullptr, nullptr, sizeof(LOCCharacter_eventSetMaxStamina_Parms), Z_Construct_UFunction_ALOCCharacter_SetMaxStamina_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetMaxStamina_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_SetMaxStamina_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetMaxStamina_Statics::Function_MetaDataParams)) };
@@ -4410,7 +4410,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_SetMaxStaminaRegen_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_SetMaxStaminaRegen_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "SetMaxStaminaRegen", nullptr, nullptr, sizeof(LOCCharacter_eventSetMaxStaminaRegen_Parms), Z_Construct_UFunction_ALOCCharacter_SetMaxStaminaRegen_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetMaxStaminaRegen_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_SetMaxStaminaRegen_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetMaxStaminaRegen_Statics::Function_MetaDataParams)) };
@@ -4443,7 +4443,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_SetMaxStrength_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_SetMaxStrength_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "SetMaxStrength", nullptr, nullptr, sizeof(LOCCharacter_eventSetMaxStrength_Parms), Z_Construct_UFunction_ALOCCharacter_SetMaxStrength_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetMaxStrength_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_SetMaxStrength_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetMaxStrength_Statics::Function_MetaDataParams)) };
@@ -4476,7 +4476,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_SetMaxWeaponDamage_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_SetMaxWeaponDamage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "SetMaxWeaponDamage", nullptr, nullptr, sizeof(LOCCharacter_eventSetMaxWeaponDamage_Parms), Z_Construct_UFunction_ALOCCharacter_SetMaxWeaponDamage_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetMaxWeaponDamage_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_SetMaxWeaponDamage_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetMaxWeaponDamage_Statics::Function_MetaDataParams)) };
@@ -4509,7 +4509,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_SetSpeed_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_SetSpeed_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "SetSpeed", nullptr, nullptr, sizeof(LOCCharacter_eventSetSpeed_Parms), Z_Construct_UFunction_ALOCCharacter_SetSpeed_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetSpeed_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_SetSpeed_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetSpeed_Statics::Function_MetaDataParams)) };
@@ -4542,7 +4542,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_SetStamina_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_SetStamina_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "SetStamina", nullptr, nullptr, sizeof(LOCCharacter_eventSetStamina_Parms), Z_Construct_UFunction_ALOCCharacter_SetStamina_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetStamina_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_SetStamina_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetStamina_Statics::Function_MetaDataParams)) };
@@ -4575,7 +4575,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_SetStaminaRegen_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_SetStaminaRegen_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "SetStaminaRegen", nullptr, nullptr, sizeof(LOCCharacter_eventSetStaminaRegen_Parms), Z_Construct_UFunction_ALOCCharacter_SetStaminaRegen_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetStaminaRegen_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_SetStaminaRegen_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetStaminaRegen_Statics::Function_MetaDataParams)) };
@@ -4608,7 +4608,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_SetStrength_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_SetStrength_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "SetStrength", nullptr, nullptr, sizeof(LOCCharacter_eventSetStrength_Parms), Z_Construct_UFunction_ALOCCharacter_SetStrength_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetStrength_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_SetStrength_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetStrength_Statics::Function_MetaDataParams)) };
@@ -4641,7 +4641,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALOCCharacter_SetWeaponDamage_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Abilities|Attributes" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALOCCharacter_SetWeaponDamage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALOCCharacter, nullptr, "SetWeaponDamage", nullptr, nullptr, sizeof(LOCCharacter_eventSetWeaponDamage_Parms), Z_Construct_UFunction_ALOCCharacter_SetWeaponDamage_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetWeaponDamage_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALOCCharacter_SetWeaponDamage_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALOCCharacter_SetWeaponDamage_Statics::Function_MetaDataParams)) };
@@ -4703,118 +4703,118 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 		(UObject* (*)())Z_Construct_UPackage__Script_LOC,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_ALOCCharacter_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_ALOCCharacter_ActivateAbility, "ActivateAbility" }, // 2424603490
-		{ &Z_Construct_UFunction_ALOCCharacter_AddLooseGameplayTag, "AddLooseGameplayTag" }, // 3490378323
-		{ &Z_Construct_UFunction_ALOCCharacter_ApplyGETOTargetData, "ApplyGETOTargetData" }, // 3762275441
-		{ &Z_Construct_UFunction_ALOCCharacter_CancelAbilityWithTags, "CancelAbilityWithTags" }, // 2161355275
-		{ &Z_Construct_UFunction_ALOCCharacter_CancelAbilityWithWithoutTags, "CancelAbilityWithWithoutTags" }, // 2163409287
-		{ &Z_Construct_UFunction_ALOCCharacter_ChangeAbilityLevelWithTags, "ChangeAbilityLevelWithTags" }, // 2585780996
-		{ &Z_Construct_UFunction_ALOCCharacter_GetArmor, "GetArmor" }, // 2257130418
-		{ &Z_Construct_UFunction_ALOCCharacter_GetCritical, "GetCritical" }, // 4289406002
-		{ &Z_Construct_UFunction_ALOCCharacter_GetCriticalProb, "GetCriticalProb" }, // 2598414596
-		{ &Z_Construct_UFunction_ALOCCharacter_GetEndurance, "GetEndurance" }, // 3450405647
-		{ &Z_Construct_UFunction_ALOCCharacter_GetExperience, "GetExperience" }, // 3034618110
-		{ &Z_Construct_UFunction_ALOCCharacter_GetHealth, "GetHealth" }, // 1054338797
-		{ &Z_Construct_UFunction_ALOCCharacter_GetHealthRegen, "GetHealthRegen" }, // 4035062092
-		{ &Z_Construct_UFunction_ALOCCharacter_GetIntellect, "GetIntellect" }, // 3122483835
-		{ &Z_Construct_UFunction_ALOCCharacter_GetLevel, "GetLevel" }, // 4294334936
-		{ &Z_Construct_UFunction_ALOCCharacter_GetMana, "GetMana" }, // 2694777782
-		{ &Z_Construct_UFunction_ALOCCharacter_GetManaRegen, "GetManaRegen" }, // 2843011623
-		{ &Z_Construct_UFunction_ALOCCharacter_GetMaxArmor, "GetMaxArmor" }, // 2692829918
-		{ &Z_Construct_UFunction_ALOCCharacter_GetMaxCritical, "GetMaxCritical" }, // 4047254338
-		{ &Z_Construct_UFunction_ALOCCharacter_GetMaxCriticalProb, "GetMaxCriticalProb" }, // 187644316
-		{ &Z_Construct_UFunction_ALOCCharacter_GetMaxEndurance, "GetMaxEndurance" }, // 2974106456
-		{ &Z_Construct_UFunction_ALOCCharacter_GetMaxExperience, "GetMaxExperience" }, // 3294821329
-		{ &Z_Construct_UFunction_ALOCCharacter_GetMaxHealth, "GetMaxHealth" }, // 3395966543
-		{ &Z_Construct_UFunction_ALOCCharacter_GetMaxHealthRegen, "GetMaxHealthRegen" }, // 267081879
-		{ &Z_Construct_UFunction_ALOCCharacter_GetMaxIntellect, "GetMaxIntellect" }, // 2127861341
-		{ &Z_Construct_UFunction_ALOCCharacter_GetMaxMana, "GetMaxMana" }, // 543355888
-		{ &Z_Construct_UFunction_ALOCCharacter_GetMaxManaRegen, "GetMaxManaRegen" }, // 3250289682
-		{ &Z_Construct_UFunction_ALOCCharacter_GetMaxSpeed, "GetMaxSpeed" }, // 2398447802
-		{ &Z_Construct_UFunction_ALOCCharacter_GetMaxStamina, "GetMaxStamina" }, // 365160211
-		{ &Z_Construct_UFunction_ALOCCharacter_GetMaxStaminaRegen, "GetMaxStaminaRegen" }, // 2878236126
-		{ &Z_Construct_UFunction_ALOCCharacter_GetMaxStrength, "GetMaxStrength" }, // 131868144
-		{ &Z_Construct_UFunction_ALOCCharacter_GetMaxWeaponDamage, "GetMaxWeaponDamage" }, // 3148411019
-		{ &Z_Construct_UFunction_ALOCCharacter_GetSpeed, "GetSpeed" }, // 3387141149
-		{ &Z_Construct_UFunction_ALOCCharacter_GetStamina, "GetStamina" }, // 1518344322
-		{ &Z_Construct_UFunction_ALOCCharacter_GetStaminaRegen, "GetStaminaRegen" }, // 3733342053
-		{ &Z_Construct_UFunction_ALOCCharacter_GetStrength, "GetStrength" }, // 486135151
-		{ &Z_Construct_UFunction_ALOCCharacter_GetWeaponDamage, "GetWeaponDamage" }, // 4019116984
-		{ &Z_Construct_UFunction_ALOCCharacter_GrantAbility, "GrantAbility" }, // 2525985727
-		{ &Z_Construct_UFunction_ALOCCharacter_InitializeAbility, "InitializeAbility" }, // 3186162872
-		{ &Z_Construct_UFunction_ALOCCharacter_InitializeAbilityMulti, "InitializeAbilityMulti" }, // 2647394673
-		{ &Z_Construct_UFunction_ALOCCharacter_LoadAttributeSetFromJson, "LoadAttributeSetFromJson" }, // 732895929
-		{ &Z_Construct_UFunction_ALOCCharacter_OnArmorChanged, "OnArmorChanged" }, // 946013964
-		{ &Z_Construct_UFunction_ALOCCharacter_OnCriticalChanged, "OnCriticalChanged" }, // 170623266
-		{ &Z_Construct_UFunction_ALOCCharacter_OnCriticalProbChanged, "OnCriticalProbChanged" }, // 2799569764
-		{ &Z_Construct_UFunction_ALOCCharacter_OnEnduranceChanged, "OnEnduranceChanged" }, // 1778715299
-		{ &Z_Construct_UFunction_ALOCCharacter_OnExperienceChanged, "OnExperienceChanged" }, // 3361856793
-		{ &Z_Construct_UFunction_ALOCCharacter_OnHealthChanged, "OnHealthChanged" }, // 71582871
-		{ &Z_Construct_UFunction_ALOCCharacter_OnHealthRegenChanged, "OnHealthRegenChanged" }, // 1188948400
-		{ &Z_Construct_UFunction_ALOCCharacter_OnIntellectChanged, "OnIntellectChanged" }, // 384574485
-		{ &Z_Construct_UFunction_ALOCCharacter_OnLevelChanged, "OnLevelChanged" }, // 2648174568
-		{ &Z_Construct_UFunction_ALOCCharacter_OnManaChanged, "OnManaChanged" }, // 3448074558
-		{ &Z_Construct_UFunction_ALOCCharacter_OnManaRegenChanged, "OnManaRegenChanged" }, // 3093092215
-		{ &Z_Construct_UFunction_ALOCCharacter_OnMaxArmorChanged, "OnMaxArmorChanged" }, // 808467054
-		{ &Z_Construct_UFunction_ALOCCharacter_OnMaxCriticalChanged, "OnMaxCriticalChanged" }, // 3299480665
-		{ &Z_Construct_UFunction_ALOCCharacter_OnMaxCriticalProbChanged, "OnMaxCriticalProbChanged" }, // 315678885
-		{ &Z_Construct_UFunction_ALOCCharacter_OnMaxEnduranceChanged, "OnMaxEnduranceChanged" }, // 3069343448
-		{ &Z_Construct_UFunction_ALOCCharacter_OnMaxExperienceChanged, "OnMaxExperienceChanged" }, // 1990595312
-		{ &Z_Construct_UFunction_ALOCCharacter_OnMaxHealthChanged, "OnMaxHealthChanged" }, // 2341221276
-		{ &Z_Construct_UFunction_ALOCCharacter_OnMaxHealthRegenChanged, "OnMaxHealthRegenChanged" }, // 2740917166
-		{ &Z_Construct_UFunction_ALOCCharacter_OnMaxIntellectChanged, "OnMaxIntellectChanged" }, // 2292863582
-		{ &Z_Construct_UFunction_ALOCCharacter_OnMaxManaChanged, "OnMaxManaChanged" }, // 2549079083
-		{ &Z_Construct_UFunction_ALOCCharacter_OnMaxManaRegenChanged, "OnMaxManaRegenChanged" }, // 1502784277
-		{ &Z_Construct_UFunction_ALOCCharacter_OnMaxSpeedChanged, "OnMaxSpeedChanged" }, // 1656274625
-		{ &Z_Construct_UFunction_ALOCCharacter_OnMaxStaminaChanged, "OnMaxStaminaChanged" }, // 3972210141
-		{ &Z_Construct_UFunction_ALOCCharacter_OnMaxStaminaRegenChanged, "OnMaxStaminaRegenChanged" }, // 674051749
-		{ &Z_Construct_UFunction_ALOCCharacter_OnMaxStrengthChanged, "OnMaxStrengthChanged" }, // 3111533793
-		{ &Z_Construct_UFunction_ALOCCharacter_OnMaxWeaponDamageChanged, "OnMaxWeaponDamageChanged" }, // 1894788597
-		{ &Z_Construct_UFunction_ALOCCharacter_OnSpeedChanged, "OnSpeedChanged" }, // 2575088951
-		{ &Z_Construct_UFunction_ALOCCharacter_OnStaminaChanged, "OnStaminaChanged" }, // 363670392
-		{ &Z_Construct_UFunction_ALOCCharacter_OnStaminaRegenChanged, "OnStaminaRegenChanged" }, // 2411126125
-		{ &Z_Construct_UFunction_ALOCCharacter_OnStrengthChanged, "OnStrengthChanged" }, // 3158230859
-		{ &Z_Construct_UFunction_ALOCCharacter_OnWeaponDamageChanged, "OnWeaponDamageChanged" }, // 3671174912
-		{ &Z_Construct_UFunction_ALOCCharacter_RemoveAbilityWithTags, "RemoveAbilityWithTags" }, // 2532061753
-		{ &Z_Construct_UFunction_ALOCCharacter_RemoveLooseGameplayTags, "RemoveLooseGameplayTags" }, // 3786983648
-		{ &Z_Construct_UFunction_ALOCCharacter_SaveAttributeSetToJson, "SaveAttributeSetToJson" }, // 81321986
-		{ &Z_Construct_UFunction_ALOCCharacter_SetArmor, "SetArmor" }, // 713798790
-		{ &Z_Construct_UFunction_ALOCCharacter_SetCritical, "SetCritical" }, // 3392287827
-		{ &Z_Construct_UFunction_ALOCCharacter_SetCriticalProb, "SetCriticalProb" }, // 1658001160
-		{ &Z_Construct_UFunction_ALOCCharacter_SetEndurance, "SetEndurance" }, // 767144089
-		{ &Z_Construct_UFunction_ALOCCharacter_SetExperience, "SetExperience" }, // 3028290523
-		{ &Z_Construct_UFunction_ALOCCharacter_SetHealth, "SetHealth" }, // 1689173578
-		{ &Z_Construct_UFunction_ALOCCharacter_SetHealthRegen, "SetHealthRegen" }, // 3035519441
-		{ &Z_Construct_UFunction_ALOCCharacter_SetIntellect, "SetIntellect" }, // 1268175542
-		{ &Z_Construct_UFunction_ALOCCharacter_SetLevel, "SetLevel" }, // 3383281807
-		{ &Z_Construct_UFunction_ALOCCharacter_SetMana, "SetMana" }, // 793561130
-		{ &Z_Construct_UFunction_ALOCCharacter_SetManaRegen, "SetManaRegen" }, // 1919777304
-		{ &Z_Construct_UFunction_ALOCCharacter_SetMaxArmor, "SetMaxArmor" }, // 4115261699
-		{ &Z_Construct_UFunction_ALOCCharacter_SetMaxCritical, "SetMaxCritical" }, // 695480253
-		{ &Z_Construct_UFunction_ALOCCharacter_SetMaxCriticalProb, "SetMaxCriticalProb" }, // 3830630017
-		{ &Z_Construct_UFunction_ALOCCharacter_SetMaxEndurance, "SetMaxEndurance" }, // 827102033
-		{ &Z_Construct_UFunction_ALOCCharacter_SetMaxExperience, "SetMaxExperience" }, // 3964649452
-		{ &Z_Construct_UFunction_ALOCCharacter_SetMaxHealth, "SetMaxHealth" }, // 206868193
-		{ &Z_Construct_UFunction_ALOCCharacter_SetMaxHealthRegen, "SetMaxHealthRegen" }, // 514119667
-		{ &Z_Construct_UFunction_ALOCCharacter_SetMaxIntellect, "SetMaxIntellect" }, // 1090252536
-		{ &Z_Construct_UFunction_ALOCCharacter_SetMaxMana, "SetMaxMana" }, // 277566139
-		{ &Z_Construct_UFunction_ALOCCharacter_SetMaxManaRegen, "SetMaxManaRegen" }, // 2397149237
-		{ &Z_Construct_UFunction_ALOCCharacter_SetMaxSpeed, "SetMaxSpeed" }, // 2296818739
-		{ &Z_Construct_UFunction_ALOCCharacter_SetMaxStamina, "SetMaxStamina" }, // 1901381972
-		{ &Z_Construct_UFunction_ALOCCharacter_SetMaxStaminaRegen, "SetMaxStaminaRegen" }, // 3878825100
-		{ &Z_Construct_UFunction_ALOCCharacter_SetMaxStrength, "SetMaxStrength" }, // 2117080753
-		{ &Z_Construct_UFunction_ALOCCharacter_SetMaxWeaponDamage, "SetMaxWeaponDamage" }, // 2239163738
-		{ &Z_Construct_UFunction_ALOCCharacter_SetSpeed, "SetSpeed" }, // 34934549
-		{ &Z_Construct_UFunction_ALOCCharacter_SetStamina, "SetStamina" }, // 3064329784
-		{ &Z_Construct_UFunction_ALOCCharacter_SetStaminaRegen, "SetStaminaRegen" }, // 646563098
-		{ &Z_Construct_UFunction_ALOCCharacter_SetStrength, "SetStrength" }, // 1484035745
-		{ &Z_Construct_UFunction_ALOCCharacter_SetWeaponDamage, "SetWeaponDamage" }, // 303103415
+		{ &Z_Construct_UFunction_ALOCCharacter_ActivateAbility, "ActivateAbility" }, // 3851971840
+		{ &Z_Construct_UFunction_ALOCCharacter_AddLooseGameplayTag, "AddLooseGameplayTag" }, // 300088362
+		{ &Z_Construct_UFunction_ALOCCharacter_ApplyGETOTargetData, "ApplyGETOTargetData" }, // 873579165
+		{ &Z_Construct_UFunction_ALOCCharacter_CancelAbilityWithTags, "CancelAbilityWithTags" }, // 65027083
+		{ &Z_Construct_UFunction_ALOCCharacter_CancelAbilityWithWithoutTags, "CancelAbilityWithWithoutTags" }, // 3749675901
+		{ &Z_Construct_UFunction_ALOCCharacter_ChangeAbilityLevelWithTags, "ChangeAbilityLevelWithTags" }, // 2242410997
+		{ &Z_Construct_UFunction_ALOCCharacter_GetArmor, "GetArmor" }, // 2395694847
+		{ &Z_Construct_UFunction_ALOCCharacter_GetCritical, "GetCritical" }, // 3407924196
+		{ &Z_Construct_UFunction_ALOCCharacter_GetCriticalProb, "GetCriticalProb" }, // 2459257879
+		{ &Z_Construct_UFunction_ALOCCharacter_GetEndurance, "GetEndurance" }, // 4057311908
+		{ &Z_Construct_UFunction_ALOCCharacter_GetExperience, "GetExperience" }, // 2821978638
+		{ &Z_Construct_UFunction_ALOCCharacter_GetHealth, "GetHealth" }, // 837887730
+		{ &Z_Construct_UFunction_ALOCCharacter_GetHealthRegen, "GetHealthRegen" }, // 2100693751
+		{ &Z_Construct_UFunction_ALOCCharacter_GetIntellect, "GetIntellect" }, // 2414435802
+		{ &Z_Construct_UFunction_ALOCCharacter_GetLevel, "GetLevel" }, // 1514090849
+		{ &Z_Construct_UFunction_ALOCCharacter_GetMana, "GetMana" }, // 1854338314
+		{ &Z_Construct_UFunction_ALOCCharacter_GetManaRegen, "GetManaRegen" }, // 3200158358
+		{ &Z_Construct_UFunction_ALOCCharacter_GetMaxArmor, "GetMaxArmor" }, // 3028433947
+		{ &Z_Construct_UFunction_ALOCCharacter_GetMaxCritical, "GetMaxCritical" }, // 691423269
+		{ &Z_Construct_UFunction_ALOCCharacter_GetMaxCriticalProb, "GetMaxCriticalProb" }, // 4096586585
+		{ &Z_Construct_UFunction_ALOCCharacter_GetMaxEndurance, "GetMaxEndurance" }, // 4269954394
+		{ &Z_Construct_UFunction_ALOCCharacter_GetMaxExperience, "GetMaxExperience" }, // 4185034430
+		{ &Z_Construct_UFunction_ALOCCharacter_GetMaxHealth, "GetMaxHealth" }, // 1001683185
+		{ &Z_Construct_UFunction_ALOCCharacter_GetMaxHealthRegen, "GetMaxHealthRegen" }, // 4152840994
+		{ &Z_Construct_UFunction_ALOCCharacter_GetMaxIntellect, "GetMaxIntellect" }, // 701076674
+		{ &Z_Construct_UFunction_ALOCCharacter_GetMaxMana, "GetMaxMana" }, // 3099048280
+		{ &Z_Construct_UFunction_ALOCCharacter_GetMaxManaRegen, "GetMaxManaRegen" }, // 3938156298
+		{ &Z_Construct_UFunction_ALOCCharacter_GetMaxSpeed, "GetMaxSpeed" }, // 1603446075
+		{ &Z_Construct_UFunction_ALOCCharacter_GetMaxStamina, "GetMaxStamina" }, // 3922332111
+		{ &Z_Construct_UFunction_ALOCCharacter_GetMaxStaminaRegen, "GetMaxStaminaRegen" }, // 65326335
+		{ &Z_Construct_UFunction_ALOCCharacter_GetMaxStrength, "GetMaxStrength" }, // 3568238720
+		{ &Z_Construct_UFunction_ALOCCharacter_GetMaxWeaponDamage, "GetMaxWeaponDamage" }, // 1741192180
+		{ &Z_Construct_UFunction_ALOCCharacter_GetSpeed, "GetSpeed" }, // 594143106
+		{ &Z_Construct_UFunction_ALOCCharacter_GetStamina, "GetStamina" }, // 3862858734
+		{ &Z_Construct_UFunction_ALOCCharacter_GetStaminaRegen, "GetStaminaRegen" }, // 439019066
+		{ &Z_Construct_UFunction_ALOCCharacter_GetStrength, "GetStrength" }, // 4225512859
+		{ &Z_Construct_UFunction_ALOCCharacter_GetWeaponDamage, "GetWeaponDamage" }, // 666331053
+		{ &Z_Construct_UFunction_ALOCCharacter_GrantAbility, "GrantAbility" }, // 4226194737
+		{ &Z_Construct_UFunction_ALOCCharacter_InitializeAbility, "InitializeAbility" }, // 85096453
+		{ &Z_Construct_UFunction_ALOCCharacter_InitializeAbilityMulti, "InitializeAbilityMulti" }, // 2462579427
+		{ &Z_Construct_UFunction_ALOCCharacter_LoadAttributeSetFromJson, "LoadAttributeSetFromJson" }, // 1501287133
+		{ &Z_Construct_UFunction_ALOCCharacter_OnArmorChanged, "OnArmorChanged" }, // 340818492
+		{ &Z_Construct_UFunction_ALOCCharacter_OnCriticalChanged, "OnCriticalChanged" }, // 793542713
+		{ &Z_Construct_UFunction_ALOCCharacter_OnCriticalProbChanged, "OnCriticalProbChanged" }, // 1745882191
+		{ &Z_Construct_UFunction_ALOCCharacter_OnEnduranceChanged, "OnEnduranceChanged" }, // 1496181902
+		{ &Z_Construct_UFunction_ALOCCharacter_OnExperienceChanged, "OnExperienceChanged" }, // 307822708
+		{ &Z_Construct_UFunction_ALOCCharacter_OnHealthChanged, "OnHealthChanged" }, // 400328884
+		{ &Z_Construct_UFunction_ALOCCharacter_OnHealthRegenChanged, "OnHealthRegenChanged" }, // 3841112022
+		{ &Z_Construct_UFunction_ALOCCharacter_OnIntellectChanged, "OnIntellectChanged" }, // 2328936436
+		{ &Z_Construct_UFunction_ALOCCharacter_OnLevelChanged, "OnLevelChanged" }, // 3946163733
+		{ &Z_Construct_UFunction_ALOCCharacter_OnManaChanged, "OnManaChanged" }, // 3809022857
+		{ &Z_Construct_UFunction_ALOCCharacter_OnManaRegenChanged, "OnManaRegenChanged" }, // 3919392414
+		{ &Z_Construct_UFunction_ALOCCharacter_OnMaxArmorChanged, "OnMaxArmorChanged" }, // 2854040192
+		{ &Z_Construct_UFunction_ALOCCharacter_OnMaxCriticalChanged, "OnMaxCriticalChanged" }, // 2794570553
+		{ &Z_Construct_UFunction_ALOCCharacter_OnMaxCriticalProbChanged, "OnMaxCriticalProbChanged" }, // 2650188365
+		{ &Z_Construct_UFunction_ALOCCharacter_OnMaxEnduranceChanged, "OnMaxEnduranceChanged" }, // 966298974
+		{ &Z_Construct_UFunction_ALOCCharacter_OnMaxExperienceChanged, "OnMaxExperienceChanged" }, // 1285886849
+		{ &Z_Construct_UFunction_ALOCCharacter_OnMaxHealthChanged, "OnMaxHealthChanged" }, // 3980267635
+		{ &Z_Construct_UFunction_ALOCCharacter_OnMaxHealthRegenChanged, "OnMaxHealthRegenChanged" }, // 3682285258
+		{ &Z_Construct_UFunction_ALOCCharacter_OnMaxIntellectChanged, "OnMaxIntellectChanged" }, // 2431837048
+		{ &Z_Construct_UFunction_ALOCCharacter_OnMaxManaChanged, "OnMaxManaChanged" }, // 3883857337
+		{ &Z_Construct_UFunction_ALOCCharacter_OnMaxManaRegenChanged, "OnMaxManaRegenChanged" }, // 2818525024
+		{ &Z_Construct_UFunction_ALOCCharacter_OnMaxSpeedChanged, "OnMaxSpeedChanged" }, // 3719123680
+		{ &Z_Construct_UFunction_ALOCCharacter_OnMaxStaminaChanged, "OnMaxStaminaChanged" }, // 1601227807
+		{ &Z_Construct_UFunction_ALOCCharacter_OnMaxStaminaRegenChanged, "OnMaxStaminaRegenChanged" }, // 2692582917
+		{ &Z_Construct_UFunction_ALOCCharacter_OnMaxStrengthChanged, "OnMaxStrengthChanged" }, // 1677839995
+		{ &Z_Construct_UFunction_ALOCCharacter_OnMaxWeaponDamageChanged, "OnMaxWeaponDamageChanged" }, // 2652768478
+		{ &Z_Construct_UFunction_ALOCCharacter_OnSpeedChanged, "OnSpeedChanged" }, // 3576306901
+		{ &Z_Construct_UFunction_ALOCCharacter_OnStaminaChanged, "OnStaminaChanged" }, // 2531673606
+		{ &Z_Construct_UFunction_ALOCCharacter_OnStaminaRegenChanged, "OnStaminaRegenChanged" }, // 1747936646
+		{ &Z_Construct_UFunction_ALOCCharacter_OnStrengthChanged, "OnStrengthChanged" }, // 1091766410
+		{ &Z_Construct_UFunction_ALOCCharacter_OnWeaponDamageChanged, "OnWeaponDamageChanged" }, // 459447752
+		{ &Z_Construct_UFunction_ALOCCharacter_RemoveAbilityWithTags, "RemoveAbilityWithTags" }, // 1286287197
+		{ &Z_Construct_UFunction_ALOCCharacter_RemoveLooseGameplayTags, "RemoveLooseGameplayTags" }, // 2022568226
+		{ &Z_Construct_UFunction_ALOCCharacter_SaveAttributeSetToJson, "SaveAttributeSetToJson" }, // 2129829337
+		{ &Z_Construct_UFunction_ALOCCharacter_SetArmor, "SetArmor" }, // 1213875961
+		{ &Z_Construct_UFunction_ALOCCharacter_SetCritical, "SetCritical" }, // 3474565186
+		{ &Z_Construct_UFunction_ALOCCharacter_SetCriticalProb, "SetCriticalProb" }, // 1496972902
+		{ &Z_Construct_UFunction_ALOCCharacter_SetEndurance, "SetEndurance" }, // 1433235234
+		{ &Z_Construct_UFunction_ALOCCharacter_SetExperience, "SetExperience" }, // 3625981362
+		{ &Z_Construct_UFunction_ALOCCharacter_SetHealth, "SetHealth" }, // 3858357856
+		{ &Z_Construct_UFunction_ALOCCharacter_SetHealthRegen, "SetHealthRegen" }, // 3435284375
+		{ &Z_Construct_UFunction_ALOCCharacter_SetIntellect, "SetIntellect" }, // 662058059
+		{ &Z_Construct_UFunction_ALOCCharacter_SetLevel, "SetLevel" }, // 4038178411
+		{ &Z_Construct_UFunction_ALOCCharacter_SetMana, "SetMana" }, // 3220404800
+		{ &Z_Construct_UFunction_ALOCCharacter_SetManaRegen, "SetManaRegen" }, // 757943612
+		{ &Z_Construct_UFunction_ALOCCharacter_SetMaxArmor, "SetMaxArmor" }, // 1648638725
+		{ &Z_Construct_UFunction_ALOCCharacter_SetMaxCritical, "SetMaxCritical" }, // 525554026
+		{ &Z_Construct_UFunction_ALOCCharacter_SetMaxCriticalProb, "SetMaxCriticalProb" }, // 371351507
+		{ &Z_Construct_UFunction_ALOCCharacter_SetMaxEndurance, "SetMaxEndurance" }, // 3290473940
+		{ &Z_Construct_UFunction_ALOCCharacter_SetMaxExperience, "SetMaxExperience" }, // 1285442082
+		{ &Z_Construct_UFunction_ALOCCharacter_SetMaxHealth, "SetMaxHealth" }, // 2005315376
+		{ &Z_Construct_UFunction_ALOCCharacter_SetMaxHealthRegen, "SetMaxHealthRegen" }, // 2945296210
+		{ &Z_Construct_UFunction_ALOCCharacter_SetMaxIntellect, "SetMaxIntellect" }, // 275693663
+		{ &Z_Construct_UFunction_ALOCCharacter_SetMaxMana, "SetMaxMana" }, // 2739629186
+		{ &Z_Construct_UFunction_ALOCCharacter_SetMaxManaRegen, "SetMaxManaRegen" }, // 3520546216
+		{ &Z_Construct_UFunction_ALOCCharacter_SetMaxSpeed, "SetMaxSpeed" }, // 202779079
+		{ &Z_Construct_UFunction_ALOCCharacter_SetMaxStamina, "SetMaxStamina" }, // 785655536
+		{ &Z_Construct_UFunction_ALOCCharacter_SetMaxStaminaRegen, "SetMaxStaminaRegen" }, // 3909152424
+		{ &Z_Construct_UFunction_ALOCCharacter_SetMaxStrength, "SetMaxStrength" }, // 550886764
+		{ &Z_Construct_UFunction_ALOCCharacter_SetMaxWeaponDamage, "SetMaxWeaponDamage" }, // 2762739531
+		{ &Z_Construct_UFunction_ALOCCharacter_SetSpeed, "SetSpeed" }, // 3055451553
+		{ &Z_Construct_UFunction_ALOCCharacter_SetStamina, "SetStamina" }, // 666718214
+		{ &Z_Construct_UFunction_ALOCCharacter_SetStaminaRegen, "SetStaminaRegen" }, // 387634894
+		{ &Z_Construct_UFunction_ALOCCharacter_SetStrength, "SetStrength" }, // 3089493225
+		{ &Z_Construct_UFunction_ALOCCharacter_SetWeaponDamage, "SetWeaponDamage" }, // 3178195534
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ALOCCharacter_Statics::Class_MetaDataParams[] = {
 		{ "HideCategories", "Navigation" },
-		{ "IncludePath", "LOCCharacter.h" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "IncludePath", "Character/Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
 #if WITH_METADATA
@@ -4823,7 +4823,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 		{ "Category", "Camera" },
 		{ "Comment", "/** Camera boom positioning the camera behind the character */" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 		{ "ToolTip", "Camera boom positioning the camera behind the character" },
 	};
 #endif
@@ -4834,7 +4834,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 		{ "Category", "Camera" },
 		{ "Comment", "/** Follow camera */" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 		{ "ToolTip", "Follow camera" },
 	};
 #endif
@@ -4844,7 +4844,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 		{ "Category", "Abilities" },
 		{ "Comment", "/** Gameplay Ability System Component */" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 		{ "ToolTip", "Gameplay Ability System Component" },
 	};
 #endif
@@ -4853,7 +4853,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ALOCCharacter_Statics::NewProp_AttributeData_MetaData[] = {
 		{ "Category", "JsonData" },
 		{ "Comment", "/** Struct for save attributeset */" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 		{ "ToolTip", "Struct for save attributeset" },
 	};
 #endif
@@ -4862,7 +4862,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ALOCCharacter_Statics::NewProp_BaseTurnRate_MetaData[] = {
 		{ "Category", "Camera" },
 		{ "Comment", "/** Base turn rate, in deg/sec. Other scaling may affect final turn rate. */" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 		{ "ToolTip", "Base turn rate, in deg/sec. Other scaling may affect final turn rate." },
 	};
 #endif
@@ -4871,7 +4871,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ALOCCharacter_Statics::NewProp_BaseLookUpRate_MetaData[] = {
 		{ "Category", "Camera" },
 		{ "Comment", "/** Base look up/down rate, in deg/sec. Other scaling may affect final rate. */" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 		{ "ToolTip", "Base look up/down rate, in deg/sec. Other scaling may affect final rate." },
 	};
 #endif
@@ -4880,7 +4880,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ALOCCharacter_Statics::NewProp_AttributeSet_MetaData[] = {
 		{ "Comment", "/** AttributeSet?? ???????\xdd\xb4\xcf\xb4?.*/" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/LOCCharacter.h" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 		{ "NativeConst", "" },
 		{ "ToolTip", "AttributeSet?? ???????\xdd\xb4\xcf\xb4?." },
 	};
@@ -4925,7 +4925,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ALOCCharacter, 2888112149);
+	IMPLEMENT_CLASS(ALOCCharacter, 1964254244);
 	template<> LOC_API UClass* StaticClass<ALOCCharacter>()
 	{
 		return ALOCCharacter::StaticClass();

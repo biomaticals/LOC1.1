@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "Zone/ProhibitedZone.h"
+#include "..\public\ProhibitedZone.h"
 
 AProhibitedZone::AProhibitedZone()
 {

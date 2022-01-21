@@ -1,6 +1,6 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
-#include "LOCCharacter.h"
+#include "..\Public\LOCCharacter.h"
 #include "HeadMountedDisplayFunctionLibrary.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
@@ -15,7 +15,7 @@
 
 /**  AbilitySystem 컴포넌트와 사용자정의 어트리뷰트세트 추가 */
 #include "AbilitySystemComponent.h"
-#include "LOCAttributeSet.h"
+#include "..\..\GameplayAbilitySystem\AttributeSet\public\LOCAttributeSet.h"
 
 
 //////////////////////////////////////////////////////////////////////////

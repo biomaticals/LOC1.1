@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "LOC/Public/Zone/Zone.h"
+#include "Source/Zone/public/Zone.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -38,7 +38,7 @@ void EmptyLinkFunctionForGeneratedCodeZone() {}
 		return EZone_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EZone(EZone_StaticEnum, TEXT("/Script/LOC"), TEXT("EZone"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_LOC_EZone_Hash() { return 3554426305U; }
+	uint32 Get_Z_Construct_UEnum_LOC_EZone_Hash() { return 591697597U; }
 	UEnum* Z_Construct_UEnum_LOC_EZone()
 	{
 #if WITH_HOT_RELOAD
@@ -60,7 +60,7 @@ void EmptyLinkFunctionForGeneratedCodeZone() {}
 				{ "BlueprintType", "true" },
 				{ "DangerZone.DisplayName", "DangerZone" },
 				{ "DangerZone.Name", "EZone::DangerZone" },
-				{ "ModuleRelativePath", "Public/Zone/Zone.h" },
+				{ "ModuleRelativePath", "Zone/public/Zone.h" },
 				{ "ProhibitedZone.DisplayName", "ProhibitedZone" },
 				{ "ProhibitedZone.Name", "EZone::ProhibitedZone" },
 				{ "SafetyZone.DisplayName", "SafetyZone" },
@@ -183,7 +183,7 @@ void EmptyLinkFunctionForGeneratedCodeZone() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AZone_OnActorBeginOverlap_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Public/Zone/Zone.h" },
+		{ "ModuleRelativePath", "Zone/public/Zone.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AZone_OnActorBeginOverlap_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AZone, nullptr, "OnActorBeginOverlap", nullptr, nullptr, sizeof(Zone_eventOnActorBeginOverlap_Parms), Z_Construct_UFunction_AZone_OnActorBeginOverlap_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AZone_OnActorBeginOverlap_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00420400, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AZone_OnActorBeginOverlap_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AZone_OnActorBeginOverlap_Statics::Function_MetaDataParams)) };
@@ -205,7 +205,7 @@ void EmptyLinkFunctionForGeneratedCodeZone() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AZone_SetZoneNameTag_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Public/Zone/Zone.h" },
+		{ "ModuleRelativePath", "Zone/public/Zone.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AZone_SetZoneNameTag_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AZone, nullptr, "SetZoneNameTag", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AZone_SetZoneNameTag_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AZone_SetZoneNameTag_Statics::Function_MetaDataParams)) };
@@ -251,20 +251,20 @@ void EmptyLinkFunctionForGeneratedCodeZone() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_LOC,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AZone_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_AZone_OnActorBeginOverlap, "OnActorBeginOverlap" }, // 197491961
-		{ &Z_Construct_UFunction_AZone_SetZoneNameTag, "SetZoneNameTag" }, // 1543879922
+		{ &Z_Construct_UFunction_AZone_OnActorBeginOverlap, "OnActorBeginOverlap" }, // 721816764
+		{ &Z_Construct_UFunction_AZone_SetZoneNameTag, "SetZoneNameTag" }, // 4176909258
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AZone_Statics::Class_MetaDataParams[] = {
-		{ "IncludePath", "Zone/Zone.h" },
-		{ "ModuleRelativePath", "Public/Zone/Zone.h" },
+		{ "IncludePath", "Zone/public/Zone.h" },
+		{ "ModuleRelativePath", "Zone/public/Zone.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_AZone_Statics::NewProp_ZoneType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AZone_Statics::NewProp_ZoneType_MetaData[] = {
 		{ "Category", "Zone" },
-		{ "ModuleRelativePath", "Public/Zone/Zone.h" },
+		{ "ModuleRelativePath", "Zone/public/Zone.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UClass_AZone_Statics::NewProp_ZoneType = { "ZoneType", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AZone, ZoneType), Z_Construct_UEnum_LOC_EZone, METADATA_PARAMS(Z_Construct_UClass_AZone_Statics::NewProp_ZoneType_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AZone_Statics::NewProp_ZoneType_MetaData)) };
@@ -272,14 +272,14 @@ void EmptyLinkFunctionForGeneratedCodeZone() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AZone_Statics::NewProp_CollisionMesh_MetaData[] = {
 		{ "Category", "Zone" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/Zone/Zone.h" },
+		{ "ModuleRelativePath", "Zone/public/Zone.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AZone_Statics::NewProp_CollisionMesh = { "CollisionMesh", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AZone, CollisionMesh), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AZone_Statics::NewProp_CollisionMesh_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AZone_Statics::NewProp_CollisionMesh_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AZone_Statics::NewProp_TagContainer_MetaData[] = {
 		{ "Category", "Zone" },
-		{ "ModuleRelativePath", "Public/Zone/Zone.h" },
+		{ "ModuleRelativePath", "Zone/public/Zone.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_AZone_Statics::NewProp_TagContainer = { "TagContainer", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AZone, TagContainer), Z_Construct_UScriptStruct_FGameplayTagContainer, METADATA_PARAMS(Z_Construct_UClass_AZone_Statics::NewProp_TagContainer_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AZone_Statics::NewProp_TagContainer_MetaData)) };
@@ -316,7 +316,7 @@ void EmptyLinkFunctionForGeneratedCodeZone() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AZone, 2785965215);
+	IMPLEMENT_CLASS(AZone, 1403128144);
 	template<> LOC_API UClass* StaticClass<AZone>()
 	{
 		return AZone::StaticClass();

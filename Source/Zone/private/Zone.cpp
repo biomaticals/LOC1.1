@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "Zone/Zone.h"
+#include "..\public\Zone.h"
 
 // Sets default values
 AZone::AZone()

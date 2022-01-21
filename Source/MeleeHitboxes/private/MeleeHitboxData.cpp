@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "MeleeHitboxData.h"
+#include "..\public\MeleeHitboxData.h"
 
 TArray<FMeleeHitSphereDefinition> UMeleeHitboxData::GetMeleeHitSpheres(TArray<int> indexes)
 {

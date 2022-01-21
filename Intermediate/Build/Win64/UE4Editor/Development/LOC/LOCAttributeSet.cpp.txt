@@ -1,5 +1,5 @@
-C:\Users\bioma\Documents\Unreal Projects\LOC\Intermediate\Build\Win64\UE4Editor\Development\LOC\Definitions.LOC.h
-C:\Users\bioma\Documents\Unreal Projects\LOC\Source\LOC\Public\LOCAttributeSet.h
+C:\Users\bioma\Documents\GitHub\LOC\Intermediate\Build\Win64\UE4Editor\Development\LOC\Definitions.LOC.h
+C:\Users\bioma\Documents\GitHub\LOC\Source\GameplayAbilitySystem\AttributeSet\private\..\public\LOCAttributeSet.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public\AttributeSet.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Engine/CurveTable.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CurveTable.generated.h
@@ -51,8 +51,8 @@ C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\Runtime\GameplayAbilities\Sou
 C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\Runtime\GameplayAbilities\Intermediate\Build\Win64\UE4Editor\Inc\GameplayAbilities\AbilitySystemReplicationProxyInterface.generated.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Net\Core\Public\Net/Core/PushModel/PushModel.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\Runtime\GameplayAbilities\Intermediate\Build\Win64\UE4Editor\Inc\GameplayAbilities\AbilitySystemComponent.generated.h
-C:\Users\bioma\Documents\Unreal Projects\LOC\Intermediate\Build\Win64\UE4Editor\Inc\LOC\LOCAttributeSet.generated.h
-C:\Users\bioma\Documents\Unreal Projects\LOC\Source\LOC\Public\LOCCharacter.h
+C:\Users\bioma\Documents\GitHub\LOC\Intermediate\Build\Win64\UE4Editor\Inc\LOC\LOCAttributeSet.generated.h
+C:\Users\bioma\Documents\GitHub\LOC\Source\GameplayAbilitySystem\AttributeSet\private\..\..\..\Character\Public\LOCCharacter.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/CharacterMovementReplication.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CharacterMovementReplication.generated.h
@@ -61,5 +61,5 @@ C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\In
 C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public\AbilitySystemInterface.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\Runtime\GameplayAbilities\Intermediate\Build\Win64\UE4Editor\Inc\GameplayAbilities\AbilitySystemInterface.generated.h
-C:\Users\bioma\Documents\Unreal Projects\LOC\Intermediate\Build\Win64\UE4Editor\Inc\LOC\LOCCharacter.generated.h
+C:\Users\bioma\Documents\GitHub\LOC\Intermediate\Build\Win64\UE4Editor\Inc\LOC\LOCCharacter.generated.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public\GameplayEffectExtension.h

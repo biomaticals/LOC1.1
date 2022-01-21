@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "LOC/Public/Zone/SafetyZone.h"
+#include "Source/Zone/public/SafetyZone.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -41,8 +41,8 @@ void EmptyLinkFunctionForGeneratedCodeSafetyZone() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASafetyZone_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n * \n */" },
-		{ "IncludePath", "Zone/SafetyZone.h" },
-		{ "ModuleRelativePath", "Public/Zone/SafetyZone.h" },
+		{ "IncludePath", "Zone/public/SafetyZone.h" },
+		{ "ModuleRelativePath", "Zone/public/SafetyZone.h" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ASafetyZone_Statics::StaticCppClassTypeInfo = {
@@ -72,7 +72,7 @@ void EmptyLinkFunctionForGeneratedCodeSafetyZone() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ASafetyZone, 2477884719);
+	IMPLEMENT_CLASS(ASafetyZone, 4251587531);
 	template<> LOC_API UClass* StaticClass<ASafetyZone>()
 	{
 		return ASafetyZone::StaticClass();

@@ -2,12 +2,12 @@
 	"Targets": [
 		{
 			"Name": "LOC",
-			"Path": "D:\\UnrealProjects\\LOC1.1\\LOC0512\\Source\\LOC.Target.cs",
+			"Path": "C:\\Users\\bioma\\Documents\\GitHub\\LOC\\Source\\LOC.Target.cs",
 			"Type": "Game"
 		},
 		{
 			"Name": "LOCEditor",
-			"Path": "D:\\UnrealProjects\\LOC1.1\\LOC0512\\Source\\LOCEditor.Target.cs",
+			"Path": "C:\\Users\\bioma\\Documents\\GitHub\\LOC\\Source\\LOCEditor.Target.cs",
 			"Type": "Editor"
 		}
 	]

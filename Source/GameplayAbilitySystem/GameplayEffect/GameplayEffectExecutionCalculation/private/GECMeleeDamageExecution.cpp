@@ -1,8 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "GECMeleeDamageExecution.h"
-#include "LOCAttributeSet.h"
+#include "..\public\GECMeleeDamageExecution.h"
+#include "..\..\..\AttributeSet\public\LOCAttributeSet.h"
 #include "AbilitySystemComponent.h"
 
 //Helper struct for fetching the stats necessary for the melee calculation.

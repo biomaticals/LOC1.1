@@ -1,5 +1,5 @@
-C:\Users\bioma\Documents\GitHub\LOC0527\Intermediate\Build\Win64\UE4Editor\Development\LOC\Definitions.LOC.h
-C:\Users\bioma\Documents\GitHub\LOC0527\Source\LOC\Public\MyBehaviorTree.h
+C:\Users\bioma\Documents\GitHub\LOC\Intermediate\Build\Win64\UE4Editor\Development\LOC\Definitions.LOC.h
+C:\Users\bioma\Documents\GitHub\LOC\Source\BehaviorTree\Private\..\Public\MyBehaviorTree.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\AIModule\Classes\BehaviorTree/BehaviorTree.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\AIModule\Classes\BehaviorTree/BTCompositeNode.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\AIModule\Classes\BehaviorTree/BTNode.h
@@ -37,4 +37,4 @@ C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\In
 C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\BTNode.generated.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\BTCompositeNode.generated.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\BehaviorTree.generated.h
-C:\Users\bioma\Documents\GitHub\LOC0527\Intermediate\Build\Win64\UE4Editor\Inc\LOC\MyBehaviorTree.generated.h
+C:\Users\bioma\Documents\GitHub\LOC\Intermediate\Build\Win64\UE4Editor\Inc\LOC\MyBehaviorTree.generated.h

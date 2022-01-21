@@ -3,7 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Zone/Zone.h"
+#include "Zone.h"
 #include "DangerZone.generated.h"
 
 /**
