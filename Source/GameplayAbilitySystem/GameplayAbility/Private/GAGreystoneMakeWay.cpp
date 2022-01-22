@@ -1,7 +1,9 @@
 #include "..\Public\GAGreystoneMakeWay.h"
+#include "..\..\AttributeSet\public\LOCAttributeSet.h"
 #include "GameplayAbilitySystem/GameplayAbility/Public/GAGreystoneMakeWay.h"
 #include "Abilities/Tasks/AbilityTask_WaitGameplayEvent.h"
 #include "Kismet/KismetSystemLibrary.h"
+
 
 UGAGreystoneMakeWay::UGAGreystoneMakeWay()
 {
@@ -73,15 +75,29 @@ void UGAGreystoneMakeWay::OnHit(const FGameplayEventData Payload)
 
 void UGAGreystoneMakeWay::ScanEnemies()
 {
-	FVector SpherePos = GetCharacterInfo()->GetActorLocation();
 	UObject* World = GetWorld();
+	FVector SpherePos = GetCharacterInfo()->GetActorLocation();
+	const float SphereRadius = 300;
+	TArray<TEnumAsByte< EObjectTypeQuery>> TargetObjectType;
 	TargetObjectType.Add(UEngineTypes::ConvertToObjectType(ECollisionChannel::ECC_Pawn));
-	SphereRadius = 300;
 	TArray<AActor*> OverlappedActors;
-
 	UKismetSystemLibrary::SphereOverlapActors(World, SpherePos, SphereRadius, TargetObjectType, nullptr, ActorsToIgnore, OverlappedActors);
-	for(AActor Actor : OverlappedActors)
+
+	//DotInitializer.
+	//UGameplayEffect* DOT;
+	//UGameplayEffect* Dot;
+	GEforTarget->DurationPolicy = EGameplayEffectDurationType::Instant;
+	FGameplayModifierInfo ModifierInfo;
+	
+	//ModifierInfo.Attribute = TEXT("LOCAttributeSet.Health");
+	GetAbilitySystemComponentFromActorInfo()->GetSet<ULOCAttributeSet>()->Health;
+	
+	//ModifierInfo.ModifierOp.Add(EGameplayModOp::Additive);
+	ModifierInfo.ModifierMagnitude = FGameplayEffectModifierMagnitude(-1);
+	GEforTarget->Modifiers.Add(ModifierInfo);
+	for (AActor* Actor : OverlappedActors)
 	{
 
+		//ApplyGameplayEffectToTarget();
 	}
 }

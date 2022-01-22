@@ -25,8 +25,6 @@ public:
 		void ScanEnemies();
 
 public:
-
-
 	UPROPERTY(BlueprintReadWrite, Category = "Default")
 		int32 CurrentHitCount;
 
@@ -37,16 +35,12 @@ public:
 		UAnimMontage* SkillMontage;
 
 	UPROPERTY(EditAnywhere, Category = "Default")
-		UGameplayEffect* GEforTaget;
+		UGameplayEffect* GEforTarget;
 
 	UPROPERTY(EditAnywhere, Category = "Default")
 		float GELevelforTaget;
 
-	UPROPERTY(EditAnywhere, Category = "Default")
-		float SphereRadius;
 
-	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "Default")
-		TArray<TEnumAsByte< EObjectTypeQuery>> TargetObjectType;
 
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "Default")
 		TArray<AActor*> ActorsToIgnore;
