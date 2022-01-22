@@ -70,10 +70,10 @@ C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\Runtime\GameplayAbilities\Sou
 C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\Runtime\GameplayAbilities\Intermediate\Build\Win64\UE4Editor\Inc\GameplayAbilities\AbilityTask.generated.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\Runtime\GameplayAbilities\Intermediate\Build\Win64\UE4Editor\Inc\GameplayAbilities\AbilityTask_WaitGameplayEvent.generated.h
 C:\Users\bioma\Documents\GitHub\LOC\Intermediate\Build\Win64\UE4Editor\Inc\LOC\GAGreystoneMakeWay.generated.h
+C:\Users\bioma\Documents\GitHub\LOC\Source\GameplayAbilitySystem\GameplayAbility\Private\..\..\AttributeSet\public\LOCAttributeSet.h
+C:\Users\bioma\Documents\GitHub\LOC\Intermediate\Build\Win64\UE4Editor\Inc\LOC\LOCAttributeSet.generated.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Kismet/KismetSystemLibrary.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\UObject/PropertyAccessUtil.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Engine/CollisionProfile.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CollisionProfile.generated.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\KismetSystemLibrary.generated.h
-C:\Users\bioma\Documents\GitHub\LOC\Source\GameplayAbilitySystem\GameplayAbility\Private\..\..\AttributeSet\public\LOCAttributeSet.h
-C:\Users\bioma\Documents\GitHub\LOC\Intermediate\Build\Win64\UE4Editor\Inc\LOC\LOCAttributeSet.generated.h

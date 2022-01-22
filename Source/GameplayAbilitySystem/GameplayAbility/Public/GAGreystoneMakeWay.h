@@ -40,8 +40,6 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Default")
 		float GELevelforTaget;
 
-
-
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "Default")
 		TArray<AActor*> ActorsToIgnore;
 };

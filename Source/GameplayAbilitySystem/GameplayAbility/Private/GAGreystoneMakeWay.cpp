@@ -82,15 +82,12 @@ void UGAGreystoneMakeWay::ScanEnemies()
 	TargetObjectType.Add(UEngineTypes::ConvertToObjectType(ECollisionChannel::ECC_Pawn));
 	TArray<AActor*> OverlappedActors;
 	UKismetSystemLibrary::SphereOverlapActors(World, SpherePos, SphereRadius, TargetObjectType, nullptr, ActorsToIgnore, OverlappedActors);
-
-	//DotInitializer.
-	//UGameplayEffect* DOT;
-	//UGameplayEffect* Dot;
+	
 	GEforTarget->DurationPolicy = EGameplayEffectDurationType::Instant;
 	FGameplayModifierInfo ModifierInfo;
 	
-	//ModifierInfo.Attribute = TEXT("LOCAttributeSet.Health");
-	GetAbilitySystemComponentFromActorInfo()->GetSet<ULOCAttributeSet>()->Health;
+	//ModifierInfo.Attribute = "LOCAttributeSet.Health";
+	ModifierInfo.Attribute = ULOCAttributeSet::GetHealthAttribute();
 	
 	//ModifierInfo.ModifierOp.Add(EGameplayModOp::Additive);
 	ModifierInfo.ModifierMagnitude = FGameplayEffectModifierMagnitude(-1);
