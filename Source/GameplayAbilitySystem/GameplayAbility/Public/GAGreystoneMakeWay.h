@@ -33,6 +33,4 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = "Default")
 		float GELevelforTaget;
-
-
 };

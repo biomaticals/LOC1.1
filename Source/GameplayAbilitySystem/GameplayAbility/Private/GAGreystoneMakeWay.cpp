@@ -16,6 +16,12 @@ void UGAGreystoneMakeWay::ActivateAbility(const FGameplayAbilitySpecHandle Handl
 	//ALOCCharacter* Owner = GetCharacterInfo();
 	//FGameplayAbilityActivationInfo a;
 	//Owner->AbilitySystemComponent->PlayMontage(nullptr,a,SkillMontage,1.0,"none",0.0);
+	UAbilitySystemComponent* AbilitySystemComponent = GetAbilitySystemComponentFromActorInfo();
+	UGameplayAbility* GameplayAbility = AbilitySystemComponent->GetAnimatingAbility();
+
+	AbilitySystemComponentt->PlayMontage(GameplayAbility, ActivationInfo, SkillMontage, 1.0, "none", 0.0);
+	
+	//PlayMontageAndWait(ActorInfo)
 	if (GEngine)
 		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Some debug message!"));
 }
