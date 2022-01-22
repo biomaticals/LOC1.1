@@ -15,12 +15,17 @@ class LOC_API UGAGreystoneMakeWay : public UGASelfCastBase
 public:
 	UGAGreystoneMakeWay();
 
-	virtual void ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData);
+	virtual void ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData) override;
+	virtual void EndAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, bool bReplicateEndAbility, bool bWasCancelled) override;
 
-	void OnHit(const FGameplayEventData Payload);
+	UFUNCTION()
+		void OnHit(const FGameplayEventData Payload);
+
+	UFUNCTION()
+		void ScanEnemies();
 
 public:
-	
+
 
 	UPROPERTY(BlueprintReadWrite, Category = "Default")
 		int32 CurrentHitCount;
@@ -36,4 +41,13 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = "Default")
 		float GELevelforTaget;
+
+	UPROPERTY(EditAnywhere, Category = "Default")
+		float SphereRadius;
+
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "Default")
+		TArray<TEnumAsByte< EObjectTypeQuery>> TargetObjectType;
+
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "Default")
+		TArray<AActor*> ActorsToIgnore;
 };

@@ -17,11 +17,97 @@ void EmptyLinkFunctionForGeneratedCodeGAGreystoneMakeWay() {}
 	LOC_API UClass* Z_Construct_UClass_UGAGreystoneMakeWay();
 	LOC_API UClass* Z_Construct_UClass_UGASelfCastBase();
 	UPackage* Z_Construct_UPackage__Script_LOC();
+	GAMEPLAYABILITIES_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayEventData();
 	ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UGameplayEffect_NoRegister();
+	ENGINE_API UEnum* Z_Construct_UEnum_Engine_EObjectTypeQuery();
+	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(UGAGreystoneMakeWay::execScanEnemies)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->ScanEnemies();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UGAGreystoneMakeWay::execOnHit)
+	{
+		P_GET_STRUCT(FGameplayEventData,Z_Param_Payload);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnHit(Z_Param_Payload);
+		P_NATIVE_END;
+	}
 	void UGAGreystoneMakeWay::StaticRegisterNativesUGAGreystoneMakeWay()
 	{
+		UClass* Class = UGAGreystoneMakeWay::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "OnHit", &UGAGreystoneMakeWay::execOnHit },
+			{ "ScanEnemies", &UGAGreystoneMakeWay::execScanEnemies },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_UGAGreystoneMakeWay_OnHit_Statics
+	{
+		struct GAGreystoneMakeWay_eventOnHit_Parms
+		{
+			FGameplayEventData Payload;
+		};
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Payload_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_Payload;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UGAGreystoneMakeWay_OnHit_Statics::NewProp_Payload_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UGAGreystoneMakeWay_OnHit_Statics::NewProp_Payload = { "Payload", nullptr, (EPropertyFlags)0x0010000000000082, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(GAGreystoneMakeWay_eventOnHit_Parms, Payload), Z_Construct_UScriptStruct_FGameplayEventData, METADATA_PARAMS(Z_Construct_UFunction_UGAGreystoneMakeWay_OnHit_Statics::NewProp_Payload_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UGAGreystoneMakeWay_OnHit_Statics::NewProp_Payload_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UGAGreystoneMakeWay_OnHit_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UGAGreystoneMakeWay_OnHit_Statics::NewProp_Payload,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UGAGreystoneMakeWay_OnHit_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "GameplayAbilitySystem/GameplayAbility/Public/GAGreystoneMakeWay.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UGAGreystoneMakeWay_OnHit_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UGAGreystoneMakeWay, nullptr, "OnHit", nullptr, nullptr, sizeof(GAGreystoneMakeWay_eventOnHit_Parms), Z_Construct_UFunction_UGAGreystoneMakeWay_OnHit_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UGAGreystoneMakeWay_OnHit_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UGAGreystoneMakeWay_OnHit_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UGAGreystoneMakeWay_OnHit_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UGAGreystoneMakeWay_OnHit()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UGAGreystoneMakeWay_OnHit_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UGAGreystoneMakeWay_ScanEnemies_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UGAGreystoneMakeWay_ScanEnemies_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "GameplayAbilitySystem/GameplayAbility/Public/GAGreystoneMakeWay.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UGAGreystoneMakeWay_ScanEnemies_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UGAGreystoneMakeWay, nullptr, "ScanEnemies", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UGAGreystoneMakeWay_ScanEnemies_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UGAGreystoneMakeWay_ScanEnemies_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UGAGreystoneMakeWay_ScanEnemies()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UGAGreystoneMakeWay_ScanEnemies_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_UGAGreystoneMakeWay_NoRegister()
 	{
@@ -30,6 +116,7 @@ void EmptyLinkFunctionForGeneratedCodeGAGreystoneMakeWay() {}
 	struct Z_Construct_UClass_UGAGreystoneMakeWay_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -53,6 +140,20 @@ void EmptyLinkFunctionForGeneratedCodeGAGreystoneMakeWay() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_GELevelforTaget_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_GELevelforTaget;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SphereRadius_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_SphereRadius;
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_TargetObjectType_Inner;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TargetObjectType_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_TargetObjectType;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ActorsToIgnore_Inner;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ActorsToIgnore_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_ActorsToIgnore;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -60,6 +161,10 @@ void EmptyLinkFunctionForGeneratedCodeGAGreystoneMakeWay() {}
 	UObject* (*const Z_Construct_UClass_UGAGreystoneMakeWay_Statics::DependentSingletons[])() = {
 		(UObject* (*)())Z_Construct_UClass_UGASelfCastBase,
 		(UObject* (*)())Z_Construct_UPackage__Script_LOC,
+	};
+	const FClassFunctionLinkInfo Z_Construct_UClass_UGAGreystoneMakeWay_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_UGAGreystoneMakeWay_OnHit, "OnHit" }, // 912897473
+		{ &Z_Construct_UFunction_UGAGreystoneMakeWay_ScanEnemies, "ScanEnemies" }, // 3738507433
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGAGreystoneMakeWay_Statics::Class_MetaDataParams[] = {
@@ -103,12 +208,40 @@ void EmptyLinkFunctionForGeneratedCodeGAGreystoneMakeWay() {}
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UGAGreystoneMakeWay_Statics::NewProp_GELevelforTaget = { "GELevelforTaget", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGAGreystoneMakeWay, GELevelforTaget), METADATA_PARAMS(Z_Construct_UClass_UGAGreystoneMakeWay_Statics::NewProp_GELevelforTaget_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGAGreystoneMakeWay_Statics::NewProp_GELevelforTaget_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGAGreystoneMakeWay_Statics::NewProp_SphereRadius_MetaData[] = {
+		{ "Category", "Default" },
+		{ "ModuleRelativePath", "GameplayAbilitySystem/GameplayAbility/Public/GAGreystoneMakeWay.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UGAGreystoneMakeWay_Statics::NewProp_SphereRadius = { "SphereRadius", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGAGreystoneMakeWay, SphereRadius), METADATA_PARAMS(Z_Construct_UClass_UGAGreystoneMakeWay_Statics::NewProp_SphereRadius_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGAGreystoneMakeWay_Statics::NewProp_SphereRadius_MetaData)) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_UGAGreystoneMakeWay_Statics::NewProp_TargetObjectType_Inner = { "TargetObjectType", nullptr, (EPropertyFlags)0x0000000000020000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UEnum_Engine_EObjectTypeQuery, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGAGreystoneMakeWay_Statics::NewProp_TargetObjectType_MetaData[] = {
+		{ "Category", "Default" },
+		{ "ModuleRelativePath", "GameplayAbilitySystem/GameplayAbility/Public/GAGreystoneMakeWay.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UGAGreystoneMakeWay_Statics::NewProp_TargetObjectType = { "TargetObjectType", nullptr, (EPropertyFlags)0x0010000000030015, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGAGreystoneMakeWay, TargetObjectType), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UGAGreystoneMakeWay_Statics::NewProp_TargetObjectType_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGAGreystoneMakeWay_Statics::NewProp_TargetObjectType_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UGAGreystoneMakeWay_Statics::NewProp_ActorsToIgnore_Inner = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0000000000020000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGAGreystoneMakeWay_Statics::NewProp_ActorsToIgnore_MetaData[] = {
+		{ "Category", "Default" },
+		{ "ModuleRelativePath", "GameplayAbilitySystem/GameplayAbility/Public/GAGreystoneMakeWay.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UGAGreystoneMakeWay_Statics::NewProp_ActorsToIgnore = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0010000000030015, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGAGreystoneMakeWay, ActorsToIgnore), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UGAGreystoneMakeWay_Statics::NewProp_ActorsToIgnore_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGAGreystoneMakeWay_Statics::NewProp_ActorsToIgnore_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UGAGreystoneMakeWay_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGAGreystoneMakeWay_Statics::NewProp_CurrentHitCount,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGAGreystoneMakeWay_Statics::NewProp_TotalHitCount,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGAGreystoneMakeWay_Statics::NewProp_SkillMontage,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGAGreystoneMakeWay_Statics::NewProp_GEforTaget,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGAGreystoneMakeWay_Statics::NewProp_GELevelforTaget,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGAGreystoneMakeWay_Statics::NewProp_SphereRadius,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGAGreystoneMakeWay_Statics::NewProp_TargetObjectType_Inner,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGAGreystoneMakeWay_Statics::NewProp_TargetObjectType,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGAGreystoneMakeWay_Statics::NewProp_ActorsToIgnore_Inner,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGAGreystoneMakeWay_Statics::NewProp_ActorsToIgnore,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UGAGreystoneMakeWay_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UGAGreystoneMakeWay>::IsAbstract,
@@ -118,11 +251,11 @@ void EmptyLinkFunctionForGeneratedCodeGAGreystoneMakeWay() {}
 		nullptr,
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		Z_Construct_UClass_UGAGreystoneMakeWay_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		0,
+		UE_ARRAY_COUNT(FuncInfo),
 		UE_ARRAY_COUNT(Z_Construct_UClass_UGAGreystoneMakeWay_Statics::PropPointers),
 		0,
 		0x001000A0u,
@@ -137,7 +270,7 @@ void EmptyLinkFunctionForGeneratedCodeGAGreystoneMakeWay() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UGAGreystoneMakeWay, 2505046608);
+	IMPLEMENT_CLASS(UGAGreystoneMakeWay, 2801896510);
 	template<> LOC_API UClass* StaticClass<UGAGreystoneMakeWay>()
 	{
 		return UGAGreystoneMakeWay::StaticClass();

@@ -1,12 +1,9 @@
+#include "..\Public\GAGreystoneMakeWay.h"
 #include "GameplayAbilitySystem/GameplayAbility/Public/GAGreystoneMakeWay.h"
 #include "Abilities/Tasks/AbilityTask_WaitGameplayEvent.h"
+#include "Kismet/KismetSystemLibrary.h"
 
 UGAGreystoneMakeWay::UGAGreystoneMakeWay()
-	:CurrentHitCount{}
-	, TotalHitCount{}
-	, SkillMontage{}
-	, GEforTaget{}
-	, GELevelforTaget{}
 {
 	static ConstructorHelpers::FObjectFinder<UAnimMontage> obj(TEXT("/Game/ParagonGreystone/Characters/Heroes/Greystone/Animations/AM_MakeWay.AM_MakeWay"));
 	SkillMontage = obj.Object;
@@ -14,7 +11,6 @@ UGAGreystoneMakeWay::UGAGreystoneMakeWay()
 
 void UGAGreystoneMakeWay::ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData)
 {
-
 	if (bHasBlueprintActivate)
 	{
 		K2_ActivateAbility();
@@ -30,34 +26,62 @@ void UGAGreystoneMakeWay::ActivateAbility(const FGameplayAbilitySpecHandle Handl
 			bool bReplicateEndAbility = false;
 			bool bWasCancelled = true;
 			EndAbility(Handle, ActorInfo, ActivationInfo, bReplicateEndAbility, bWasCancelled);
+			return;
 		}
 	}
 	else
 	{
 		if (CommitAbility(Handle, ActorInfo, ActivationInfo))
-		{			
+		{
 			UAbilitySystemComponent* AbilitySystemComponent = GetAbilitySystemComponentFromActorInfo();
 			UGameplayAbility* GameplayAbility = AbilitySystemComponent->GetAnimatingAbility();
 			USkeletalMeshComponent* Mesh = GetCharacterInfo()->GetMesh();
 			FGameplayTag HitTag = FGameplayTag::RequestGameplayTag(TEXT("Ability.Skill.Casting.Self.MakeWay"));;
-		
+			CurrentHitCount = 0;
+			TotalHitCount = 5;
+
 			UAbilityTask_WaitGameplayEvent* HitTask = UAbilityTask_WaitGameplayEvent::WaitGameplayEvent(this, HitTag);
 			HitTask->EventReceived.AddDynamic(this, &UGAGreystoneMakeWay::OnHit);
-			//HitTask->ReadyForActivation();
+			HitTask->ReadyForActivation();
 			AbilitySystemComponent->PlayMontage(GameplayAbility, ActivationInfo, SkillMontage, 1.0, "none", 0.0);
-			//UAbilityTask_WaitGameplayEvent::WaitGameplayEvent(GameplayAbility, Tag, nullptr, true, true);
+			CommitAbility(Handle, ActorInfo, ActivationInfo, nullptr);
+			for (; CurrentHitCount >= TotalHitCount; CurrentHitCount++)
+			{
+
+			}
+
 			K2_EndAbility();
 		}
 	}
-	//ALOCCharacter* Owner = GetCharacterInfo();
-	//FGameplayAbilityActivationInfo a;
-	//Owner->AbilitySystemComponent->PlayMontage(nullptr,a,SkillMontage,1.0,"none",0.0);
-	//PlayMontageAndWait(ActorInfo)
-	//if (GEngine)
-	//	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Some debug message!"));
+}
+
+void UGAGreystoneMakeWay::EndAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, bool bReplicateEndAbility, bool bWasCancelled)
+{
+	Super::EndAbility(Handle, ActorInfo, ActivationInfo, bReplicateEndAbility, bWasCancelled);
 }
 
 void UGAGreystoneMakeWay::OnHit(const FGameplayEventData Payload)
 {
+	UAbilitySystemComponent* AbilitySystemComponent = GetAbilitySystemComponentFromActorInfo();
+	FGameplayTag OwnerTag = FGameplayTag::RequestGameplayTag(TEXT("Ability.Skill.Casting.Self.MakeWay"));
+	FGameplayEffectContextHandle EffectContextHandle = AbilitySystemComponent->MakeEffectContext();
 
+	AbilitySystemComponent->ExecuteGameplayCue(OwnerTag, EffectContextHandle);
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("This is an on screen message!"));
+	//AbilitySystemComponent->ExecuteGameplayCue();
+}
+
+void UGAGreystoneMakeWay::ScanEnemies()
+{
+	FVector SpherePos = GetCharacterInfo()->GetActorLocation();
+	UObject* World = GetWorld();
+	TargetObjectType.Add(UEngineTypes::ConvertToObjectType(ECollisionChannel::ECC_Pawn));
+	SphereRadius = 300;
+	TArray<AActor*> OverlappedActors;
+
+	UKismetSystemLibrary::SphereOverlapActors(World, SpherePos, SphereRadius, TargetObjectType, nullptr, ActorsToIgnore, OverlappedActors);
+	for(AActor Actor : OverlappedActors)
+	{
+
+	}
 }
