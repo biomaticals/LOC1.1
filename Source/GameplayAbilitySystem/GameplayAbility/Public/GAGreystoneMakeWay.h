@@ -2,8 +2,8 @@
 
 #include "CoreMinimal.h"
 #include "GameplayAbilitySystem/GameplayAbility/Public/GASelfCastBase.h"
+#include "Abilities/Tasks/AbilityTask_WaitGameplayEvent.h"
 #include "GAGreystoneMakeWay.generated.h"
-
 /**
  *
  */
@@ -17,8 +17,11 @@ public:
 
 	virtual void ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData);
 
+	void OnHit(const FGameplayEventData Payload);
 
 public:
+	
+
 	UPROPERTY(BlueprintReadWrite, Category = "Default")
 		int32 CurrentHitCount;
 
