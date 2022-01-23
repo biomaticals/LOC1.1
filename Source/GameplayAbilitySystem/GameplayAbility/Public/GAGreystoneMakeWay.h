@@ -18,9 +18,6 @@ public:
 	virtual void ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData) override;
 	virtual void EndAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, bool bReplicateEndAbility, bool bWasCancelled) override;
 
-//	UFUNCTION()
-//		void ScanEnemies();
-//	
 		
 	UFUNCTION()
 		void OnCancelled();
@@ -28,9 +25,12 @@ public:
 	UFUNCTION()
 		void OnHitStart(const FGameplayEventData Payload);
 
-//	UFUNCTION()
-//		void OnHit(const FGameplayEventData Payload);
+	UFUNCTION()
+		void OnHit(const FGameplayEventData Payload);
 
+//	UFUNCTION()
+//		void ScanEnemies();
+//	
 public:
 	UPROPERTY(BlueprintReadWrite, Category = "Default")
 		int32 CurrentHitCount;

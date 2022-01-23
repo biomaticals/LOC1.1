@@ -55,20 +55,19 @@ void UGAGreystoneMakeWay::ActivateAbility(const FGameplayAbilitySpecHandle Handl
 			WaitEventTask->EventReceived.AddDynamic(this, &UGAGreystoneMakeWay::OnHitStart);
 			WaitEventTask->ReadyForActivation();
 			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("WaitEventTask"));
-
+			//OnHitStart(*TriggerEventData);
 			
-			CommitAbility(Handle, ActorInfo, ActivationInfo, nullptr);
-			
-			UAbilityTask_WaitDelay* DelayTask = UAbilityTask_WaitDelay::WaitDelay(this, SecondsForHit);
-			//DelayTask->OnFinish.AddDynamic(this, &UGAGreystoneMakeWay::OnHit);
-			for (; CurrentHitCount <= TotalHitCount; CurrentHitCount++)
-			{
-				//DelayTask->ReadyForActivation();
-				GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("DelayTask"));
-				//ScanEnemies();
-			}
-
-			K2_EndAbility();
+//			CommitAbility(Handle, ActorInfo, ActivationInfo, nullptr);
+//			
+//			UAbilityTask_WaitDelay* DelayTask = UAbilityTask_WaitDelay::WaitDelay(this, SecondsForHit);
+//			DelayTask->OnFinish.AddDynamic(this, &UGAGreystoneMakeWay::OnHit);
+//			for (; CurrentHitCount <= TotalHitCount; CurrentHitCount++)
+//			{
+//				DelayTask->ReadyForActivation();
+//				GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("DelayTask"));
+//			}
+//
+//			K2_EndAbility();
 		}
 	}
 }
@@ -90,13 +89,14 @@ void UGAGreystoneMakeWay::OnHitStart(const FGameplayEventData Payload)
 	FGameplayEffectContextHandle EffectContextHandle = AbilitySystemComponent->MakeEffectContext();
 
 	AbilitySystemComponent->ExecuteGameplayCue(OwnerTag, EffectContextHandle);
-	
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("OnHitStart"));
 }
 
-//void UGAGreystoneMakeWay::OnHit(const FGameplayEventData Payload)
-//{
-//	
-//}
+void UGAGreystoneMakeWay::OnHit(const FGameplayEventData Payload)
+{
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("OnHit"));
+	//ScanEnemies();
+}
 
 //
 //void UGAGreystoneMakeWay::ScanEnemies(const FGameplayEventData Payload)
