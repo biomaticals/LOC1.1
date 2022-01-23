@@ -3,6 +3,7 @@
 #include "GameplayAbilitySystem/GameplayAbility/Public/GAGreystoneMakeWay.h"
 #include "Abilities/Tasks/AbilityTask_WaitGameplayEvent.h"
 #include "Abilities/Tasks/AbilityTask_PlayMontageAndWait.h"
+#include "Abilities/Tasks/AbilityTask_WaitDelay.h"
 #include "Kismet/KismetSystemLibrary.h"
 #include "..\..\..\Character\Public\LOCCharacter.h"
 
@@ -44,20 +45,26 @@ void UGAGreystoneMakeWay::ActivateAbility(const FGameplayAbilitySpecHandle Handl
 			UGameplayAbility*				SourceAbility	 = SourceComponent->GetAnimatingAbility();
 			USkeletalMeshComponent*			SourceMesh		 = GetCharacterInfo()->GetMesh();
 			FGameplayTag					HitTag			 = FGameplayTag::RequestGameplayTag(TEXT("Ability.Skill.Casting.Self.MakeWay"));;
+						
+			UAbilityTask_PlayMontageAndWait* MontageTask = UAbilityTask_PlayMontageAndWait::CreatePlayMontageAndWaitProxy(this, "none", SkillMontage, 1, "none", false);		
+			MontageTask->OnCancelled.AddDynamic(this,&UGAGreystoneMakeWay::OnCancelled);
+			MontageTask->ReadyForActivation();
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("MontageTask"));
+
+			UAbilityTask_WaitGameplayEvent* WaitEventTask = UAbilityTask_WaitGameplayEvent::WaitGameplayEvent(this, HitTag);
+			WaitEventTask->EventReceived.AddDynamic(this, &UGAGreystoneMakeWay::OnHitStart);
+			WaitEventTask->ReadyForActivation();
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("WaitEventTask"));
+
 			
-			
-			UAbilityTask_PlayMontageAndWait* Task = UAbilityTask_PlayMontageAndWait::CreatePlayMontageAndWaitProxy(this, "none", SkillMontage, 1, "none", false);
-			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("This is an on screen message!1"));
-			Task->OnCancelled.AddDynamic(this,&UGAGreystoneMakeWay::OnCancelled);
-			Task->ReadyForActivation();
-			
-			UAbilityTask_WaitGameplayEvent* Task2 = UAbilityTask_WaitGameplayEvent::WaitGameplayEvent(this, HitTag);
-			//Task2->EventReceived
-			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("This is an on screen message!2"));
 			CommitAbility(Handle, ActorInfo, ActivationInfo, nullptr);
+			
+			UAbilityTask_WaitDelay* DelayTask = UAbilityTask_WaitDelay::WaitDelay(this, SecondsForHit);
+			//DelayTask->OnFinish.AddDynamic(this, &UGAGreystoneMakeWay::OnHit);
 			for (; CurrentHitCount <= TotalHitCount; CurrentHitCount++)
 			{
-				GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("This is an on screen message!3"));
+				//DelayTask->ReadyForActivation();
+				GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("DelayTask"));
 				//ScanEnemies();
 			}
 
@@ -71,15 +78,26 @@ void UGAGreystoneMakeWay::EndAbility(const FGameplayAbilitySpecHandle Handle, co
 	Super::EndAbility(Handle, ActorInfo, ActivationInfo, bReplicateEndAbility, bWasCancelled);
 }
 
+void UGAGreystoneMakeWay::OnCancelled()
+{
+
+}
+
+void UGAGreystoneMakeWay::OnHitStart(const FGameplayEventData Payload)
+{
+	UAbilitySystemComponent* AbilitySystemComponent = GetAbilitySystemComponentFromActorInfo();
+	FGameplayTag OwnerTag = FGameplayTag::RequestGameplayTag(TEXT("Ability.Skill.Casting.Self.MakeWay"));
+	FGameplayEffectContextHandle EffectContextHandle = AbilitySystemComponent->MakeEffectContext();
+
+	AbilitySystemComponent->ExecuteGameplayCue(OwnerTag, EffectContextHandle);
+	
+}
+
 //void UGAGreystoneMakeWay::OnHit(const FGameplayEventData Payload)
 //{
-//	UAbilitySystemComponent* AbilitySystemComponent = GetAbilitySystemComponentFromActorInfo();
-//	FGameplayTag OwnerTag = FGameplayTag::RequestGameplayTag(TEXT("Ability.Skill.Casting.Self.MakeWay"));
-//	FGameplayEffectContextHandle EffectContextHandle = AbilitySystemComponent->MakeEffectContext();
-//
-//	AbilitySystemComponent->ExecuteGameplayCue(OwnerTag, EffectContextHandle);
 //	
 //}
+
 //
 //void UGAGreystoneMakeWay::ScanEnemies(const FGameplayEventData Payload)
 //{GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("This is an on screen message!4"));
@@ -106,7 +124,3 @@ void UGAGreystoneMakeWay::EndAbility(const FGameplayAbilitySpecHandle Handle, co
 //	}
 //}
 //
-void UGAGreystoneMakeWay::OnCancelled()
-{
-
-}

@@ -21,11 +21,15 @@ public:
 //	UFUNCTION()
 //		void ScanEnemies();
 //	
-//	UFUNCTION()
-//		void OnHit(const FGameplayEventData Payload);
-//	
+		
 	UFUNCTION()
 		void OnCancelled();
+
+	UFUNCTION()
+		void OnHitStart(const FGameplayEventData Payload);
+
+//	UFUNCTION()
+//		void OnHit(const FGameplayEventData Payload);
 
 public:
 	UPROPERTY(BlueprintReadWrite, Category = "Default")
@@ -33,6 +37,9 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = "Default")
 		int32 TotalHitCount;
+
+	UPROPERTY(EditAnywhere, Category = "Default")
+		float SecondsForHit;
 
 	UPROPERTY(VisibleDefaultsOnly, Category = "Default")
 		UAnimMontage* SkillMontage;

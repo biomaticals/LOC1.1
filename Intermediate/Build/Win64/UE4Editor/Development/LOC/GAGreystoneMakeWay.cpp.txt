@@ -74,6 +74,8 @@ C:\Users\bioma\Documents\GitHub\LOC\Source\GameplayAbilitySystem\GameplayAbility
 C:\Users\bioma\Documents\GitHub\LOC\Intermediate\Build\Win64\UE4Editor\Inc\LOC\LOCAttributeSet.generated.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public\Abilities/Tasks/AbilityTask_PlayMontageAndWait.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\Runtime\GameplayAbilities\Intermediate\Build\Win64\UE4Editor\Inc\GameplayAbilities\AbilityTask_PlayMontageAndWait.generated.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public\Abilities/Tasks/AbilityTask_WaitDelay.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\Runtime\GameplayAbilities\Intermediate\Build\Win64\UE4Editor\Inc\GameplayAbilities\AbilityTask_WaitDelay.generated.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Kismet/KismetSystemLibrary.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\UObject/PropertyAccessUtil.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Engine/CollisionProfile.h
