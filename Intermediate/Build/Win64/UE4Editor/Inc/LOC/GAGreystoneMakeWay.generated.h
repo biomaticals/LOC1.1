@@ -17,6 +17,7 @@ struct FGameplayEventData;
 #define LOC_Source_GameplayAbilitySystem_GameplayAbility_Public_GAGreystoneMakeWay_h_13_SPARSE_DATA
 #define LOC_Source_GameplayAbilitySystem_GameplayAbility_Public_GAGreystoneMakeWay_h_13_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execScanEnemies); \
 	DECLARE_FUNCTION(execOnHit); \
 	DECLARE_FUNCTION(execOnHitStart); \
 	DECLARE_FUNCTION(execOnCancelled);
@@ -24,6 +25,7 @@ struct FGameplayEventData;
 
 #define LOC_Source_GameplayAbilitySystem_GameplayAbility_Public_GAGreystoneMakeWay_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execScanEnemies); \
 	DECLARE_FUNCTION(execOnHit); \
 	DECLARE_FUNCTION(execOnHitStart); \
 	DECLARE_FUNCTION(execOnCancelled);

@@ -28,9 +28,9 @@ public:
 	UFUNCTION()
 		void OnHit();
 
-//	UFUNCTION()
-//		void ScanEnemies();
-//	
+	UFUNCTION()
+		void ScanEnemies();
+	
 public:
 	UPROPERTY(BlueprintReadWrite, Category = "Default")
 		int32 CurrentHitCount;
@@ -41,11 +41,14 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Default")
 		float SecondsForHit;
 
+	UPROPERTY(EditAnywhere, Category = "Default")
+		float DamageRange;
+
 	UPROPERTY(VisibleDefaultsOnly, Category = "Default")
 		UAnimMontage* SkillMontage;
 
 	UPROPERTY(EditAnywhere, Category = "Default")
-		UGameplayEffect* GEforTarget;
+		TSubclassOf<UGameplayEffect> GEforTarget;
 
 	UPROPERTY(EditAnywhere, Category = "Default")
 		float GELevelforTaget;
