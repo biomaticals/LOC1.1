@@ -24,10 +24,9 @@ void EmptyLinkFunctionForGeneratedCodeGAGreystoneMakeWay() {}
 // End Cross Module References
 	DEFINE_FUNCTION(UGAGreystoneMakeWay::execOnHit)
 	{
-		P_GET_STRUCT(FGameplayEventData,Z_Param_Payload);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->OnHit(Z_Param_Payload);
+		P_THIS->OnHit();
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(UGAGreystoneMakeWay::execOnHitStart)
@@ -79,35 +78,17 @@ void EmptyLinkFunctionForGeneratedCodeGAGreystoneMakeWay() {}
 	}
 	struct Z_Construct_UFunction_UGAGreystoneMakeWay_OnHit_Statics
 	{
-		struct GAGreystoneMakeWay_eventOnHit_Parms
-		{
-			FGameplayEventData Payload;
-		};
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Payload_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_Payload;
-		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UGAGreystoneMakeWay_OnHit_Statics::NewProp_Payload_MetaData[] = {
-		{ "NativeConst", "" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UGAGreystoneMakeWay_OnHit_Statics::NewProp_Payload = { "Payload", nullptr, (EPropertyFlags)0x0010000000000082, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(GAGreystoneMakeWay_eventOnHit_Parms, Payload), Z_Construct_UScriptStruct_FGameplayEventData, METADATA_PARAMS(Z_Construct_UFunction_UGAGreystoneMakeWay_OnHit_Statics::NewProp_Payload_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UGAGreystoneMakeWay_OnHit_Statics::NewProp_Payload_MetaData)) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UGAGreystoneMakeWay_OnHit_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UGAGreystoneMakeWay_OnHit_Statics::NewProp_Payload,
-	};
-#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UGAGreystoneMakeWay_OnHit_Statics::Function_MetaDataParams[] = {
 		{ "ModuleRelativePath", "GameplayAbilitySystem/GameplayAbility/Public/GAGreystoneMakeWay.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UGAGreystoneMakeWay_OnHit_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UGAGreystoneMakeWay, nullptr, "OnHit", nullptr, nullptr, sizeof(GAGreystoneMakeWay_eventOnHit_Parms), Z_Construct_UFunction_UGAGreystoneMakeWay_OnHit_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UGAGreystoneMakeWay_OnHit_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UGAGreystoneMakeWay_OnHit_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UGAGreystoneMakeWay_OnHit_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UGAGreystoneMakeWay_OnHit_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UGAGreystoneMakeWay, nullptr, "OnHit", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UGAGreystoneMakeWay_OnHit_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UGAGreystoneMakeWay_OnHit_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UGAGreystoneMakeWay_OnHit()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -207,7 +188,7 @@ void EmptyLinkFunctionForGeneratedCodeGAGreystoneMakeWay() {}
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UGAGreystoneMakeWay_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_UGAGreystoneMakeWay_OnCancelled, "OnCancelled" }, // 1148049344
-		{ &Z_Construct_UFunction_UGAGreystoneMakeWay_OnHit, "OnHit" }, // 912897473
+		{ &Z_Construct_UFunction_UGAGreystoneMakeWay_OnHit, "OnHit" }, // 131463761
 		{ &Z_Construct_UFunction_UGAGreystoneMakeWay_OnHitStart, "OnHitStart" }, // 291574133
 	};
 #if WITH_METADATA
@@ -304,7 +285,7 @@ void EmptyLinkFunctionForGeneratedCodeGAGreystoneMakeWay() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UGAGreystoneMakeWay, 3778425302);
+	IMPLEMENT_CLASS(UGAGreystoneMakeWay, 236352944);
 	template<> LOC_API UClass* StaticClass<UGAGreystoneMakeWay>()
 	{
 		return UGAGreystoneMakeWay::StaticClass();

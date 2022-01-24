@@ -26,7 +26,7 @@ public:
 		void OnHitStart(const FGameplayEventData Payload);
 
 	UFUNCTION()
-		void OnHit(const FGameplayEventData Payload);
+		void OnHit();
 
 //	UFUNCTION()
 //		void ScanEnemies();

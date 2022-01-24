@@ -38,9 +38,6 @@ void UGAGreystoneMakeWay::ActivateAbility(const FGameplayAbilitySpecHandle Handl
 	{
 		if (CommitAbility(Handle, ActorInfo, ActivationInfo))
 		{	
-			CurrentHitCount									 = 0;
-			TotalHitCount									 = 5;
-
 			UAbilitySystemComponent*		SourceComponent	 = GetAbilitySystemComponentFromActorInfo();
 			UGameplayAbility*				SourceAbility	 = SourceComponent->GetAnimatingAbility();
 			USkeletalMeshComponent*			SourceMesh		 = GetCharacterInfo()->GetMesh();
@@ -55,19 +52,6 @@ void UGAGreystoneMakeWay::ActivateAbility(const FGameplayAbilitySpecHandle Handl
 			WaitEventTask->EventReceived.AddDynamic(this, &UGAGreystoneMakeWay::OnHitStart);
 			WaitEventTask->ReadyForActivation();
 			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("WaitEventTask"));
-			//OnHitStart(*TriggerEventData);
-			
-//			CommitAbility(Handle, ActorInfo, ActivationInfo, nullptr);
-//			
-//			UAbilityTask_WaitDelay* DelayTask = UAbilityTask_WaitDelay::WaitDelay(this, SecondsForHit);
-//			DelayTask->OnFinish.AddDynamic(this, &UGAGreystoneMakeWay::OnHit);
-//			for (; CurrentHitCount <= TotalHitCount; CurrentHitCount++)
-//			{
-//				DelayTask->ReadyForActivation();
-//				GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("DelayTask"));
-//			}
-//
-//			K2_EndAbility();
 		}
 	}
 }
@@ -83,16 +67,41 @@ void UGAGreystoneMakeWay::OnCancelled()
 }
 
 void UGAGreystoneMakeWay::OnHitStart(const FGameplayEventData Payload)
-{
-	UAbilitySystemComponent* AbilitySystemComponent = GetAbilitySystemComponentFromActorInfo();
-	FGameplayTag OwnerTag = FGameplayTag::RequestGameplayTag(TEXT("Ability.Skill.Casting.Self.MakeWay"));
-	FGameplayEffectContextHandle EffectContextHandle = AbilitySystemComponent->MakeEffectContext();
+{	
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("OnHitStart"));
+
+	UAbilitySystemComponent*	 AbilitySystemComponent = GetAbilitySystemComponentFromActorInfo();
+	FGameplayTag				 OwnerTag				= FGameplayTag::RequestGameplayTag(TEXT("Ability.Skill.Casting.Self.MakeWay"));
+	FGameplayEffectContextHandle EffectContextHandle	= AbilitySystemComponent->MakeEffectContext();
 
 	AbilitySystemComponent->ExecuteGameplayCue(OwnerTag, EffectContextHandle);
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("OnHitStart"));
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("ExecuteGameplayCue"));
+
+
+	CurrentHitCount  = 0;
+	TotalHitCount	 = 5;
+	SecondsForHit	 = 1.0f;
+	FTimerHandle WaitHandle;
+	FTimerManager& Timer = GetWorld()->GetTimerManager();
+
+	for (; CurrentHitCount <= TotalHitCount; CurrentHitCount++)
+	{	
+		Timer.SetTimer(WaitHandle, FTimerDelegate::CreateLambda
+		(	
+			[&]()
+			{	
+				OnHit();
+				GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("DelayTask"));
+				
+			}
+		),SecondsForHit, true);
+	}
+	
+	K2_EndAbility();
+
 }
 
-void UGAGreystoneMakeWay::OnHit(const FGameplayEventData Payload)
+void UGAGreystoneMakeWay::OnHit()
 {
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("OnHit"));
 	//ScanEnemies();
