@@ -81,29 +81,24 @@ void UGAGreystoneMakeWay::OnHitStart(const FGameplayEventData Payload)
 	AbilitySystemComponent->ExecuteGameplayCue(OwnerTag, EffectContextHandle);
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("ExecuteGameplayCue"));
 	
-	int32			CurrentHitCount  = 0;
-	FTimerHandle TimerHandle;
-	FTimerManager& Timer = GetWorld()->GetTimerManager();
+	GetWorld()->GetTimerManager().SetTimer(TimerHandle,this, &UGAGreystoneMakeWay::TimerFunction,SecondsForHit, true);
+}
 
-
+void UGAGreystoneMakeWay::TimerFunction()
+{
 	
-	for (; CurrentHitCount <= TotalHitCount; CurrentHitCount++)
+	if (TotalHitCount == 0.0f)
 	{	
-		Timer.SetTimer(TimerHandle,FTimerDelegate::CreateLambda
-		(
-			[&]()
-			{	
-				TotalHitCount--;
-				if (TotalHitCount == 0)
-				{
-					Timer.ClearTimer(TimerHandle);
-				}
-				OnHit();
-			}
-		),SecondsForHit, true);
-	}	
-
-	K2_EndAbility();
+		GetWorld()->GetTimerManager().ClearTimer(TimerHandle);
+		K2_EndAbility();
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Clear"));
+	}
+	else
+	{
+		OnHit();
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Hit"));
+	}
+	TotalHitCount--;
 }
 
 void UGAGreystoneMakeWay::OnHit()
@@ -116,10 +111,10 @@ void UGAGreystoneMakeWay::OnHit()
 	TArray<TEnumAsByte< EObjectTypeQuery>> TargetObjectType;
 	TargetObjectType.Add(UEngineTypes::ConvertToObjectType(ECollisionChannel::ECC_Pawn));
 	TArray<AActor*> ActorsToIgnore;
+	ActorsToIgnore.Add_GetRef(GetCharacterInfo());
 	TArray<AActor*> OverlappedActors;
 	UKismetSystemLibrary::SphereOverlapActors(World, SpherePos, DamageRange, TargetObjectType, nullptr, ActorsToIgnore, OverlappedActors);
 	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("SphereOverlapActors"));		
-	
 
 	for (AActor* Actor : OverlappedActors)
 	{

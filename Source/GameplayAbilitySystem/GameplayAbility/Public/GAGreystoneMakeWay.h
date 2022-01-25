@@ -12,9 +12,11 @@
 UCLASS()
 class LOC_API UGAGreystoneMakeWay : public UGASelfCastBase
 {
+
 	GENERATED_BODY()
 
 protected:
+
 	UGAGreystoneMakeWay();
 
 	virtual void ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData) override;
@@ -27,9 +29,13 @@ protected:
 		void OnHitStart(const FGameplayEventData Payload);
 
 	UFUNCTION()
+		void TimerFunction();
+
+	UFUNCTION()
 		void OnHit();
 	
 public:
+
 	UPROPERTY(EditDefaultsOnly, Category = "Default")
 		int32 TotalHitCount;
 
@@ -47,4 +53,10 @@ public:
 
 	UPROPERTY(EditDefaultsOnly, Category = "Default")
 		float GELevelforTaget;
+
+protected:
+	
+	UPROPERTY()
+		FTimerHandle TimerHandle;
+
 };
