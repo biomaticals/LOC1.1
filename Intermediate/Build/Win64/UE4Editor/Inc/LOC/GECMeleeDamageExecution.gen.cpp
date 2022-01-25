@@ -40,10 +40,10 @@ void EmptyLinkFunctionForGeneratedCodeGECMeleeDamageExecution() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGECMeleeDamageExecution_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n *  ???????? ???????? ?????\xd5\xb4\xcf\xb4?. Strength, Endurance, Weapon Damage?? ???? ?????\xcf\xb0? Health_Current?? ?????\xd5\xb4\xcf\xb4?.\n */" },
+		{ "Comment", "/**\n *  ???????????? ???????? ?????\xcf\xb4? \xc5\xac????\n */" },
 		{ "IncludePath", "GameplayAbilitySystem/GameplayEffect/GameplayEffectExecutionCalculation/Public/GECMeleeDamageExecution.h" },
 		{ "ModuleRelativePath", "GameplayAbilitySystem/GameplayEffect/GameplayEffectExecutionCalculation/Public/GECMeleeDamageExecution.h" },
-		{ "ToolTip", "???????? ???????? ?????\xd5\xb4\xcf\xb4?. Strength, Endurance, Weapon Damage?? ???? ?????\xcf\xb0? Health_Current?? ?????\xd5\xb4\xcf\xb4?." },
+		{ "ToolTip", "???????????? ???????? ?????\xcf\xb4? \xc5\xac????" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UGECMeleeDamageExecution_Statics::StaticCppClassTypeInfo = {
@@ -73,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeGECMeleeDamageExecution() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UGECMeleeDamageExecution, 3249014245);
+	IMPLEMENT_CLASS(UGECMeleeDamageExecution, 1035272601);
 	template<> LOC_API UClass* StaticClass<UGECMeleeDamageExecution>()
 	{
 		return UGECMeleeDamageExecution::StaticClass();

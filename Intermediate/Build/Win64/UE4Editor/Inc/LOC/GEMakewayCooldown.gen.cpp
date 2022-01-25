@@ -40,9 +40,10 @@ void EmptyLinkFunctionForGeneratedCodeGEMakewayCooldown() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGEMakewayCooldown_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n * \n */" },
+		{ "Comment", "/**\n * Greystone?? Makeway ??\xc5\xb3 ???\xd9\xbf?\n */" },
 		{ "IncludePath", "GameplayAbilitySystem/GameplayEffect/Public/GEMakewayCooldown.h" },
 		{ "ModuleRelativePath", "GameplayAbilitySystem/GameplayEffect/Public/GEMakewayCooldown.h" },
+		{ "ToolTip", "Greystone?? Makeway ??\xc5\xb3 ???\xd9\xbf?" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UGEMakewayCooldown_Statics::StaticCppClassTypeInfo = {
@@ -72,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeGEMakewayCooldown() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UGEMakewayCooldown, 2264697459);
+	IMPLEMENT_CLASS(UGEMakewayCooldown, 3045858196);
 	template<> LOC_API UClass* StaticClass<UGEMakewayCooldown>()
 	{
 		return UGEMakewayCooldown::StaticClass();

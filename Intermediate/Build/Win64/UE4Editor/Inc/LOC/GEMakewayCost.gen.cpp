@@ -40,9 +40,10 @@ void EmptyLinkFunctionForGeneratedCodeGEMakewayCost() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGEMakewayCost_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n * \n */" },
+		{ "Comment", "/**\n * Greystone?? Makeway ??\xc5\xb3 ????\n */" },
 		{ "IncludePath", "GameplayAbilitySystem/GameplayEffect/Public/GEMakewayCost.h" },
 		{ "ModuleRelativePath", "GameplayAbilitySystem/GameplayEffect/Public/GEMakewayCost.h" },
+		{ "ToolTip", "Greystone?? Makeway ??\xc5\xb3 ????" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UGEMakewayCost_Statics::StaticCppClassTypeInfo = {
@@ -72,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeGEMakewayCost() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UGEMakewayCost, 671772738);
+	IMPLEMENT_CLASS(UGEMakewayCost, 3666907154);
 	template<> LOC_API UClass* StaticClass<UGEMakewayCost>()
 	{
 		return UGEMakewayCost::StaticClass();

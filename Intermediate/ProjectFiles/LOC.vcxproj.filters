@@ -135,7 +135,7 @@
     <ClCompile Include="..\..\Source\GameplayAbilitySystem\GameplayEffect\Private\GEBase.cpp">
       <Filter>Source\GameplayAbilitySystem\GameplayEffect\Private</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\GameplayAbilitySystem\GameplayEffect\Private\GEMakeway.cpp">
+    <ClCompile Include="..\..\Source\GameplayAbilitySystem\GameplayEffect\Private\GEMakewayTargetEffect.cpp">
       <Filter>Source\GameplayAbilitySystem\GameplayEffect\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\GameplayAbilitySystem\GameplayEffect\Private\GEMakewayCooldown.cpp">
@@ -150,7 +150,7 @@
     <ClInclude Include="..\..\Source\GameplayAbilitySystem\GameplayEffect\Public\GEBase.h">
       <Filter>Source\GameplayAbilitySystem\GameplayEffect\Public</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\GameplayAbilitySystem\GameplayEffect\Public\GEMakeway.h">
+    <ClInclude Include="..\..\Source\GameplayAbilitySystem\GameplayEffect\Public\GEMakewayTargetEffect.h">
       <Filter>Source\GameplayAbilitySystem\GameplayEffect\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\GameplayAbilitySystem\GameplayEffect\Public\GEMakewayCooldown.h">

@@ -40,8 +40,10 @@ void EmptyLinkFunctionForGeneratedCodeGEBase() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGEBase_Statics::Class_MetaDataParams[] = {
+		{ "Comment", "/**\n * GameplayEffect?? ???? \xc5\xac????\n */" },
 		{ "IncludePath", "GameplayAbilitySystem/GameplayEffect/Public/GEBase.h" },
 		{ "ModuleRelativePath", "GameplayAbilitySystem/GameplayEffect/Public/GEBase.h" },
+		{ "ToolTip", "GameplayEffect?? ???? \xc5\xac????" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UGEBase_Statics::StaticCppClassTypeInfo = {
@@ -71,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeGEBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UGEBase, 4257871443);
+	IMPLEMENT_CLASS(UGEBase, 480277216);
 	template<> LOC_API UClass* StaticClass<UGEBase>()
 	{
 		return UGEBase::StaticClass();

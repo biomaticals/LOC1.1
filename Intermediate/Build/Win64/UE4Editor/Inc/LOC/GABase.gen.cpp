@@ -53,7 +53,9 @@ void EmptyLinkFunctionForGeneratedCodeGABase() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UGABase_GetCharacterInfo_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "// ???? \xc4\xb3???? ?????? ?????\xc9\xb4\xcf\xb4?. GetOwningActorFromActorInfo() ???? ?? ?\xd4\xbc??? ?????\xcf\xbc???.\n" },
 		{ "ModuleRelativePath", "GameplayAbilitySystem/GameplayAbility/Public/GABase.h" },
+		{ "ToolTip", "???? \xc4\xb3???? ?????? ?????\xc9\xb4\xcf\xb4?. GetOwningActorFromActorInfo() ???? ?? ?\xd4\xbc??? ?????\xcf\xbc???." },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UGABase_GetCharacterInfo_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UGABase, nullptr, "GetCharacterInfo", nullptr, nullptr, sizeof(GABase_eventGetCharacterInfo_Parms), Z_Construct_UFunction_UGABase_GetCharacterInfo_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UGABase_GetCharacterInfo_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UGABase_GetCharacterInfo_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UGABase_GetCharacterInfo_Statics::Function_MetaDataParams)) };
@@ -85,12 +87,14 @@ void EmptyLinkFunctionForGeneratedCodeGABase() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_LOC,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UGABase_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UGABase_GetCharacterInfo, "GetCharacterInfo" }, // 3375505782
+		{ &Z_Construct_UFunction_UGABase_GetCharacterInfo, "GetCharacterInfo" }, // 3474857202
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGABase_Statics::Class_MetaDataParams[] = {
+		{ "Comment", "/**\n * GameplayAbility?? ???? \xc5\xac????\n */" },
 		{ "IncludePath", "GameplayAbilitySystem/GameplayAbility/Public/GABase.h" },
 		{ "ModuleRelativePath", "GameplayAbilitySystem/GameplayAbility/Public/GABase.h" },
+		{ "ToolTip", "GameplayAbility?? ???? \xc5\xac????" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UGABase_Statics::StaticCppClassTypeInfo = {
@@ -120,7 +124,7 @@ void EmptyLinkFunctionForGeneratedCodeGABase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UGABase, 4176687981);
+	IMPLEMENT_CLASS(UGABase, 1951493349);
 	template<> LOC_API UClass* StaticClass<UGABase>()
 	{
 		return UGABase::StaticClass();

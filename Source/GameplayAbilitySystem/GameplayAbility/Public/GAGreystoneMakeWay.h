@@ -2,7 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "GameplayAbilitySystem/GameplayAbility/Public/GASelfCastBase.h"
-#include "GameplayAbilitySystem/GameplayEffect/Public/GEMakeway.h"
+#include "GameplayAbilitySystem/GameplayEffect/Public/GEMakewayTargetEffect.h"
 #include "Abilities/Tasks/AbilityTask_WaitGameplayEvent.h"
 #include "GAGreystoneMakeWay.generated.h"
 
@@ -54,7 +54,7 @@ public:
 	
 	// 타격 대상에 적용될 GameplayEffect
 	UPROPERTY(EditDefaultsOnly, Category = Skill)
-		TSubclassOf<class UGEMakeway> GEforTarget;
+		TSubclassOf<class UGEMakewayTargetEffect> GEforTarget;
 
 	// 타격 대상에 적용될 GameplayEffect의 레벨
 	UPROPERTY(EditDefaultsOnly, Category = Skill)

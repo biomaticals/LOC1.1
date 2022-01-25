@@ -12,6 +12,10 @@
 #define CONSTRUCT_CLASS(Class, Name) Class* Name = NewObject<Class>(GetTransientPackage(), FName(TEXT(#Name)))
 #endif
 
+/**
+ * GameplayEffect의 기초 클래스
+ */
+
 UCLASS()
 class LOC_API UGEBase : public UGameplayEffect
 {

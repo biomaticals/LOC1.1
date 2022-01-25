@@ -1,18 +1,15 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
-
 #include "..\public\GECMonsterExpExecution.h"
 #include "..\..\..\AttributeSet\public\LOCAttributeSet.h"
 #include "AbilitySystemComponent.h"
 
+// 계산식에 사용될 스탯을 담은 구조체
 struct FMonsterExpStatics
 {
-	//Capturedef declarations for attributes.
+
 	DECLARE_ATTRIBUTE_CAPTUREDEF(Level);
 	DECLARE_ATTRIBUTE_CAPTUREDEF(Experience);
 	DECLARE_ATTRIBUTE_CAPTUREDEF(MaxExperience);
 	 
-	//Default constructor.
 	FMonsterExpStatics()
 	{
 		DEFINE_ATTRIBUTE_CAPTUREDEF(ULOCAttributeSet, Level, Target, true);
@@ -37,13 +34,12 @@ UGECMonsterExpExecution::UGECMonsterExpExecution()
 
 void UGECMonsterExpExecution::Execute_Implementation(const FGameplayEffectCustomExecutionParameters& ExecutionParams, OUT FGameplayEffectCustomExecutionOutput& OutExecutionOutput) const
 {
-	UAbilitySystemComponent* TargetABSC = ExecutionParams.GetTargetAbilitySystemComponent();
-	AActor* TargetActor = TargetABSC ? TargetABSC->GetAvatarActor() : nullptr;
+	UAbilitySystemComponent*	TargetABSC	= ExecutionParams.GetTargetAbilitySystemComponent();
+	AActor*						TargetActor = TargetABSC ? TargetABSC->GetAvatarActor() : nullptr;
+	UAbilitySystemComponent*	SourceABSC  = ExecutionParams.GetSourceAbilitySystemComponent();
+	AActor*						SourceActor = SourceABSC ? SourceABSC->GetAvatarActor() : nullptr;
 
-	UAbilitySystemComponent* SourceABSC = ExecutionParams.GetSourceAbilitySystemComponent();
-	AActor* SourceActor = SourceABSC ? SourceABSC->GetAvatarActor() : nullptr;
-
-	const FGameplayEffectSpec& Spec = ExecutionParams.GetOwningSpec();
+	const FGameplayEffectSpec&   Spec		= ExecutionParams.GetOwningSpec();
 	const FGameplayTagContainer* SourceTags = Spec.CapturedSourceTags.GetAggregatedTags();
 	const FGameplayTagContainer* TargetTags = Spec.CapturedTargetTags.GetAggregatedTags();
 
@@ -52,38 +48,35 @@ void UGECMonsterExpExecution::Execute_Implementation(const FGameplayEffectCustom
 	EvaluationParameters.TargetTags = TargetTags;
 
 	float TargetLevel = 0.f;
-	ExecutionParams.AttemptCalculateCapturedAttributeMagnitude(MonsterExpStatics().LevelDef, EvaluationParameters, TargetLevel);
-
 	float TargetExperience = 0.f;
-	ExecutionParams.AttemptCalculateCapturedAttributeMagnitude(MonsterExpStatics().ExperienceDef, EvaluationParameters, TargetExperience);
-
 	float TargetMaxExperience = 0.f;
+	ExecutionParams.AttemptCalculateCapturedAttributeMagnitude(MonsterExpStatics().LevelDef, EvaluationParameters, TargetLevel);	
+	ExecutionParams.AttemptCalculateCapturedAttributeMagnitude(MonsterExpStatics().ExperienceDef, EvaluationParameters, TargetExperience);
 	ExecutionParams.AttemptCalculateCapturedAttributeMagnitude(MonsterExpStatics().MaxExperienceDef, EvaluationParameters, TargetMaxExperience);
 
-	float Exp = 50.f;
+	// 기본 경험치는 50
+	float BaseExp = 50.f;
 	float ExpRemain = 0.f;
 	float NewTargetMaxExperience = 0.f;
-	float NewTargetLevel = 0.f;
 
-	Exp = 50 / TargetLevel;	
+	// 획득 경험치 공식 ; Exp = 50 / DifferOfLevel 
+	BaseExp = 50 / TargetLevel;	
 
-	if (TargetExperience + Exp >= TargetMaxExperience)
+	if (TargetExperience + BaseExp >= TargetMaxExperience)
 	{
-		ExpRemain = TargetExperience + Exp - TargetMaxExperience;
+		ExpRemain = TargetExperience + BaseExp - TargetMaxExperience;
 
-		// 경험치 공식 ; MaxExp = exp2(Level - 1 ) * 100
+		// 캐릭터 최대 경험치 공식 ; MaxExp = exp2(Level - 1 ) * 100
 		NewTargetMaxExperience = TargetMaxExperience * 2;
 
 		OutExecutionOutput.AddOutputModifier(FGameplayModifierEvaluatedData(MonsterExpStatics().LevelProperty, EGameplayModOp::Additive, 1));
 		OutExecutionOutput.AddOutputModifier(FGameplayModifierEvaluatedData(MonsterExpStatics().ExperienceProperty, EGameplayModOp::Override, ExpRemain));
 		OutExecutionOutput.AddOutputModifier(FGameplayModifierEvaluatedData(MonsterExpStatics().MaxExperienceProperty, EGameplayModOp::Override, NewTargetMaxExperience));
 
-
 	}
-	else if (TargetExperience + Exp < TargetMaxExperience)
+	else if (TargetExperience + BaseExp < TargetMaxExperience)
 	{
-
-		OutExecutionOutput.AddOutputModifier(FGameplayModifierEvaluatedData(MonsterExpStatics().ExperienceProperty, EGameplayModOp::Additive, Exp));
+		OutExecutionOutput.AddOutputModifier(FGameplayModifierEvaluatedData(MonsterExpStatics().ExperienceProperty, EGameplayModOp::Additive, BaseExp));
 	}
 
 

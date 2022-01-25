@@ -40,9 +40,10 @@ void EmptyLinkFunctionForGeneratedCodeGASelfCastBase() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGASelfCastBase_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n * \n */" },
+		{ "Comment", "/**\n * ?\xda\xbd\xc5\xbf??? ?????\xcf\xb4? GameplayAbility?? ???? \xc5\xac???? \n */" },
 		{ "IncludePath", "GameplayAbilitySystem/GameplayAbility/Public/GASelfCastBase.h" },
 		{ "ModuleRelativePath", "GameplayAbilitySystem/GameplayAbility/Public/GASelfCastBase.h" },
+		{ "ToolTip", "?\xda\xbd\xc5\xbf??? ?????\xcf\xb4? GameplayAbility?? ???? \xc5\xac????" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UGASelfCastBase_Statics::StaticCppClassTypeInfo = {
@@ -72,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeGASelfCastBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UGASelfCastBase, 1723273889);
+	IMPLEMENT_CLASS(UGASelfCastBase, 359580246);
 	template<> LOC_API UClass* StaticClass<UGASelfCastBase>()
 	{
 		return UGASelfCastBase::StaticClass();

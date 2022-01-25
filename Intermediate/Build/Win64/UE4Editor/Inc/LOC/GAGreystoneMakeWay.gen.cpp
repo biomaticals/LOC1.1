@@ -20,7 +20,7 @@ void EmptyLinkFunctionForGeneratedCodeGAGreystoneMakeway() {}
 	GAMEPLAYABILITIES_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayEventData();
 	ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
-	LOC_API UClass* Z_Construct_UClass_UGEMakeway_NoRegister();
+	LOC_API UClass* Z_Construct_UClass_UGEMakewayTargetEffect_NoRegister();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FTimerHandle();
 // End Cross Module References
 	DEFINE_FUNCTION(UGAGreystoneMakeway::execOnHit)
@@ -224,50 +224,63 @@ void EmptyLinkFunctionForGeneratedCodeGAGreystoneMakeway() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGAGreystoneMakeway_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n *\n */" },
+		{ "Comment", "/**\n * Greystone?? Makeway ??\xc5\xb3 \n */" },
 		{ "IncludePath", "GameplayAbilitySystem/GameplayAbility/Public/GAGreystoneMakeway.h" },
 		{ "ModuleRelativePath", "GameplayAbilitySystem/GameplayAbility/Public/GAGreystoneMakeway.h" },
+		{ "ToolTip", "Greystone?? Makeway ??\xc5\xb3" },
 	};
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGAGreystoneMakeway_Statics::NewProp_TotalHitCount_MetaData[] = {
 		{ "Category", "Ability" },
+		{ "Comment", "// ?? \xc5\xb8?? \xc8\xbd??\n" },
 		{ "ModuleRelativePath", "GameplayAbilitySystem/GameplayAbility/Public/GAGreystoneMakeway.h" },
+		{ "ToolTip", "?? \xc5\xb8?? \xc8\xbd??" },
 	};
 #endif
 	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_UGAGreystoneMakeway_Statics::NewProp_TotalHitCount = { "TotalHitCount", nullptr, (EPropertyFlags)0x0010000000010001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGAGreystoneMakeway, TotalHitCount), METADATA_PARAMS(Z_Construct_UClass_UGAGreystoneMakeway_Statics::NewProp_TotalHitCount_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGAGreystoneMakeway_Statics::NewProp_TotalHitCount_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGAGreystoneMakeway_Statics::NewProp_SecondsForHit_MetaData[] = {
 		{ "Category", "Ability" },
+		{ "Comment", "// ?\xd1\xb9??? \xc5\xb8?\xdd\xbf? ?\xc9\xb8??? ?\xc3\xb0?\n" },
 		{ "ModuleRelativePath", "GameplayAbilitySystem/GameplayAbility/Public/GAGreystoneMakeway.h" },
+		{ "ToolTip", "?\xd1\xb9??? \xc5\xb8?\xdd\xbf? ?\xc9\xb8??? ?\xc3\xb0?" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UGAGreystoneMakeway_Statics::NewProp_SecondsForHit = { "SecondsForHit", nullptr, (EPropertyFlags)0x0010000000010001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGAGreystoneMakeway, SecondsForHit), METADATA_PARAMS(Z_Construct_UClass_UGAGreystoneMakeway_Statics::NewProp_SecondsForHit_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGAGreystoneMakeway_Statics::NewProp_SecondsForHit_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGAGreystoneMakeway_Statics::NewProp_DamageRange_MetaData[] = {
 		{ "Category", "Ability" },
+		{ "Comment", "// ??\xc5\xb3 \xc5\xb8?? ????\n" },
 		{ "ModuleRelativePath", "GameplayAbilitySystem/GameplayAbility/Public/GAGreystoneMakeway.h" },
+		{ "ToolTip", "??\xc5\xb3 \xc5\xb8?? ????" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UGAGreystoneMakeway_Statics::NewProp_DamageRange = { "DamageRange", nullptr, (EPropertyFlags)0x0010000000010001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGAGreystoneMakeway, DamageRange), METADATA_PARAMS(Z_Construct_UClass_UGAGreystoneMakeway_Statics::NewProp_DamageRange_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGAGreystoneMakeway_Statics::NewProp_DamageRange_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGAGreystoneMakeway_Statics::NewProp_SkillMontage_MetaData[] = {
 		{ "Category", "Ability" },
+		{ "Comment", "// ??\xc5\xb3 ??\xc5\xb8??\n" },
 		{ "ModuleRelativePath", "GameplayAbilitySystem/GameplayAbility/Public/GAGreystoneMakeway.h" },
+		{ "ToolTip", "??\xc5\xb3 ??\xc5\xb8??" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UGAGreystoneMakeway_Statics::NewProp_SkillMontage = { "SkillMontage", nullptr, (EPropertyFlags)0x0010000000010001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGAGreystoneMakeway, SkillMontage), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UGAGreystoneMakeway_Statics::NewProp_SkillMontage_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGAGreystoneMakeway_Statics::NewProp_SkillMontage_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGAGreystoneMakeway_Statics::NewProp_GEforTarget_MetaData[] = {
 		{ "Category", "Skill" },
+		{ "Comment", "// \xc5\xb8?? ?????? ?????? GameplayEffect\n" },
 		{ "ModuleRelativePath", "GameplayAbilitySystem/GameplayAbility/Public/GAGreystoneMakeway.h" },
+		{ "ToolTip", "\xc5\xb8?? ?????? ?????? GameplayEffect" },
 	};
 #endif
-	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_UGAGreystoneMakeway_Statics::NewProp_GEforTarget = { "GEforTarget", nullptr, (EPropertyFlags)0x0014000000010001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGAGreystoneMakeway, GEforTarget), Z_Construct_UClass_UGEMakeway_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_UGAGreystoneMakeway_Statics::NewProp_GEforTarget_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGAGreystoneMakeway_Statics::NewProp_GEforTarget_MetaData)) };
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_UGAGreystoneMakeway_Statics::NewProp_GEforTarget = { "GEforTarget", nullptr, (EPropertyFlags)0x0014000000010001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGAGreystoneMakeway, GEforTarget), Z_Construct_UClass_UGEMakewayTargetEffect_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_UGAGreystoneMakeway_Statics::NewProp_GEforTarget_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGAGreystoneMakeway_Statics::NewProp_GEforTarget_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGAGreystoneMakeway_Statics::NewProp_GELevelforTarget_MetaData[] = {
 		{ "Category", "Skill" },
+		{ "Comment", "// \xc5\xb8?? ?????? ?????? GameplayEffect?? ????\n" },
 		{ "ModuleRelativePath", "GameplayAbilitySystem/GameplayAbility/Public/GAGreystoneMakeway.h" },
+		{ "ToolTip", "\xc5\xb8?? ?????? ?????? GameplayEffect?? ????" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UGAGreystoneMakeway_Statics::NewProp_GELevelforTarget = { "GELevelforTarget", nullptr, (EPropertyFlags)0x0010000000010001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGAGreystoneMakeway, GELevelforTarget), METADATA_PARAMS(Z_Construct_UClass_UGAGreystoneMakeway_Statics::NewProp_GELevelforTarget_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGAGreystoneMakeway_Statics::NewProp_GELevelforTarget_MetaData)) };
@@ -313,7 +326,7 @@ void EmptyLinkFunctionForGeneratedCodeGAGreystoneMakeway() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UGAGreystoneMakeway, 984649605);
+	IMPLEMENT_CLASS(UGAGreystoneMakeway, 2452946766);
 	template<> LOC_API UClass* StaticClass<UGAGreystoneMakeway>()
 	{
 		return UGAGreystoneMakeway::StaticClass();

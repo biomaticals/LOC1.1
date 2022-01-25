@@ -40,9 +40,10 @@ void EmptyLinkFunctionForGeneratedCodeGECMonsterExpExecution() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGECMonsterExpExecution_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n * \n */" },
+		{ "Comment", "/**\n * ?????? ???? ?? ???? ????\xc4\xa1 ?????? \xc5\xac????\n */" },
 		{ "IncludePath", "GameplayAbilitySystem/GameplayEffect/GameplayEffectExecutionCalculation/Public/GECMonsterExpExecution.h" },
 		{ "ModuleRelativePath", "GameplayAbilitySystem/GameplayEffect/GameplayEffectExecutionCalculation/Public/GECMonsterExpExecution.h" },
+		{ "ToolTip", "?????? ???? ?? ???? ????\xc4\xa1 ?????? \xc5\xac????" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UGECMonsterExpExecution_Statics::StaticCppClassTypeInfo = {
@@ -72,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeGECMonsterExpExecution() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UGECMonsterExpExecution, 2131751325);
+	IMPLEMENT_CLASS(UGECMonsterExpExecution, 3775774995);
 	template<> LOC_API UClass* StaticClass<UGECMonsterExpExecution>()
 	{
 		return UGECMonsterExpExecution::StaticClass();
