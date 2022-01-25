@@ -5,6 +5,7 @@
 #include "GameplayAbilitySystem/GameplayEffect/Public/GEMakeWay.h"
 #include "Abilities/Tasks/AbilityTask_WaitGameplayEvent.h"
 #include "GAGreystoneMakeWay.generated.h"
+
 /**
  *
  */
@@ -29,27 +30,21 @@ protected:
 		void OnHit();
 	
 public:
-	UPROPERTY(BlueprintReadWrite, Category = "Default")
-		int32 CurrentHitCount;
-
-	UPROPERTY(EditAnywhere, Category = "Default")
+	UPROPERTY(EditDefaultsOnly, Category = "Default")
 		int32 TotalHitCount;
 
-	UPROPERTY(EditAnywhere, Category = "Default")
+	UPROPERTY(EditDefaultsOnly, Category = "Default")
 		float SecondsForHit;
 
-	UPROPERTY(EditAnywhere, Category = "Default")
+	UPROPERTY(EditDefaultsOnly, Category = "Default")
 		float DamageRange;
 
-	UPROPERTY(VisibleDefaultsOnly, Category = "Default")
+	UPROPERTY(EditDefaultsOnly, Category = "Default")
 		UAnimMontage* SkillMontage;
 
-	UPROPERTY(VisibleDefaultsOnly, Category = "Default")
+	UPROPERTY(EditDefaultsOnly, Category = "Default")
 		TSubclassOf<UGEMakeWay> GEforTarget;
 
-	UPROPERTY(EditAnywhere, Category = "Default")
+	UPROPERTY(EditDefaultsOnly, Category = "Default")
 		float GELevelforTaget;
-
-	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "Default")
-		TArray<AActor*> ActorsToIgnore;
 };

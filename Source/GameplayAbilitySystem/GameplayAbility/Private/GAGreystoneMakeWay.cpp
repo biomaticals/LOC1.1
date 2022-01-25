@@ -9,12 +9,13 @@
 #include "..\..\..\Character\Public\LOCCharacter.h"
 
 UGAGreystoneMakeWay::UGAGreystoneMakeWay()
+	: TotalHitCount   { 10 }
+	, SecondsForHit	  { 1.0f }
+	, DamageRange	  { 300.0f }
+	, GELevelforTaget { 1.f}
 {
-	static ConstructorHelpers::FObjectFinder<UAnimMontage> SkillMontageFinder(TEXT("/Game/ParagonGreystone/Characters/Heroes/Greystone/Animations/AM_MakeWay.AM_MakeWay"));
+	ConstructorHelpers::FObjectFinder<UAnimMontage> SkillMontageFinder(TEXT("/Game/ParagonGreystone/Characters/Heroes/Greystone/Animations/AM_MakeWay.AM_MakeWay"));
 	SkillMontage = SkillMontageFinder.Object;
-
-	GEforTarget = UGEMakeWay::StaticClass();
-
 }
 
 void UGAGreystoneMakeWay::ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData)
@@ -80,26 +81,29 @@ void UGAGreystoneMakeWay::OnHitStart(const FGameplayEventData Payload)
 	AbilitySystemComponent->ExecuteGameplayCue(OwnerTag, EffectContextHandle);
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("ExecuteGameplayCue"));
 	
-	CurrentHitCount  = 0;
-	TotalHitCount	 = 5;
-	SecondsForHit	 = 1.0f;
-	FTimerHandle WaitHandle;
+	int32			CurrentHitCount  = 0;
+	FTimerHandle TimerHandle;
 	FTimerManager& Timer = GetWorld()->GetTimerManager();
 
+
+	
 	for (; CurrentHitCount <= TotalHitCount; CurrentHitCount++)
 	{	
-		Timer.SetTimer(WaitHandle, FTimerDelegate::CreateLambda
-		(	
+		Timer.SetTimer(TimerHandle,FTimerDelegate::CreateLambda
+		(
 			[&]()
 			{	
+				TotalHitCount--;
+				if (TotalHitCount == 0)
+				{
+					Timer.ClearTimer(TimerHandle);
+				}
 				OnHit();
-				GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("DelayTask"));			
 			}
 		),SecondsForHit, true);
-	}
-	
-	K2_EndAbility();
+	}	
 
+	K2_EndAbility();
 }
 
 void UGAGreystoneMakeWay::OnHit()
@@ -111,17 +115,18 @@ void UGAGreystoneMakeWay::OnHit()
 
 	TArray<TEnumAsByte< EObjectTypeQuery>> TargetObjectType;
 	TargetObjectType.Add(UEngineTypes::ConvertToObjectType(ECollisionChannel::ECC_Pawn));
-
+	TArray<AActor*> ActorsToIgnore;
 	TArray<AActor*> OverlappedActors;
 	UKismetSystemLibrary::SphereOverlapActors(World, SpherePos, DamageRange, TargetObjectType, nullptr, ActorsToIgnore, OverlappedActors);
-	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("SphereOverlapActors"));
+	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("SphereOverlapActors"));		
+	
 
 	for (AActor* Actor : OverlappedActors)
 	{
 		ALOCCharacter* TargetActor = Cast<ALOCCharacter>(Actor);
 		UAbilitySystemComponent* TargetComponent = TargetActor->GetAbilitySystemComponent();
 		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("AsOverlappedActors"));
-		//GetAbilitySystemComponentFromActorInfo()->ApplyGameplayEffectToTarget(BaseDmgEffect, TargetComponent, GELevelforTaget);
+		GetAbilitySystemComponentFromActorInfo()->ApplyGameplayEffectToTarget(GEforTarget.GetDefaultObject(), TargetComponent, GELevelforTaget);
 	}
 }
 
