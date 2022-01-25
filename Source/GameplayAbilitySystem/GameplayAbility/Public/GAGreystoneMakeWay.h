@@ -7,7 +7,7 @@
 #include "GAGreystoneMakeWay.generated.h"
 
 /**
- *
+ * Greystone의 Makeway 스킬 
  */
 UCLASS()
 class LOC_API UGAGreystoneMakeway : public UGASelfCastBase
@@ -36,21 +36,27 @@ protected:
 	
 public:
 
+	// 총 타격 횟수
 	UPROPERTY(EditDefaultsOnly, Category = Ability)
 		int32 TotalHitCount;
 
+	// 한번의 타격에 걸리는 시간
 	UPROPERTY(EditDefaultsOnly, Category = Ability)
 		float SecondsForHit;
 
+	// 스킬 타격 범위
 	UPROPERTY(EditDefaultsOnly, Category = Ability)
 		float DamageRange;
 
+	// 스킬 몽타주
 	UPROPERTY(EditDefaultsOnly, Category = Ability)
 		UAnimMontage* SkillMontage;
 	
+	// 타격 대상에 적용될 GameplayEffect
 	UPROPERTY(EditDefaultsOnly, Category = Skill)
 		TSubclassOf<class UGEMakeway> GEforTarget;
 
+	// 타격 대상에 적용될 GameplayEffect의 레벨
 	UPROPERTY(EditDefaultsOnly, Category = Skill)
 		float GELevelforTarget;
 

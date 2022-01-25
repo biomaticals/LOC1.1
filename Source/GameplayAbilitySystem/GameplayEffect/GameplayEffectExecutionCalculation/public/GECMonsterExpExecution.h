@@ -7,7 +7,7 @@
 #include "GECMonsterExpExecution.generated.h"
 
 /**
- * 
+ * 몬스터 사냥 시 얻는 경험치 계산식 클래스
  */
 UCLASS()
 class LOC_API UGECMonsterExpExecution : public UGameplayEffectExecutionCalculation

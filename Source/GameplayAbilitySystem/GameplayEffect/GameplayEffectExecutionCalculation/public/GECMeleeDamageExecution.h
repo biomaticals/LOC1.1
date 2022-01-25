@@ -7,7 +7,7 @@
 #include "GECMeleeDamageExecution.generated.h"
 
 /**
- *  근접공격 데미지를 계산합니다. Strength, Endurance, Weapon Damage를 통해 계산하고 Health_Current에 적용합니다.
+ *  근접근접공격 데미지를 계산하는 클래스
  */
 UCLASS()
 class LOC_API UGECMeleeDamageExecution : public UGameplayEffectExecutionCalculation

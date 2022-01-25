@@ -13,12 +13,17 @@
 #define CONSTRUCT_CLASS(Class, Name) Class* Name = NewObject<Class>(GetTransientPackage(), FName(TEXT(#Name)))
 #endif
 
+/**
+ * GameplayAbility의 기초 클래스
+ */
 UCLASS()
 class LOC_API UGABase : public UGameplayAbility
 {
 	GENERATED_BODY()
 	
 protected:
+
+	// 소유 캐릭터 정보를 얻어옵니다. GetOwningActorFromActorInfo() 대신 이 함수를 사용하세요.
 	UFUNCTION()
 		ALOCCharacter* GetCharacterInfo();
 	
