@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Source/MeleeHitboxes/public/MeleeHitboxData.h"
+#include "Source/MeleeHitboxes/Public/MeleeHitboxData.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -67,7 +67,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFMeleeHitSphereDefinition
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FMeleeHitSphereDefinition_Statics::Struct_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
 		{ "Comment", "/**\n * \n */" },
-		{ "ModuleRelativePath", "MeleeHitboxes/public/MeleeHitboxData.h" },
+		{ "ModuleRelativePath", "MeleeHitboxes/Public/MeleeHitboxData.h" },
 	};
 #endif
 	void* Z_Construct_UScriptStruct_FMeleeHitSphereDefinition_Statics::NewStructOps()
@@ -77,21 +77,21 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFMeleeHitSphereDefinition
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FMeleeHitSphereDefinition_Statics::NewProp_Nickname_MetaData[] = {
 		{ "Category", "MeleeHitSphereDefinition" },
-		{ "ModuleRelativePath", "MeleeHitboxes/public/MeleeHitboxData.h" },
+		{ "ModuleRelativePath", "MeleeHitboxes/Public/MeleeHitboxData.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FMeleeHitSphereDefinition_Statics::NewProp_Nickname = { "Nickname", nullptr, (EPropertyFlags)0x0010000000010015, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FMeleeHitSphereDefinition, Nickname), METADATA_PARAMS(Z_Construct_UScriptStruct_FMeleeHitSphereDefinition_Statics::NewProp_Nickname_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FMeleeHitSphereDefinition_Statics::NewProp_Nickname_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FMeleeHitSphereDefinition_Statics::NewProp_Offset_MetaData[] = {
 		{ "Category", "MeleeHitSphereDefinition" },
-		{ "ModuleRelativePath", "MeleeHitboxes/public/MeleeHitboxData.h" },
+		{ "ModuleRelativePath", "MeleeHitboxes/Public/MeleeHitboxData.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FMeleeHitSphereDefinition_Statics::NewProp_Offset = { "Offset", nullptr, (EPropertyFlags)0x0010000000010015, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FMeleeHitSphereDefinition, Offset), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UScriptStruct_FMeleeHitSphereDefinition_Statics::NewProp_Offset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FMeleeHitSphereDefinition_Statics::NewProp_Offset_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FMeleeHitSphereDefinition_Statics::NewProp_Radius_MetaData[] = {
 		{ "Category", "MeleeHitSphereDefinition" },
-		{ "ModuleRelativePath", "MeleeHitboxes/public/MeleeHitboxData.h" },
+		{ "ModuleRelativePath", "MeleeHitboxes/Public/MeleeHitboxData.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FMeleeHitSphereDefinition_Statics::NewProp_Radius = { "Radius", nullptr, (EPropertyFlags)0x0010000000010015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FMeleeHitSphereDefinition, Radius), METADATA_PARAMS(Z_Construct_UScriptStruct_FMeleeHitSphereDefinition_Statics::NewProp_Radius_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FMeleeHitSphereDefinition_Statics::NewProp_Radius_MetaData)) };
@@ -128,7 +128,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFMeleeHitSphereDefinition
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FMeleeHitSphereDefinition_Hash() { return 799181269U; }
+	uint32 Get_Z_Construct_UScriptStruct_FMeleeHitSphereDefinition_Hash() { return 1025688590U; }
 	DEFINE_FUNCTION(UMeleeHitboxData::execGetMeleeHitSpheres)
 	{
 		P_GET_TARRAY(int32,Z_Param_indexes);
@@ -174,7 +174,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFMeleeHitSphereDefinition
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UMeleeHitboxData_GetMeleeHitSpheres_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "MeleeHitboxes/public/MeleeHitboxData.h" },
+		{ "ModuleRelativePath", "MeleeHitboxes/Public/MeleeHitboxData.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMeleeHitboxData_GetMeleeHitSpheres_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMeleeHitboxData, nullptr, "GetMeleeHitSpheres", nullptr, nullptr, sizeof(MeleeHitboxData_eventGetMeleeHitSpheres_Parms), Z_Construct_UFunction_UMeleeHitboxData_GetMeleeHitSpheres_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UMeleeHitboxData_GetMeleeHitSpheres_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMeleeHitboxData_GetMeleeHitSpheres_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UMeleeHitboxData_GetMeleeHitSpheres_Statics::Function_MetaDataParams)) };
@@ -212,20 +212,20 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFMeleeHitSphereDefinition
 		(UObject* (*)())Z_Construct_UPackage__Script_LOC,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UMeleeHitboxData_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UMeleeHitboxData_GetMeleeHitSpheres, "GetMeleeHitSpheres" }, // 4046863540
+		{ &Z_Construct_UFunction_UMeleeHitboxData_GetMeleeHitSpheres, "GetMeleeHitSpheres" }, // 309307651
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMeleeHitboxData_Statics::Class_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
-		{ "IncludePath", "MeleeHitboxes/public/MeleeHitboxData.h" },
-		{ "ModuleRelativePath", "MeleeHitboxes/public/MeleeHitboxData.h" },
+		{ "IncludePath", "MeleeHitboxes/Public/MeleeHitboxData.h" },
+		{ "ModuleRelativePath", "MeleeHitboxes/Public/MeleeHitboxData.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UMeleeHitboxData_Statics::NewProp_MeleeHitSpheres_Inner = { "MeleeHitSpheres", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FMeleeHitSphereDefinition, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMeleeHitboxData_Statics::NewProp_MeleeHitSpheres_MetaData[] = {
 		{ "Category", "MeleeHitboxData" },
-		{ "ModuleRelativePath", "MeleeHitboxes/public/MeleeHitboxData.h" },
+		{ "ModuleRelativePath", "MeleeHitboxes/Public/MeleeHitboxData.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UMeleeHitboxData_Statics::NewProp_MeleeHitSpheres = { "MeleeHitSpheres", nullptr, (EPropertyFlags)0x0010000000010015, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMeleeHitboxData, MeleeHitSpheres), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UMeleeHitboxData_Statics::NewProp_MeleeHitSpheres_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UMeleeHitboxData_Statics::NewProp_MeleeHitSpheres_MetaData)) };
@@ -260,7 +260,7 @@ static struct FScriptStruct_LOC_StaticRegisterNativesFMeleeHitSphereDefinition
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UMeleeHitboxData, 633551054);
+	IMPLEMENT_CLASS(UMeleeHitboxData, 1716138990);
 	template<> LOC_API UClass* StaticClass<UMeleeHitboxData>()
 	{
 		return UMeleeHitboxData::StaticClass();

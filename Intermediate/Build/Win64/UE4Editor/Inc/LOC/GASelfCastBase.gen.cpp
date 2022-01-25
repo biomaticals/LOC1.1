@@ -72,7 +72,7 @@ void EmptyLinkFunctionForGeneratedCodeGASelfCastBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UGASelfCastBase, 2647302308);
+	IMPLEMENT_CLASS(UGASelfCastBase, 1723273889);
 	template<> LOC_API UClass* StaticClass<UGASelfCastBase>()
 	{
 		return UGASelfCastBase::StaticClass();

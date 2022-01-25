@@ -2,6 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "GameplayAbilitySystem/GameplayAbility/Public/GASelfCastBase.h"
+#include "GameplayAbilitySystem/GameplayEffect/Greystone/Public/GEMakeWay.h"
 #include "Abilities/Tasks/AbilityTask_WaitGameplayEvent.h"
 #include "GAGreystoneMakeWay.generated.h"
 /**
@@ -12,12 +13,11 @@ class LOC_API UGAGreystoneMakeWay : public UGASelfCastBase
 {
 	GENERATED_BODY()
 
-public:
+protected:
 	UGAGreystoneMakeWay();
 
 	virtual void ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData) override;
 	virtual void EndAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, bool bReplicateEndAbility, bool bWasCancelled) override;
-
 		
 	UFUNCTION()
 		void OnCancelled();
@@ -27,9 +27,6 @@ public:
 
 	UFUNCTION()
 		void OnHit();
-
-	UFUNCTION()
-		void ScanEnemies();
 	
 public:
 	UPROPERTY(BlueprintReadWrite, Category = "Default")

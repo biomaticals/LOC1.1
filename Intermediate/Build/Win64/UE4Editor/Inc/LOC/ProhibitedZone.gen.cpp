@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Source/Zone/public/ProhibitedZone.h"
+#include "Source/Zone/Public/ProhibitedZone.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -41,8 +41,8 @@ void EmptyLinkFunctionForGeneratedCodeProhibitedZone() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AProhibitedZone_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n * \n */" },
-		{ "IncludePath", "Zone/public/ProhibitedZone.h" },
-		{ "ModuleRelativePath", "Zone/public/ProhibitedZone.h" },
+		{ "IncludePath", "Zone/Public/ProhibitedZone.h" },
+		{ "ModuleRelativePath", "Zone/Public/ProhibitedZone.h" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AProhibitedZone_Statics::StaticCppClassTypeInfo = {
@@ -72,7 +72,7 @@ void EmptyLinkFunctionForGeneratedCodeProhibitedZone() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AProhibitedZone, 540619949);
+	IMPLEMENT_CLASS(AProhibitedZone, 1052774250);
 	template<> LOC_API UClass* StaticClass<AProhibitedZone>()
 	{
 		return AProhibitedZone::StaticClass();

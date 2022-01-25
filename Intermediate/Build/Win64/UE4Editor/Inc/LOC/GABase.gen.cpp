@@ -89,7 +89,6 @@ void EmptyLinkFunctionForGeneratedCodeGABase() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGABase_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n * \n */" },
 		{ "IncludePath", "GameplayAbilitySystem/GameplayAbility/Public/GABase.h" },
 		{ "ModuleRelativePath", "GameplayAbilitySystem/GameplayAbility/Public/GABase.h" },
 	};
@@ -121,7 +120,7 @@ void EmptyLinkFunctionForGeneratedCodeGABase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UGABase, 949107291);
+	IMPLEMENT_CLASS(UGABase, 4176687981);
 	template<> LOC_API UClass* StaticClass<UGABase>()
 	{
 		return UGABase::StaticClass();

@@ -4,19 +4,14 @@
 #include "Abilities/Tasks/AbilityTask_WaitGameplayEvent.h"
 #include "Abilities/Tasks/AbilityTask_PlayMontageAndWait.h"
 #include "Abilities/Tasks/AbilityTask_WaitDelay.h"
-#include "GameplayAbilities\Private\GameplayEffectTests.cpp"
 #include "UObject\ConstructorHelpers.h"
 #include "Kismet/KismetSystemLibrary.h"
 #include "..\..\..\Character\Public\LOCCharacter.h"
 
 UGAGreystoneMakeWay::UGAGreystoneMakeWay()
-{
-																
+{																
 	static ConstructorHelpers::FObjectFinder<UAnimMontage> SkillMontageFinder(TEXT("/Game/ParagonGreystone/Characters/Heroes/Greystone/Animations/AM_MakeWay.AM_MakeWay"));
-	SkillMontage = SkillMontageFinder.Object;								
-	
-	static ConstructorHelpers::FClassFinder<UGameplayEffect> GEforTargetFinder(TEXT("/Game/Blueprints/GameplayEffects/Greystone/GE_MakeWay.GE_MakeWay_C"));
-	GEforTarget = GEforTargetFinder.Class;
+	SkillMontage = SkillMontageFinder.Object;		
 }
 
 void UGAGreystoneMakeWay::ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData)
@@ -105,14 +100,7 @@ void UGAGreystoneMakeWay::OnHitStart(const FGameplayEventData Payload)
 }
 
 void UGAGreystoneMakeWay::OnHit()
-{
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("OnHit"));
-	ScanEnemies();
-}
-
-
-void UGAGreystoneMakeWay::ScanEnemies()
-{
+{	
 	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("ScanEnemies"));
 	UObject* World = GetWorld();
 	FVector SpherePos = GetCharacterInfo()->GetActorLocation();
@@ -124,21 +112,8 @@ void UGAGreystoneMakeWay::ScanEnemies()
 	TArray<AActor*> OverlappedActors;
 	UKismetSystemLibrary::SphereOverlapActors(World, SpherePos, DamageRange, TargetObjectType, nullptr, ActorsToIgnore, OverlappedActors);
 	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("SphereOverlapActors"));
-	
-	FGameplayModifierInfo ModifierInfo;
-	ModifierInfo.Attribute = ULOCAttributeSet::GetHealthAttribute();
-	ModifierInfo.ModifierMagnitude = FGameplayEffectModifierMagnitude(-1);
-	
-	UGameplayEffect* BaseDmgEffect = NewObject<UGameplayEffect>(GetTransientPackage(), FName(TEXT("BaseDmgEffect")));
-	BaseDmgEffect->DurationPolicy = EGameplayEffectDurationType::Instant;
-
-		int32 Idx = BaseDmgEffect->Modifiers.Num();
-		BaseDmgEffect->Modifiers.SetNum(Idx + 1);
-		FGameplayModifierInfo& Info = BaseDmgEffect->Modifiers[Idx];
-		Info.ModifierMagnitude = FScalableFloat(-5);
-		Info.ModifierOp = EGameplayModOp::Additive;
-		Info.Attribute.SetUProperty(GET_FIELD_CHECKED(ULOCAttributeSet, Health));
-
+		
+	UGameplayEffect* BaseDmgEffect = GEforTarget.GetDefaultObject();
 	
 	for (AActor* Actor : OverlappedActors)
 	{

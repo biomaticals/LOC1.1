@@ -1,8 +1,8 @@
 C:\Users\bioma\Documents\GitHub\LOC\Intermediate\Build\Win64\UE4Editor\Development\LOC\Definitions.LOC.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-C:\Users\bioma\Documents\GitHub\LOC\Source/Zone/public/SafetyZone.h
-C:\Users\bioma\Documents\GitHub\LOC\Source\Zone\public\Zone.h
+C:\Users\bioma\Documents\GitHub\LOC\Source/Zone/Public/SafetyZone.h
+C:\Users\bioma\Documents\GitHub\LOC\Source\Zone\Public\Zone.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Components/BoxComponent.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h
