@@ -274,7 +274,7 @@
 /FI"C:\Users\bioma\Documents\GitHub\LOC\Intermediate\Build\Win64\LOCEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
 /Yu"C:\Users\bioma\Documents\GitHub\LOC\Intermediate\Build\Win64\LOCEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
 /Fp"C:\Users\bioma\Documents\GitHub\LOC\Intermediate\Build\Win64\LOCEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
-"C:\Users\bioma\Documents\GitHub\LOC\Source\GameplayAbilitySystem\GameplayEffect\Greystone\Private\GEMakeWay.cpp"
+"C:\Users\bioma\Documents\GitHub\LOC\Source\GameplayAbilitySystem\GameplayEffect\Private\GEMakeWay.cpp"
 /FI"C:\Users\bioma\Documents\GitHub\LOC\Intermediate\Build\Win64\UE4Editor\Development\LOC\Definitions.LOC.h"
 /Fo"C:\Users\bioma\Documents\GitHub\LOC\Intermediate\Build\Win64\UE4Editor\Development\LOC\GEMakeWay.cpp.obj"
 /TP

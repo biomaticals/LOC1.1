@@ -2,7 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "GameplayAbilitySystem/GameplayAbility/Public/GASelfCastBase.h"
-#include "GameplayAbilitySystem/GameplayEffect/Greystone/Public/GEMakeWay.h"
+#include "GameplayAbilitySystem/GameplayEffect/Public/GEMakeWay.h"
 #include "Abilities/Tasks/AbilityTask_WaitGameplayEvent.h"
 #include "GAGreystoneMakeWay.generated.h"
 /**
@@ -44,8 +44,8 @@ public:
 	UPROPERTY(VisibleDefaultsOnly, Category = "Default")
 		UAnimMontage* SkillMontage;
 
-	UPROPERTY(EditAnywhere, Category = "Default")
-		TSubclassOf<UGameplayEffect> GEforTarget;
+	UPROPERTY(VisibleDefaultsOnly, Category = "Default")
+		TSubclassOf<UGEMakeWay> GEforTarget;
 
 	UPROPERTY(EditAnywhere, Category = "Default")
 		float GELevelforTaget;

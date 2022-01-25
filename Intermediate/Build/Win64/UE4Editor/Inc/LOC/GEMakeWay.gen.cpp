@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Source/GameplayAbilitySystem/GameplayEffect/Greystone/Public/GEMakeWay.h"
+#include "Source/GameplayAbilitySystem/GameplayEffect/Public/GEMakeWay.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -41,8 +41,8 @@ void EmptyLinkFunctionForGeneratedCodeGEMakeWay() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGEMakeWay_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n * \n */" },
-		{ "IncludePath", "GameplayAbilitySystem/GameplayEffect/Greystone/Public/GEMakeWay.h" },
-		{ "ModuleRelativePath", "GameplayAbilitySystem/GameplayEffect/Greystone/Public/GEMakeWay.h" },
+		{ "IncludePath", "GameplayAbilitySystem/GameplayEffect/Public/GEMakeWay.h" },
+		{ "ModuleRelativePath", "GameplayAbilitySystem/GameplayEffect/Public/GEMakeWay.h" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UGEMakeWay_Statics::StaticCppClassTypeInfo = {
@@ -72,7 +72,7 @@ void EmptyLinkFunctionForGeneratedCodeGEMakeWay() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UGEMakeWay, 2162381768);
+	IMPLEMENT_CLASS(UGEMakeWay, 640126650);
 	template<> LOC_API UClass* StaticClass<UGEMakeWay>()
 	{
 		return UGEMakeWay::StaticClass();

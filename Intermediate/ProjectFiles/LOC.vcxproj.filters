@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\LOC.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{FC2D5CA3-606D-40CA-BDC6-3C9C38D2BA86}</UniqueIdentifier>
+      <UniqueIdentifier>{3F1F2E3C-469C-4003-A67A-ED90B4636A03}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\LOC.Target.cs">
       <Filter>Source</Filter>
@@ -16,7 +16,7 @@
     <None Include="..\..\LOC.png" />
     <None Include="..\..\README.md" />
     <Filter Include="Config">
-      <UniqueIdentifier>{75A6405B-9D18-4D43-A772-210BEE88F488}</UniqueIdentifier>
+      <UniqueIdentifier>{D520DCCB-5942-48D6-A56F-D63D6925955A}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -37,7 +37,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Config\Tags">
-      <UniqueIdentifier>{005002FD-932A-4916-9AB2-6877D6F4D1B9}</UniqueIdentifier>
+      <UniqueIdentifier>{383E61E4-C683-498A-BBF2-CA1957CACCD7}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\Tags\Experience">
       <Filter>Config\Tags</Filter>
@@ -46,37 +46,43 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Source\Character">
-      <UniqueIdentifier>{F18887B0-2142-4D61-8D81-B18655CDBB1D}</UniqueIdentifier>
+      <UniqueIdentifier>{9EA2AC85-7FC3-4BB0-A2EB-7974EDAE9130}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source\Character\Private">
-      <UniqueIdentifier>{034C8588-5B64-4EF4-9A14-60F42D118DDF}</UniqueIdentifier>
+      <UniqueIdentifier>{7B38E4E3-312C-4065-8CF3-46508CC6D85F}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Character\Private\LOCCharacter.cpp">
       <Filter>Source\Character\Private</Filter>
     </ClCompile>
     <Filter Include="Source\Character\Public">
-      <UniqueIdentifier>{2CF75CAB-E491-43AF-8BF7-4C00994C0EBE}</UniqueIdentifier>
+      <UniqueIdentifier>{555CF05F-D9A6-430F-A3AA-90D3ABA173A4}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\Character\Public\LOCCharacter.h">
       <Filter>Source\Character\Public</Filter>
     </ClInclude>
     <Filter Include="Source\GameplayAbilitySystem">
-      <UniqueIdentifier>{6CCB7F52-72FA-4113-A9EA-573533174E93}</UniqueIdentifier>
+      <UniqueIdentifier>{E41165AE-9AD5-4BF6-967B-496A1A54A507}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source\GameplayAbilitySystem\AttributeSet">
-      <UniqueIdentifier>{27465757-E614-45E0-A05E-4CFF62780110}</UniqueIdentifier>
+      <UniqueIdentifier>{4A115003-39E0-497D-BAFE-DAF72876D2E1}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\GameplayAbilitySystem\AttributeSet\private\LOCAttributeSet.cpp">
+    <Filter Include="Source\GameplayAbilitySystem\AttributeSet\Private">
+      <UniqueIdentifier>{F19D018F-0CA1-4F57-B5EB-5BE4501AF570}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\GameplayAbilitySystem\AttributeSet\Private\LOCAttributeSet.cpp">
       <Filter>Source\GameplayAbilitySystem\AttributeSet\Private</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\GameplayAbilitySystem\AttributeSet\public\LOCAttributeSet.h">
+    <Filter Include="Source\GameplayAbilitySystem\AttributeSet\Public">
+      <UniqueIdentifier>{CB524D5F-CB6B-47A8-8A91-247D9F0A22C0}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\GameplayAbilitySystem\AttributeSet\Public\LOCAttributeSet.h">
       <Filter>Source\GameplayAbilitySystem\AttributeSet\Public</Filter>
     </ClInclude>
     <Filter Include="Source\GameplayAbilitySystem\GameplayAbility">
-      <UniqueIdentifier>{8B0A70EC-9BE1-48B7-8635-70C64227D89D}</UniqueIdentifier>
+      <UniqueIdentifier>{4428946C-B6A1-4B68-9B37-FFBE744A44A9}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source\GameplayAbilitySystem\GameplayAbility\Private">
-      <UniqueIdentifier>{34C9DDBE-6A2C-4074-99E1-AFDCB68B7D75}</UniqueIdentifier>
+      <UniqueIdentifier>{24D28BB5-EB04-4D91-8EF4-36285E2FE27D}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\GameplayAbilitySystem\GameplayAbility\Private\GABase.cpp">
       <Filter>Source\GameplayAbilitySystem\GameplayAbility\Private</Filter>
@@ -88,7 +94,7 @@
       <Filter>Source\GameplayAbilitySystem\GameplayAbility\Private</Filter>
     </ClCompile>
     <Filter Include="Source\GameplayAbilitySystem\GameplayAbility\Public">
-      <UniqueIdentifier>{71C835EA-16E8-4CB0-8DB9-C2F3BD145269}</UniqueIdentifier>
+      <UniqueIdentifier>{0ED8926D-5403-460E-A6D7-C2A20C2BDE27}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\GameplayAbilitySystem\GameplayAbility\Public\GABase.h">
       <Filter>Source\GameplayAbilitySystem\GameplayAbility\Public</Filter>
@@ -100,114 +106,109 @@
       <Filter>Source\GameplayAbilitySystem\GameplayAbility\Public</Filter>
     </ClInclude>
     <Filter Include="Source\GameplayAbilitySystem\GameplayEffect">
-      <UniqueIdentifier>{9BED5F7F-782F-457F-9684-8CEEE866938F}</UniqueIdentifier>
+      <UniqueIdentifier>{4B98BE3D-E50E-4DE9-B5FB-73BBC5C7A31E}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\GameplayAbilitySystem\GameplayEffect\GEBase.cpp">
-      <Filter>Source\GameplayAbilitySystem\GameplayEffect</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\GameplayAbilitySystem\GameplayEffect\GEBase.h">
-      <Filter>Source\GameplayAbilitySystem\GameplayEffect</Filter>
-    </ClInclude>
     <Filter Include="Source\GameplayAbilitySystem\GameplayEffect\GameplayEffectExecutionCalculation">
-      <UniqueIdentifier>{330E7A8B-8C46-4867-BD85-8B88EDCB2ED6}</UniqueIdentifier>
+      <UniqueIdentifier>{B6227C21-8E36-4D40-AF91-BF0E7DF8E60C}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\GameplayAbilitySystem\GameplayEffect\GameplayEffectExecutionCalculation\private\GECMeleeDamageExecution.cpp">
+    <Filter Include="Source\GameplayAbilitySystem\GameplayEffect\GameplayEffectExecutionCalculation\Private">
+      <UniqueIdentifier>{47537CC3-63EE-47CC-BC9D-7959E38DA993}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\GameplayAbilitySystem\GameplayEffect\GameplayEffectExecutionCalculation\Private\GECMeleeDamageExecution.cpp">
       <Filter>Source\GameplayAbilitySystem\GameplayEffect\GameplayEffectExecutionCalculation\Private</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\GameplayAbilitySystem\GameplayEffect\GameplayEffectExecutionCalculation\private\GECMonsterExpExecution.cpp">
+    <ClCompile Include="..\..\Source\GameplayAbilitySystem\GameplayEffect\GameplayEffectExecutionCalculation\Private\GECMonsterExpExecution.cpp">
       <Filter>Source\GameplayAbilitySystem\GameplayEffect\GameplayEffectExecutionCalculation\Private</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\GameplayAbilitySystem\GameplayEffect\GameplayEffectExecutionCalculation\public\GECMeleeDamageExecution.h">
-      <Filter>Source\GameplayAbilitySystem\GameplayEffect\GameplayEffectExecutionCalculation\Public</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\GameplayAbilitySystem\GameplayEffect\GameplayEffectExecutionCalculation\public\GECMonsterExpExecution.h">
-      <Filter>Source\GameplayAbilitySystem\GameplayEffect\GameplayEffectExecutionCalculation\Public</Filter>
-    </ClInclude>
-    <Filter Include="Source\GameplayAbilitySystem\GameplayEffect\Greystone">
-      <UniqueIdentifier>{D48CF540-A109-4234-A7A2-70992C77B5F5}</UniqueIdentifier>
+    <Filter Include="Source\GameplayAbilitySystem\GameplayEffect\GameplayEffectExecutionCalculation\Public">
+      <UniqueIdentifier>{B480C45F-C951-44DB-835A-5E998FCBDE8B}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\GameplayAbilitySystem\GameplayEffect\Greystone\GEMakeWay.cpp">
-      <Filter>Source\GameplayAbilitySystem\GameplayEffect\Greystone</Filter>
+    <ClInclude Include="..\..\Source\GameplayAbilitySystem\GameplayEffect\GameplayEffectExecutionCalculation\Public\GECMeleeDamageExecution.h">
+      <Filter>Source\GameplayAbilitySystem\GameplayEffect\GameplayEffectExecutionCalculation\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GameplayAbilitySystem\GameplayEffect\GameplayEffectExecutionCalculation\Public\GECMonsterExpExecution.h">
+      <Filter>Source\GameplayAbilitySystem\GameplayEffect\GameplayEffectExecutionCalculation\Public</Filter>
+    </ClInclude>
+    <Filter Include="Source\GameplayAbilitySystem\GameplayEffect\Private">
+      <UniqueIdentifier>{090C1BFD-793F-4CA4-96DE-C4A500129F51}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\GameplayAbilitySystem\GameplayEffect\Private\GEBase.cpp">
+      <Filter>Source\GameplayAbilitySystem\GameplayEffect\Private</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\GameplayAbilitySystem\GameplayEffect\Greystone\GEMakeWay.h">
-      <Filter>Source\GameplayAbilitySystem\GameplayEffect\Greystone</Filter>
+    <ClCompile Include="..\..\Source\GameplayAbilitySystem\GameplayEffect\Private\GEMakeWay.cpp">
+      <Filter>Source\GameplayAbilitySystem\GameplayEffect\Private</Filter>
+    </ClCompile>
+    <Filter Include="Source\GameplayAbilitySystem\GameplayEffect\Public">
+      <UniqueIdentifier>{FAC83974-2E33-4A03-ABE2-2B3476639B26}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\GameplayAbilitySystem\GameplayEffect\Public\GEBase.h">
+      <Filter>Source\GameplayAbilitySystem\GameplayEffect\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GameplayAbilitySystem\GameplayEffect\Public\GEMakeWay.h">
+      <Filter>Source\GameplayAbilitySystem\GameplayEffect\Public</Filter>
     </ClInclude>
     <Filter Include="Source\LOC">
-      <UniqueIdentifier>{DCF0E798-1001-4C8F-8DDE-0042AFF5579E}</UniqueIdentifier>
+      <UniqueIdentifier>{5DE3D4A1-833D-4F3D-9E8F-6BC3928C1479}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source\LOC\Private">
-      <UniqueIdentifier>{8E4D3294-D72C-44FA-A501-60620D3295E3}</UniqueIdentifier>
+      <UniqueIdentifier>{9B2BE670-727C-4099-9486-8AA836488734}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\LOC\Private\LOC.cpp">
       <Filter>Source\LOC\Private</Filter>
     </ClCompile>
     <Filter Include="Source\LOC\Public">
-      <UniqueIdentifier>{81007810-7EF6-4447-B3C5-3B9006310362}</UniqueIdentifier>
+      <UniqueIdentifier>{E051D52E-1D3F-42C7-AC70-D7114CD654E6}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\LOC\Public\LOC.h">
       <Filter>Source\LOC\Public</Filter>
     </ClInclude>
     <Filter Include="Source\MeleeHitboxes">
-      <UniqueIdentifier>{0C9F799C-E545-4B0B-9360-6EA805AE6E7F}</UniqueIdentifier>
+      <UniqueIdentifier>{E8237467-B234-421C-8A31-06F554631E2C}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\MeleeHitboxes\private\MeleeHitboxData.cpp">
+    <Filter Include="Source\MeleeHitboxes\Private">
+      <UniqueIdentifier>{F5782A48-4550-42AA-831B-752859444B59}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\MeleeHitboxes\Private\MeleeHitboxData.cpp">
       <Filter>Source\MeleeHitboxes\Private</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\MeleeHitboxes\public\MeleeHitboxData.h">
+    <Filter Include="Source\MeleeHitboxes\Public">
+      <UniqueIdentifier>{04812786-5984-4F3C-97A7-59B87BBB543B}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\MeleeHitboxes\Public\MeleeHitboxData.h">
       <Filter>Source\MeleeHitboxes\Public</Filter>
     </ClInclude>
     <Filter Include="Source\Zone">
-      <UniqueIdentifier>{598CEFEB-FCE4-48AB-9CF7-7401C6149B60}</UniqueIdentifier>
-    </Filter>
-    <ClCompile Include="..\..\Source\Zone\private\DangerZone.cpp">
-      <Filter>Source\Zone\Private</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Zone\private\ProhibitedZone.cpp">
-      <Filter>Source\Zone\Private</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Zone\private\SafetyZone.cpp">
-      <Filter>Source\Zone\Private</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Zone\private\Zone.cpp">
-      <Filter>Source\Zone\Private</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Zone\public\DangerZone.h">
-      <Filter>Source\Zone\Public</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Zone\public\ProhibitedZone.h">
-      <Filter>Source\Zone\Public</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Zone\public\SafetyZone.h">
-      <Filter>Source\Zone\Public</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Zone\public\Zone.h">
-      <Filter>Source\Zone\Public</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <Filter Include="Source\GameplayAbilitySystem\AttributeSet\Private">
-      <UniqueIdentifier>{F7A9D2F9-2D0C-41BD-B616-B7DF85F02687}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\GameplayAbilitySystem\AttributeSet\Public">
-      <UniqueIdentifier>{545E4E42-A8A7-4323-8424-C05A4A02BF13}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\GameplayAbilitySystem\GameplayEffect\GameplayEffectExecutionCalculation\Private">
-      <UniqueIdentifier>{576AB56F-3797-440A-B99E-6AB2D5F60FE0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\GameplayAbilitySystem\GameplayEffect\GameplayEffectExecutionCalculation\Public">
-      <UniqueIdentifier>{0A1CAE6E-C5E5-4649-80F4-9AA10D1D5549}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\MeleeHitboxes\Private">
-      <UniqueIdentifier>{2503DE49-873E-4BBF-BDD4-DE039164E9DC}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\MeleeHitboxes\Public">
-      <UniqueIdentifier>{80A25271-E276-4933-8808-88D0E60AB402}</UniqueIdentifier>
+      <UniqueIdentifier>{516CA2AD-060E-4209-B162-BD2E0BFD9748}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source\Zone\Private">
-      <UniqueIdentifier>{39DBC4ED-35C4-42B3-AE6A-1B21F2E4B062}</UniqueIdentifier>
+      <UniqueIdentifier>{2DE382A1-62F2-4D2A-80E5-2DD94846C46C}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Zone\Private\DangerZone.cpp">
+      <Filter>Source\Zone\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Zone\Private\ProhibitedZone.cpp">
+      <Filter>Source\Zone\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Zone\Private\SafetyZone.cpp">
+      <Filter>Source\Zone\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Zone\Private\Zone.cpp">
+      <Filter>Source\Zone\Private</Filter>
+    </ClCompile>
     <Filter Include="Source\Zone\Public">
-      <UniqueIdentifier>{F082AEFD-122C-49FB-A2EA-54240BAB1C34}</UniqueIdentifier>
+      <UniqueIdentifier>{C7AB4B42-264B-48FA-BE0F-6C0905A8FCC1}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\Zone\Public\DangerZone.h">
+      <Filter>Source\Zone\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Zone\Public\ProhibitedZone.h">
+      <Filter>Source\Zone\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Zone\Public\SafetyZone.h">
+      <Filter>Source\Zone\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Zone\Public\Zone.h">
+      <Filter>Source\Zone\Public</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

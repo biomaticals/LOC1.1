@@ -9,9 +9,12 @@
 #include "..\..\..\Character\Public\LOCCharacter.h"
 
 UGAGreystoneMakeWay::UGAGreystoneMakeWay()
-{																
+{
 	static ConstructorHelpers::FObjectFinder<UAnimMontage> SkillMontageFinder(TEXT("/Game/ParagonGreystone/Characters/Heroes/Greystone/Animations/AM_MakeWay.AM_MakeWay"));
-	SkillMontage = SkillMontageFinder.Object;		
+	SkillMontage = SkillMontageFinder.Object;
+
+	GEforTarget = UGEMakeWay::StaticClass();
+
 }
 
 void UGAGreystoneMakeWay::ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData)
@@ -112,15 +115,13 @@ void UGAGreystoneMakeWay::OnHit()
 	TArray<AActor*> OverlappedActors;
 	UKismetSystemLibrary::SphereOverlapActors(World, SpherePos, DamageRange, TargetObjectType, nullptr, ActorsToIgnore, OverlappedActors);
 	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("SphereOverlapActors"));
-		
-	UGameplayEffect* BaseDmgEffect = GEforTarget.GetDefaultObject();
-	
+
 	for (AActor* Actor : OverlappedActors)
 	{
 		ALOCCharacter* TargetActor = Cast<ALOCCharacter>(Actor);
 		UAbilitySystemComponent* TargetComponent = TargetActor->GetAbilitySystemComponent();
 		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("AsOverlappedActors"));
-		GetAbilitySystemComponentFromActorInfo()->ApplyGameplayEffectToTarget(BaseDmgEffect, TargetComponent, GELevelforTaget);
+		//GetAbilitySystemComponentFromActorInfo()->ApplyGameplayEffectToTarget(BaseDmgEffect, TargetComponent, GELevelforTaget);
 	}
 }
 

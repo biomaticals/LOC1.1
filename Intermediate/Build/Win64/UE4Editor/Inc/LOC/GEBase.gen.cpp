@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Source/GameplayAbilitySystem/GameplayEffect/GEBase.h"
+#include "Source/GameplayAbilitySystem/GameplayEffect/Public/GEBase.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -40,8 +40,8 @@ void EmptyLinkFunctionForGeneratedCodeGEBase() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGEBase_Statics::Class_MetaDataParams[] = {
-		{ "IncludePath", "GameplayAbilitySystem/GameplayEffect/GEBase.h" },
-		{ "ModuleRelativePath", "GameplayAbilitySystem/GameplayEffect/GEBase.h" },
+		{ "IncludePath", "GameplayAbilitySystem/GameplayEffect/Public/GEBase.h" },
+		{ "ModuleRelativePath", "GameplayAbilitySystem/GameplayEffect/Public/GEBase.h" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UGEBase_Statics::StaticCppClassTypeInfo = {
@@ -71,7 +71,7 @@ void EmptyLinkFunctionForGeneratedCodeGEBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UGEBase, 3657560298);
+	IMPLEMENT_CLASS(UGEBase, 4257871443);
 	template<> LOC_API UClass* StaticClass<UGEBase>()
 	{
 		return UGEBase::StaticClass();
