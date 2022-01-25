@@ -1,5 +1,5 @@
-#include "..\public\GECMonsterExpExecution.h"
-#include "..\..\..\AttributeSet\public\LOCAttributeSet.h"
+#include "GameplayAbilitySystem/GameplayEffect/GameplayEffectExecutionCalculation/Public/GECMonsterExpExecution.h"
+#include "GameplayAbilitySystem/AttributeSet/Public/LOCAttributeSet.h"
 #include "AbilitySystemComponent.h"
 
 // 계산식에 사용될 스탯을 담은 구조체

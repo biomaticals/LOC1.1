@@ -1,5 +1,5 @@
 C:\Users\bioma\Documents\GitHub\LOC\Intermediate\Build\Win64\UE4Editor\Development\LOC\Definitions.LOC.h
-C:\Users\bioma\Documents\GitHub\LOC\Source\GameplayAbilitySystem\GameplayAbility\Private\..\Public\GAGreystoneMakeWay.h
+C:\Users\bioma\Documents\GitHub\LOC\Source\GameplayAbilitySystem/GameplayAbility\Public\GAGreystoneMakeway.h
 C:\Users\bioma\Documents\GitHub\LOC\Source\GameplayAbilitySystem/GameplayAbility/Public/GASelfCastBase.h
 C:\Users\bioma\Documents\GitHub\LOC\Source\GameplayAbilitySystem\GameplayAbility\Public\GABase.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public\Abilities/GameplayAbility.h
@@ -74,7 +74,7 @@ C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\Runtime\GameplayAbilities\Sou
 C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\Runtime\GameplayAbilities\Intermediate\Build\Win64\UE4Editor\Inc\GameplayAbilities\AbilityTask.generated.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\Runtime\GameplayAbilities\Intermediate\Build\Win64\UE4Editor\Inc\GameplayAbilities\AbilityTask_WaitGameplayEvent.generated.h
 C:\Users\bioma\Documents\GitHub\LOC\Intermediate\Build\Win64\UE4Editor\Inc\LOC\GAGreystoneMakeWay.generated.h
-C:\Users\bioma\Documents\GitHub\LOC\Source\GameplayAbilitySystem\GameplayAbility\Private\..\..\AttributeSet\public\LOCAttributeSet.h
+C:\Users\bioma\Documents\GitHub\LOC\Source\GameplayAbilitySystem/AttributeSet\Public\LOCAttributeSet.h
 C:\Users\bioma\Documents\GitHub\LOC\Intermediate\Build\Win64\UE4Editor\Inc\LOC\LOCAttributeSet.generated.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public\Abilities/Tasks/AbilityTask_PlayMontageAndWait.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\Runtime\GameplayAbilities\Intermediate\Build\Win64\UE4Editor\Inc\GameplayAbilities\AbilityTask_PlayMontageAndWait.generated.h

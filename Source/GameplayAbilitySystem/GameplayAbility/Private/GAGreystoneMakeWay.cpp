@@ -1,12 +1,12 @@
-#include "..\Public\GAGreystoneMakeWay.h"
-#include "..\..\AttributeSet\public\LOCAttributeSet.h"
-#include "GameplayAbilitySystem/GameplayAbility/Public/GAGreystoneMakeway.h"
+#include "GameplayAbilitySystem/GameplayAbility\Public\GAGreystoneMakeway.h"
+#include "GameplayAbilitySystem/AttributeSet\Public\LOCAttributeSet.h"
 #include "Abilities/Tasks/AbilityTask_WaitGameplayEvent.h"
 #include "Abilities/Tasks/AbilityTask_PlayMontageAndWait.h"
 #include "Abilities/Tasks/AbilityTask_WaitDelay.h"
+#include "Character\Public\LOCCharacter.h"
 #include "UObject\ConstructorHelpers.h"
 #include "Kismet/KismetSystemLibrary.h"
-#include "..\..\..\Character\Public\LOCCharacter.h"
+
 
 UGAGreystoneMakeway::UGAGreystoneMakeway()
 	: TotalHitCount   { 10 }

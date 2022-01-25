@@ -1,9 +1,6 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
-
-#include "..\public\LOCAttributeSet.h"
+#include "GameplayAbilitySystem\AttributeSet\Public\LOCAttributeSet.h"
+#include "Character\Public\LOCCharacter.h"
 #include "GameplayEffect.h"
-#include "..\..\..\Character\Public\LOCCharacter.h"
 #include "GameplayEffectExtension.h"
 
 // 이 함수는 이 Attribute를 소유하고 있는 액터가 Gameplay Effect가 AbilitySystem에 적용된 뒤 일어나는 이벤트를 구현할 수 있습니다. 

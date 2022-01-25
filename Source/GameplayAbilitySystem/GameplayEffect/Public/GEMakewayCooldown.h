@@ -1,5 +1,3 @@
-// Do not Use
-
 #pragma once
 
 #include "CoreMinimal.h"
