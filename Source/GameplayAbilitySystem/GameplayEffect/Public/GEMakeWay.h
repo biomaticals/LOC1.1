@@ -2,16 +2,17 @@
 
 #include "CoreMinimal.h"
 #include "GameplayAbilitySystem/GameplayEffect/Public/GEBase.h"
-#include "GEMakeWay.generated.h"
+#include "GEMakeway.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class LOC_API UGEMakeWay : public UGEBase
+class LOC_API UGEMakeway : public UGEBase
 {
 	GENERATED_BODY()
 
 protected:
-	UGEMakeWay();
+	UGEMakeway();
+
 };

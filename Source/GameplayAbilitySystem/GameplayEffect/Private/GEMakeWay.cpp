@@ -1,7 +1,7 @@
-#include "GameplayAbilitySystem/GameplayEffect/Public/GEMakeWay.h"
+#include "GameplayAbilitySystem/GameplayEffect/Public/GEMakeway.h"
 #include "GameplayAbilitySystem/AttributeSet/Public/LOCAttributeSet.h"
 
-UGEMakeWay::UGEMakeWay()
+UGEMakeway::UGEMakeway()
 {
 	DurationPolicy = EGameplayEffectDurationType::Instant;
 	int32 Idx = Modifiers.Num();

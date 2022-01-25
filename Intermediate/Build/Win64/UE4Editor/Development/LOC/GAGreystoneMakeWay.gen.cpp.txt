@@ -1,7 +1,7 @@
 C:\Users\bioma\Documents\GitHub\LOC\Intermediate\Build\Win64\UE4Editor\Development\LOC\Definitions.LOC.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-C:\Users\bioma\Documents\GitHub\LOC\Source/GameplayAbilitySystem/GameplayAbility/Public/GAGreystoneMakeWay.h
+C:\Users\bioma\Documents\GitHub\LOC\Source/GameplayAbilitySystem/GameplayAbility/Public/GAGreystoneMakeway.h
 C:\Users\bioma\Documents\GitHub\LOC\Source\GameplayAbilitySystem/GameplayAbility/Public/GASelfCastBase.h
 C:\Users\bioma\Documents\GitHub\LOC\Source\GameplayAbilitySystem\GameplayAbility\Public\GABase.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public\Abilities/GameplayAbility.h
@@ -67,10 +67,10 @@ C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\Runtime\GameplayAbilities\Int
 C:\Users\bioma\Documents\GitHub\LOC\Intermediate\Build\Win64\UE4Editor\Inc\LOC\LOCCharacter.generated.h
 C:\Users\bioma\Documents\GitHub\LOC\Intermediate\Build\Win64\UE4Editor\Inc\LOC\GABase.generated.h
 C:\Users\bioma\Documents\GitHub\LOC\Intermediate\Build\Win64\UE4Editor\Inc\LOC\GASelfCastBase.generated.h
-C:\Users\bioma\Documents\GitHub\LOC\Source\GameplayAbilitySystem/GameplayEffect/Public/GEMakeWay.h
+C:\Users\bioma\Documents\GitHub\LOC\Source\GameplayAbilitySystem/GameplayEffect/Public/GEMakeway.h
 C:\Users\bioma\Documents\GitHub\LOC\Source\GameplayAbilitySystem/GameplayEffect/Public/GEBase.h
 C:\Users\bioma\Documents\GitHub\LOC\Intermediate\Build\Win64\UE4Editor\Inc\LOC\GEBase.generated.h
-C:\Users\bioma\Documents\GitHub\LOC\Intermediate\Build\Win64\UE4Editor\Inc\LOC\GEMakeWay.generated.h
+C:\Users\bioma\Documents\GitHub\LOC\Intermediate\Build\Win64\UE4Editor\Inc\LOC\GEMakeway.generated.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public\Abilities/Tasks/AbilityTask_WaitGameplayEvent.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public\Abilities/Tasks/AbilityTask.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\Runtime\GameplayAbilities\Intermediate\Build\Win64\UE4Editor\Inc\GameplayAbilities\AbilityTask.generated.h
