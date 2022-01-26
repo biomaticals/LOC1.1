@@ -15,7 +15,7 @@ void EmptyLinkFunctionForGeneratedCodeGEMakewayCost() {}
 // Cross Module References
 	LOC_API UClass* Z_Construct_UClass_UGEMakewayCost_NoRegister();
 	LOC_API UClass* Z_Construct_UClass_UGEMakewayCost();
-	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UGameplayEffect();
+	LOC_API UClass* Z_Construct_UClass_UGEBase();
 	UPackage* Z_Construct_UPackage__Script_LOC();
 // End Cross Module References
 	void UGEMakewayCost::StaticRegisterNativesUGEMakewayCost()
@@ -35,7 +35,7 @@ void EmptyLinkFunctionForGeneratedCodeGEMakewayCost() {}
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
 	UObject* (*const Z_Construct_UClass_UGEMakewayCost_Statics::DependentSingletons[])() = {
-		(UObject* (*)())Z_Construct_UClass_UGameplayEffect,
+		(UObject* (*)())Z_Construct_UClass_UGEBase,
 		(UObject* (*)())Z_Construct_UPackage__Script_LOC,
 	};
 #if WITH_METADATA
@@ -73,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeGEMakewayCost() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UGEMakewayCost, 3666907154);
+	IMPLEMENT_CLASS(UGEMakewayCost, 344840129);
 	template<> LOC_API UClass* StaticClass<UGEMakewayCost>()
 	{
 		return UGEMakewayCost::StaticClass();

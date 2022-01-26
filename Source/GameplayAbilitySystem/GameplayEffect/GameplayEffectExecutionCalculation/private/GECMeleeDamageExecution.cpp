@@ -1,5 +1,5 @@
-#include "..\public\GECMeleeDamageExecution.h"
-#include "..\..\..\AttributeSet\public\LOCAttributeSet.h"
+#include "GameplayAbilitySystem/GameplayEffect/GameplayEffectExecutionCalculation/Public/GECMeleeDamageExecution.h"
+#include "GameplayAbilitySystem\AttributeSet\Public\LOCAttributeSet.h"
 #include "AbilitySystemComponent.h"
 
 // 계산식에 사용될 스탯을 담은 구조체
@@ -68,8 +68,7 @@ void UGECMeleeDamageExecution::Execute_Implementation(const FGameplayEffectCusto
 
 	// 데미지 공식 = 기본공격력 + ( Source의 힘 / 방어력 )
 	float DamageDone = BaseDamage + (Strength / Endurance);
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("DamageDone is %f"), &DamageDone));
-
+	
 	// 최소 데미지는 1
 	if (DamageDone <= 0.f)
 	{

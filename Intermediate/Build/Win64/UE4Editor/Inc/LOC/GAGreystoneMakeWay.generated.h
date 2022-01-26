@@ -74,7 +74,9 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UGAGreystoneMakeway); \
 
 
 #define LOC_Source_GameplayAbilitySystem_GameplayAbility_Public_GAGreystoneMakeway_h_16_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__TimerHandle() { return STRUCT_OFFSET(UGAGreystoneMakeway, TimerHandle); }
+	FORCEINLINE static uint32 __PPO__TimerHandle() { return STRUCT_OFFSET(UGAGreystoneMakeway, TimerHandle); } \
+	FORCEINLINE static uint32 __PPO__CurrentHitCount() { return STRUCT_OFFSET(UGAGreystoneMakeway, CurrentHitCount); } \
+	FORCEINLINE static uint32 __PPO__OwnerCueTag() { return STRUCT_OFFSET(UGAGreystoneMakeway, OwnerCueTag); }
 
 
 #define LOC_Source_GameplayAbilitySystem_GameplayAbility_Public_GAGreystoneMakeway_h_12_PROLOG

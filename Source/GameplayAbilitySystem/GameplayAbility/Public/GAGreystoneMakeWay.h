@@ -64,5 +64,10 @@ protected:
 	
 	UPROPERTY()
 		FTimerHandle TimerHandle;
+	
+	UPROPERTY()
+		int32 CurrentHitCount;
 
+	UPROPERTY()
+		FGameplayTag OwnerCueTag;
 };

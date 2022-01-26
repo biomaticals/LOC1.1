@@ -21,7 +21,7 @@ private: \
 	static void StaticRegisterNativesUGEMakewayCost(); \
 	friend struct Z_Construct_UClass_UGEMakewayCost_Statics; \
 public: \
-	DECLARE_CLASS(UGEMakewayCost, UGameplayEffect, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/LOC"), NO_API) \
+	DECLARE_CLASS(UGEMakewayCost, UGEBase, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/LOC"), NO_API) \
 	DECLARE_SERIALIZER(UGEMakewayCost)
 
 
@@ -30,7 +30,7 @@ private: \
 	static void StaticRegisterNativesUGEMakewayCost(); \
 	friend struct Z_Construct_UClass_UGEMakewayCost_Statics; \
 public: \
-	DECLARE_CLASS(UGEMakewayCost, UGameplayEffect, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/LOC"), NO_API) \
+	DECLARE_CLASS(UGEMakewayCost, UGEBase, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/LOC"), NO_API) \
 	DECLARE_SERIALIZER(UGEMakewayCost)
 
 

@@ -15,7 +15,7 @@ void EmptyLinkFunctionForGeneratedCodeGEMakewayCooldown() {}
 // Cross Module References
 	LOC_API UClass* Z_Construct_UClass_UGEMakewayCooldown_NoRegister();
 	LOC_API UClass* Z_Construct_UClass_UGEMakewayCooldown();
-	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UGameplayEffect();
+	LOC_API UClass* Z_Construct_UClass_UGEBase();
 	UPackage* Z_Construct_UPackage__Script_LOC();
 // End Cross Module References
 	void UGEMakewayCooldown::StaticRegisterNativesUGEMakewayCooldown()
@@ -35,7 +35,7 @@ void EmptyLinkFunctionForGeneratedCodeGEMakewayCooldown() {}
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
 	UObject* (*const Z_Construct_UClass_UGEMakewayCooldown_Statics::DependentSingletons[])() = {
-		(UObject* (*)())Z_Construct_UClass_UGameplayEffect,
+		(UObject* (*)())Z_Construct_UClass_UGEBase,
 		(UObject* (*)())Z_Construct_UPackage__Script_LOC,
 	};
 #if WITH_METADATA
@@ -73,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeGEMakewayCooldown() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UGEMakewayCooldown, 3045858196);
+	IMPLEMENT_CLASS(UGEMakewayCooldown, 3351142343);
 	template<> LOC_API UClass* StaticClass<UGEMakewayCooldown>()
 	{
 		return UGEMakewayCooldown::StaticClass();

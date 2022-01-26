@@ -7,7 +7,6 @@
 #include "UObject\ConstructorHelpers.h"
 #include "Kismet/KismetSystemLibrary.h"
 
-
 UGAGreystoneMakeway::UGAGreystoneMakeway()
 	: TotalHitCount   { 10 }
 	, SecondsForHit	  { 1.0f }
@@ -64,6 +63,7 @@ void UGAGreystoneMakeway::ActivateAbility(const FGameplayAbilitySpecHandle Handl
 void UGAGreystoneMakeway::EndAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, bool bReplicateEndAbility, bool bWasCancelled)
 {
 	Super::EndAbility(Handle, ActorInfo, ActivationInfo, bReplicateEndAbility, bWasCancelled);
+	GetAbilitySystemComponentFromActorInfo()->RemoveGameplayCue(OwnerCueTag);
 }
 
 void UGAGreystoneMakeway::OnCancelled()
@@ -73,11 +73,10 @@ void UGAGreystoneMakeway::OnCancelled()
 
 void UGAGreystoneMakeway::OnHitStart(const FGameplayEventData Payload)
 {	
-	UAbilitySystemComponent*	 AbilitySystemComponent = GetAbilitySystemComponentFromActorInfo();
-	FGameplayTag				 OwnerTag				= FGameplayTag::RequestGameplayTag(TEXT("Ability.Skill.Casting.Self.MakeWay"));
-	FGameplayEffectContextHandle EffectContextHandle	= AbilitySystemComponent->MakeEffectContext();
+	OwnerCueTag = FGameplayTag::RequestGameplayTag(TEXT("Ability.Skill.Casting.Self.MakeWay"));
+	FGameplayEffectContextHandle EffectContextHandle	= GetAbilitySystemComponentFromActorInfo()->MakeEffectContext();
 
-	AbilitySystemComponent->ExecuteGameplayCue(OwnerTag, EffectContextHandle);
+	GetAbilitySystemComponentFromActorInfo()->ExecuteGameplayCue(OwnerCueTag, EffectContextHandle);
 	//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("ExecuteGameplayCue"));
 	
 	GetWorld()->GetTimerManager().SetTimer(TimerHandle,this, &UGAGreystoneMakeway::TimerFunction,SecondsForHit, true);
@@ -86,18 +85,18 @@ void UGAGreystoneMakeway::OnHitStart(const FGameplayEventData Payload)
 void UGAGreystoneMakeway::TimerFunction()
 {
 	
-	if (TotalHitCount == 0.0f)
+	if (CurrentHitCount == TotalHitCount)
 	{	
 		GetWorld()->GetTimerManager().ClearTimer(TimerHandle);
 		K2_EndAbility();
-		//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Clear"));
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Clear&end"));
 	}
 	else
 	{
 		OnHit();
 		//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Hit"));
 	}
-	TotalHitCount--;
+	CurrentHitCount++;
 }
 
 void UGAGreystoneMakeway::OnHit()

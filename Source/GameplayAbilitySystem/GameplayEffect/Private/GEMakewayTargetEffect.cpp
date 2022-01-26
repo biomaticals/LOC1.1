@@ -2,7 +2,7 @@
 #include "GameplayAbilitySystem/AttributeSet/Public/LOCAttributeSet.h"
 
 UGEMakewayTargetEffect::UGEMakewayTargetEffect()
-{
+{	
 	DurationPolicy = EGameplayEffectDurationType::Instant;
 	int32 Idx = Modifiers.Num();
 	Modifiers.SetNum(Idx + 1);
