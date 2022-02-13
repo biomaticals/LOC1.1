@@ -38,7 +38,6 @@ public:
 
 	void PostGameplayEffectExecute(const struct FGameplayEffectModCallbackData& Data) override;
 
-	//////////////////////////////////////////////////////////////////////////////
 	/* ·¹º§ */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Abilities|Attributes")
 		FGameplayAttributeData Level;

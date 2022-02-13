@@ -22,7 +22,7 @@ public:
 	ALOCCharacter();
 	virtual void BeginPlay() override;
 
-	FORCEINLINE virtual class UAbilitySystemComponent* GetAbilitySystemComponent() const  { return AbilitySystemComponent; } 
+	FORCEINLINE virtual class UAbilitySystemComponent* GetAbilitySystemComponent() const { return AbilitySystemComponent; }
 
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 
@@ -67,8 +67,16 @@ public:
 	UFUNCTION(BlueprintCallable, Category = Json)
 		void LoadAttributeSetFromJson();
 
-	/** On#Property#ChangedInternal */
-	void OnLevelChangedInternal(const FOnAttributeChangeData& Data);
+	/** On##Property##ChangedInternal */
+
+#define GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(PropertyName) \
+	FORCEINLINE void On##PropertyName##ChangedInternal(const FOnAttributeChangeData& Data) \
+	{ \
+		return On##PropertyName##Changed(Data.OldValue, Data.NewValue); \
+	};
+
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(Level);
+	//void OnLevelChangedInternal(const FOnAttributeChangeData& Data);
 	void OnExperienceChangedInternal(const FOnAttributeChangeData& Data);
 	void OnMaxExperienceChangedInternal(const FOnAttributeChangeData& Data);
 	void OnHealthChangedInternal(const FOnAttributeChangeData& Data);
@@ -315,7 +323,7 @@ protected:
 
 protected:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-	
+
 	void OnResetVR();
 
 	void MoveForward(float Value);

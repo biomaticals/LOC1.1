@@ -42,6 +42,7 @@ ALOCCharacter::ALOCCharacter()
 	auto LOCAttributeSet = CreateDefaultSubobject<ULOCAttributeSet>(TEXT("LOCAttributeSet"));	
 	AbilitySystemComponent->AddAttributeSetSubobject(LOCAttributeSet);
 }
+
 void ALOCCharacter::BeginPlay()
 {
 	Super::BeginPlay();
@@ -49,9 +50,18 @@ void ALOCCharacter::BeginPlay()
 	if (IsValid(AbilitySystemComponent))
 	{
 		AttributeSet = AbilitySystemComponent->GetSet<ULOCAttributeSet>();
-
-		//GetGameplayAttributeValueChangeDelegate를 통해 Attribute이 변화하면 내부 On#Property#ChangedInternal을 호출하도록 바인딩합니다.
-		#define AddGAValueChangeDelegate(GetAttributeFunction,InternalFunction) AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetAttributeFunction)).AddUObject(this,&ALOCCharacter::InternalFunction);
+		TArray<FGameplayAttribute> Attributes{};
+		AbilitySystemComponent->GetAllAttributes(Attributes);
+		
+		//GetGameplayAttributeValueChangeDelegate를 통해 Attribute이 변화하면 내부 On##Property##ChangedInternal을 호출하도록 바인딩합니다.
+		#define AddAttributeValueChangeDelegate(Attribute)\
+		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(Attribute).AddUObject(this,GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(Attribute));		
+		//GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(PropertyName
+		//for (const auto& element : Attributes)
+		//{
+		//	AddAttributeValueChangeDelegate(element);
+		//}
+		
 		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetLevelAttribute()).AddUObject(this, &ALOCCharacter::OnLevelChangedInternal);
 		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetExperienceAttribute()).AddUObject(this, &ALOCCharacter::OnExperienceChangedInternal);
 		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetMaxExperienceAttribute()).AddUObject(this, &ALOCCharacter::OnMaxExperienceChangedInternal);
@@ -464,12 +474,6 @@ void  ALOCCharacter::LoadAttributeSetFromJson()
 		DetailData.AttributeValue = JsonValueObject->GetNumberField(TEXT("attributeValue"));
 		SetMaxArmor(DetailData.AttributeValue);
 	}
-}
-
-
-void ALOCCharacter::OnLevelChangedInternal(const FOnAttributeChangeData& Data)
-{
-	OnLevelChanged(Data.OldValue, Data.NewValue);
 }
 
 void ALOCCharacter::OnExperienceChangedInternal(const FOnAttributeChangeData& Data)
