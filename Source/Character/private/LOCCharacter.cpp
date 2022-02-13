@@ -37,59 +37,50 @@ ALOCCharacter::ALOCCharacter()
 	FollowCamera->bUsePawnControlRotation = false; 
 	FollowCamera->SetupAttachment(CameraBoom, USpringArmComponent::SocketName); 
 
-	AbilitySystemComponent = CreateDefaultSubobject<UAbilitySystemComponent>(TEXT("Ability System Componenet"));
+	AbilitySystemComponent = CreateDefaultSubobject<UAbilitySystemComponent>(TEXT("AbilitySystemComponenet"));
 	
 	auto LOCAttributeSet = CreateDefaultSubobject<ULOCAttributeSet>(TEXT("LOCAttributeSet"));	
 	AbilitySystemComponent->AddAttributeSetSubobject(LOCAttributeSet);
+
+#define BindAttributeValueChangeDelegate(PropertyName)\
+		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->Get##PropertyName##Attribute()).AddUObject(this,&ALOCCharacter::On##PropertyName##ChangedInternal);		
+
+	BindAttributeValueChangeDelegate(Level);
+	BindAttributeValueChangeDelegate(Experience);
+	BindAttributeValueChangeDelegate(MaxExperience);
+	BindAttributeValueChangeDelegate(Health);
+	BindAttributeValueChangeDelegate(MaxHealth);
+	BindAttributeValueChangeDelegate(HealthRegen);
+	BindAttributeValueChangeDelegate(MaxHealthRegen);
+	BindAttributeValueChangeDelegate(Mana);
+	BindAttributeValueChangeDelegate(MaxMana);
+	BindAttributeValueChangeDelegate(ManaRegen);
+	BindAttributeValueChangeDelegate(MaxManaRegen);
+	BindAttributeValueChangeDelegate(Stamina);
+	BindAttributeValueChangeDelegate(MaxStamina);
+	BindAttributeValueChangeDelegate(StaminaRegen);
+	BindAttributeValueChangeDelegate(MaxStaminaRegen);
+	BindAttributeValueChangeDelegate(Critical);
+	BindAttributeValueChangeDelegate(MaxCritical);
+	BindAttributeValueChangeDelegate(CriticalProb);
+	BindAttributeValueChangeDelegate(MaxCriticalProb);
+	BindAttributeValueChangeDelegate(Strength);
+	BindAttributeValueChangeDelegate(MaxStrength);
+	BindAttributeValueChangeDelegate(Endurance);
+	BindAttributeValueChangeDelegate(MaxEndurance);
+	BindAttributeValueChangeDelegate(Intellect);
+	BindAttributeValueChangeDelegate(MaxIntellect);
+	BindAttributeValueChangeDelegate(Speed);
+	BindAttributeValueChangeDelegate(MaxSpeed);
+	BindAttributeValueChangeDelegate(WeaponDamage);
+	BindAttributeValueChangeDelegate(MaxWeaponDamage);
+	BindAttributeValueChangeDelegate(Armor);
+	BindAttributeValueChangeDelegate(MaxArmor);
 }
 
 void ALOCCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-
-	if (IsValid(AbilitySystemComponent))
-	{
-		AttributeSet = AbilitySystemComponent->GetSet<ULOCAttributeSet>();
-		TArray<FGameplayAttribute> Attributes{};
-		AbilitySystemComponent->GetAllAttributes(Attributes);
-		
-		
-		#define AddAttributeValueChangeDelegate(AttributeName)\
-		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetActorInfo##AttributeName##()).AddUObject(this,&ALOCCharacter::On##PropertyName##ChangedInternal);		
-		
-		
-		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetLevelAttribute()).AddUObject(this, &ALOCCharacter::OnLevelChangedInternal);
-		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetExperienceAttribute()).AddUObject(this, &ALOCCharacter::OnExperienceChangedInternal);
-		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetMaxExperienceAttribute()).AddUObject(this, &ALOCCharacter::OnMaxExperienceChangedInternal);
-		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetHealthAttribute()).AddUObject(this, &ALOCCharacter::OnHealthChangedInternal);
-		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetMaxHealthAttribute()).AddUObject(this, &ALOCCharacter::OnMaxHealthChangedInternal);
-		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetHealthRegenAttribute()).AddUObject(this, &ALOCCharacter::OnHealthRegenChangedInternal);
-		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetMaxHealthRegenAttribute()).AddUObject(this, &ALOCCharacter::OnMaxHealthRegenChangedInternal);
-		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetManaAttribute()).AddUObject(this, &ALOCCharacter::OnManaChangedInternal);
-		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetMaxManaAttribute()).AddUObject(this, &ALOCCharacter::OnMaxManaChangedInternal);
-		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetManaRegenAttribute()).AddUObject(this, &ALOCCharacter::OnManaRegenChangedInternal);
-		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetMaxManaRegenAttribute()).AddUObject(this, &ALOCCharacter::OnMaxManaRegenChangedInternal);
-		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetStaminaAttribute()).AddUObject(this, &ALOCCharacter::OnStaminaChangedInternal);
-		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetMaxStaminaAttribute()).AddUObject(this, &ALOCCharacter::OnMaxStaminaChangedInternal);
-		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetStaminaRegenAttribute()).AddUObject(this, &ALOCCharacter::OnStaminaRegenChangedInternal);
-		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetMaxStaminaRegenAttribute()).AddUObject(this, &ALOCCharacter::OnMaxStaminaRegenChangedInternal);
-		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetCriticalAttribute()).AddUObject(this, &ALOCCharacter::OnCriticalChangedInternal);
-		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetMaxCriticalAttribute()).AddUObject(this, &ALOCCharacter::OnMaxCriticalChangedInternal);
-		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetCriticalProbAttribute()).AddUObject(this, &ALOCCharacter::OnCriticalProbChangedInternal);
-		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetMaxCriticalProbAttribute()).AddUObject(this, &ALOCCharacter::OnMaxCriticalProbChangedInternal);
-		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetStrengthAttribute()).AddUObject(this, &ALOCCharacter::OnStrengthChangedInternal);
-		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetMaxStrengthAttribute()).AddUObject(this, &ALOCCharacter::OnMaxStrengthChangedInternal);
-		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetEnduranceAttribute()).AddUObject(this, &ALOCCharacter::OnEnduranceChangedInternal);
-		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetMaxEnduranceAttribute()).AddUObject(this, &ALOCCharacter::OnMaxEnduranceChangedInternal);
-		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetIntellectAttribute()).AddUObject(this, &ALOCCharacter::OnIntellectChangedInternal);
-		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetMaxIntellectAttribute()).AddUObject(this, &ALOCCharacter::OnMaxIntellectChangedInternal);
-		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetSpeedAttribute()).AddUObject(this, &ALOCCharacter::OnSpeedChangedInternal);
-		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetMaxSpeedAttribute()).AddUObject(this, &ALOCCharacter::OnMaxSpeedChangedInternal);
-		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetWeaponDamageAttribute()).AddUObject(this, &ALOCCharacter::OnWeaponDamageChangedInternal);
-		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetMaxWeaponDamageAttribute()).AddUObject(this, &ALOCCharacter::OnMaxWeaponDamageChangedInternal);
-		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetArmorAttribute()).AddUObject(this, &ALOCCharacter::OnArmorChangedInternal);
-		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetMaxArmorAttribute()).AddUObject(this, &ALOCCharacter::OnMaxArmorChangedInternal);
-	}
 }
 
 ////////////////////////////////////////////////////////////////////////////////////
