@@ -36,7 +36,11 @@ ALOCCharacter::ALOCCharacter()
 	FollowCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("FollowCamera"));
 	FollowCamera->bUsePawnControlRotation = false; 
 	FollowCamera->SetupAttachment(CameraBoom, USpringArmComponent::SocketName); 
+
 	AbilitySystemComponent = CreateDefaultSubobject<UAbilitySystemComponent>(TEXT("Ability System Componenet"));
+	
+	auto LOCAttributeSet = CreateDefaultSubobject<ULOCAttributeSet>(TEXT("LOCAttributeSet"));	
+	AbilitySystemComponent->AddAttributeSetSubobject(LOCAttributeSet);
 }
 void ALOCCharacter::BeginPlay()
 {
@@ -47,7 +51,7 @@ void ALOCCharacter::BeginPlay()
 		AttributeSet = AbilitySystemComponent->GetSet<ULOCAttributeSet>();
 
 		//GetGameplayAttributeValueChangeDelegate를 통해 Attribute이 변화하면 내부 On#Property#ChangedInternal을 호출하도록 바인딩합니다.
-		#define AddGAValueChangeDelegate(Attribute,Inter) 
+		#define AddGAValueChangeDelegate(GetAttributeFunction,InternalFunction) AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetAttributeFunction)).AddUObject(this,&ALOCCharacter::InternalFunction);
 		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetLevelAttribute()).AddUObject(this, &ALOCCharacter::OnLevelChangedInternal);
 		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetExperienceAttribute()).AddUObject(this, &ALOCCharacter::OnExperienceChangedInternal);
 		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetMaxExperienceAttribute()).AddUObject(this, &ALOCCharacter::OnMaxExperienceChangedInternal);

@@ -80,6 +80,4 @@ void ULOCAttributeSet::PostGameplayEffectExecute(const struct FGameplayEffectMod
 	{
 		SetArmor(FMath::Clamp(GetArmor(), 0.f, GetMaxArmor()));
 	}
-
-
 }
