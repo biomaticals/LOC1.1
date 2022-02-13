@@ -76,37 +76,37 @@ public:
 	};
 
 	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(Level);
-	//void OnLevelChangedInternal(const FOnAttributeChangeData& Data);
-	void OnExperienceChangedInternal(const FOnAttributeChangeData& Data);
-	void OnMaxExperienceChangedInternal(const FOnAttributeChangeData& Data);
-	void OnHealthChangedInternal(const FOnAttributeChangeData& Data);
-	void OnMaxHealthChangedInternal(const FOnAttributeChangeData& Data);
-	void OnHealthRegenChangedInternal(const FOnAttributeChangeData& Data);
-	void OnMaxHealthRegenChangedInternal(const FOnAttributeChangeData& Data);
-	void OnManaChangedInternal(const FOnAttributeChangeData& Data);
-	void OnMaxManaChangedInternal(const FOnAttributeChangeData& Data);
-	void OnManaRegenChangedInternal(const FOnAttributeChangeData& Data);
-	void OnMaxManaRegenChangedInternal(const FOnAttributeChangeData& Data);
-	void OnStaminaChangedInternal(const FOnAttributeChangeData& Data);
-	void OnMaxStaminaChangedInternal(const FOnAttributeChangeData& Data);
-	void OnStaminaRegenChangedInternal(const FOnAttributeChangeData& Data);
-	void OnMaxStaminaRegenChangedInternal(const FOnAttributeChangeData& Data);
-	void OnCriticalChangedInternal(const FOnAttributeChangeData& Data);
-	void OnMaxCriticalChangedInternal(const FOnAttributeChangeData& Data);
-	void OnCriticalProbChangedInternal(const FOnAttributeChangeData& Data);
-	void OnMaxCriticalProbChangedInternal(const FOnAttributeChangeData& Data);
-	void OnStrengthChangedInternal(const FOnAttributeChangeData& Data);
-	void OnMaxStrengthChangedInternal(const FOnAttributeChangeData& Data);
-	void OnEnduranceChangedInternal(const FOnAttributeChangeData& Data);
-	void OnMaxEnduranceChangedInternal(const FOnAttributeChangeData& Data);
-	void OnIntellectChangedInternal(const FOnAttributeChangeData& Data);
-	void OnMaxIntellectChangedInternal(const FOnAttributeChangeData& Data);
-	void OnSpeedChangedInternal(const FOnAttributeChangeData& Data);
-	void OnMaxSpeedChangedInternal(const FOnAttributeChangeData& Data);
-	void OnWeaponDamageChangedInternal(const FOnAttributeChangeData& Data);
-	void OnMaxWeaponDamageChangedInternal(const FOnAttributeChangeData& Data);
-	void OnArmorChangedInternal(const FOnAttributeChangeData& Data);
-	void OnMaxArmorChangedInternal(const FOnAttributeChangeData& Data);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(Experience);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxExperience);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(Health);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxHealth);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(HealthRegen);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxHealthRegen);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(Mana);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxMana);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(ManaRegen);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxManaRegen);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(Stamina);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxStamina);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(StaminaRegen);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxStaminaRegen);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(Critical);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxCritical);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(CriticalProb);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxCriticalProb);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(Strength);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxStrength);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(Endurance);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxEndurance);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(Intellect);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxIntellect);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(Speed);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxSpeed);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(WeaponDamage);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxWeaponDamage);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(Armor);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxArmor);
+	
 
 	/** On"Property"Changed */
 	UFUNCTION(BlueprintImplementableEvent, Category = "Abilities|Attributes")

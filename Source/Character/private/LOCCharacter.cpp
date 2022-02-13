@@ -53,14 +53,10 @@ void ALOCCharacter::BeginPlay()
 		TArray<FGameplayAttribute> Attributes{};
 		AbilitySystemComponent->GetAllAttributes(Attributes);
 		
-		//GetGameplayAttributeValueChangeDelegate를 통해 Attribute이 변화하면 내부 On##Property##ChangedInternal을 호출하도록 바인딩합니다.
-		#define AddAttributeValueChangeDelegate(Attribute)\
-		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(Attribute).AddUObject(this,GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(Attribute));		
-		//GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(PropertyName
-		//for (const auto& element : Attributes)
-		//{
-		//	AddAttributeValueChangeDelegate(element);
-		//}
+		
+		#define AddAttributeValueChangeDelegate(AttributeName)\
+		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetActorInfo##AttributeName##()).AddUObject(this,&ALOCCharacter::On##PropertyName##ChangedInternal);		
+		
 		
 		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetLevelAttribute()).AddUObject(this, &ALOCCharacter::OnLevelChangedInternal);
 		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetExperienceAttribute()).AddUObject(this, &ALOCCharacter::OnExperienceChangedInternal);
@@ -476,156 +472,7 @@ void  ALOCCharacter::LoadAttributeSetFromJson()
 	}
 }
 
-void ALOCCharacter::OnExperienceChangedInternal(const FOnAttributeChangeData& Data)
-{
-	OnExperienceChanged(Data.OldValue, Data.NewValue);
-}
 
-void ALOCCharacter::OnMaxExperienceChangedInternal(const FOnAttributeChangeData& Data)
-{
-	OnMaxExperienceChanged(Data.OldValue, Data.NewValue);
-}   
-
-void ALOCCharacter::OnHealthChangedInternal(const FOnAttributeChangeData& Data)
-{
-	OnHealthChanged(Data.OldValue, Data.NewValue);
-}
-
-void ALOCCharacter::OnMaxHealthChangedInternal(const FOnAttributeChangeData& Data)
-{
-	OnMaxHealthChanged(Data.OldValue, Data.NewValue);
-}
-
-void ALOCCharacter::OnHealthRegenChangedInternal(const FOnAttributeChangeData& Data)
-{
-	OnHealthRegenChanged(Data.OldValue, Data.NewValue);
-}
-
-void ALOCCharacter::OnMaxHealthRegenChangedInternal(const FOnAttributeChangeData& Data)
-{
-	OnMaxHealthRegenChanged(Data.OldValue, Data.NewValue);
-}
-
-void ALOCCharacter::OnManaChangedInternal(const FOnAttributeChangeData& Data)
-{
-	OnManaChanged(Data.OldValue, Data.NewValue);
-}
-
-void ALOCCharacter::OnMaxManaChangedInternal(const FOnAttributeChangeData& Data)
-{
-	OnMaxManaChanged(Data.OldValue, Data.NewValue);
-}
-
-void ALOCCharacter::OnManaRegenChangedInternal(const FOnAttributeChangeData& Data)
-{
-	OnManaRegenChanged(Data.OldValue, Data.NewValue);
-}
-
-void ALOCCharacter::OnMaxManaRegenChangedInternal(const FOnAttributeChangeData& Data)
-{
-	OnMaxManaRegenChanged(Data.OldValue, Data.NewValue);
-}
-
-void ALOCCharacter::OnStaminaChangedInternal(const FOnAttributeChangeData& Data)
-{
-	OnStaminaChanged(Data.OldValue, Data.NewValue);
-}
-
-void ALOCCharacter::OnMaxStaminaChangedInternal(const FOnAttributeChangeData& Data)
-{
-	OnMaxStaminaChanged(Data.OldValue, Data.NewValue);
-}
-
-void ALOCCharacter::OnStaminaRegenChangedInternal(const FOnAttributeChangeData& Data)
-{
-	OnStaminaRegenChanged(Data.OldValue, Data.NewValue);
-}
-
-void ALOCCharacter::OnMaxStaminaRegenChangedInternal(const FOnAttributeChangeData& Data)
-{
-	OnMaxStaminaRegenChanged(Data.OldValue, Data.NewValue);
-}
-
-void ALOCCharacter::OnCriticalChangedInternal(const FOnAttributeChangeData& Data)
-{
-	OnCriticalChanged(Data.OldValue, Data.NewValue);
-}
-
-void ALOCCharacter::OnMaxCriticalChangedInternal(const FOnAttributeChangeData& Data)
-{
-	OnMaxCriticalChanged(Data.OldValue, Data.NewValue);
-}
-
-void ALOCCharacter::OnCriticalProbChangedInternal(const FOnAttributeChangeData& Data)
-{
-	OnCriticalProbChanged(Data.OldValue, Data.NewValue);
-}
-
-void ALOCCharacter::OnMaxCriticalProbChangedInternal(const FOnAttributeChangeData& Data)
-{
-	OnMaxCriticalProbChanged(Data.OldValue, Data.NewValue);
-}
-
-void ALOCCharacter::OnStrengthChangedInternal(const FOnAttributeChangeData& Data)
-{
-	OnStrengthChanged(Data.OldValue, Data.NewValue);
-}
-
-void ALOCCharacter::OnMaxStrengthChangedInternal(const FOnAttributeChangeData& Data)
-{
-	OnMaxStrengthChanged(Data.OldValue, Data.NewValue);
-}
-
-void ALOCCharacter::OnEnduranceChangedInternal(const FOnAttributeChangeData& Data)
-{
-	OnEnduranceChanged(Data.OldValue, Data.NewValue);
-}
-
-void ALOCCharacter::OnMaxEnduranceChangedInternal(const FOnAttributeChangeData& Data)
-{
-	OnMaxEnduranceChanged(Data.OldValue, Data.NewValue);
-}
-
-void ALOCCharacter::OnIntellectChangedInternal(const FOnAttributeChangeData& Data)
-{
-	OnIntellectChanged(Data.OldValue, Data.NewValue);
-}
-
-void ALOCCharacter::OnMaxIntellectChangedInternal(const FOnAttributeChangeData& Data)
-{
-	OnMaxIntellectChanged(Data.OldValue, Data.NewValue);	
-}
-
-void ALOCCharacter::OnSpeedChangedInternal(const FOnAttributeChangeData& Data)
-{
-	OnSpeedChanged(Data.OldValue, Data.NewValue);
-}
-
-void ALOCCharacter::OnMaxSpeedChangedInternal(const FOnAttributeChangeData& Data)
-{
-	OnMaxSpeedChanged(Data.OldValue, Data.NewValue);
-}
-
-
-void ALOCCharacter::OnWeaponDamageChangedInternal(const FOnAttributeChangeData& Data)
-{
-	OnWeaponDamageChanged(Data.OldValue, Data.NewValue);
-}
-
-void ALOCCharacter::OnMaxWeaponDamageChangedInternal(const FOnAttributeChangeData& Data)
-{
-	OnMaxWeaponDamageChanged(Data.OldValue, Data.NewValue);
-}
-
-void ALOCCharacter::OnArmorChangedInternal(const FOnAttributeChangeData& Data)
-{
-	OnArmorChanged(Data.OldValue, Data.NewValue);
-}
-
-void ALOCCharacter::OnMaxArmorChangedInternal(const FOnAttributeChangeData& Data)
-{
-	OnMaxArmorChanged(Data.OldValue, Data.NewValue);
-}
 
 /** Getter for AttributeSet's Current Value. It will return 0 or -1 if AttributeSet is not valid. */
 
