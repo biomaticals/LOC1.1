@@ -1,6 +1,4 @@
- // Copyright Epic Games, Inc. All Rights Reserved.
-
-#include "..\Public\LOCCharacter.h"
+#include "Character\Public\LOCCharacter.h"
 #include "HeadMountedDisplayFunctionLibrary.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
@@ -8,70 +6,48 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/Controller.h"
 #include "GameFramework/SpringArmComponent.h"
-
-/** Json */
 #include "JsonObjectConverter.h"
 #include "Misc/FileHelper.h"
-
-/**  AbilitySystem 컴포넌트와 사용자정의 어트리뷰트세트 추가 */
 #include "AbilitySystemComponent.h"
-#include "..\..\GameplayAbilitySystem\AttributeSet\public\LOCAttributeSet.h"
-
-
-//////////////////////////////////////////////////////////////////////////
-// ALOCCharacter
+#include "GameplayAbilitySystem\AttributeSet\Public\LOCAttributeSet.h"
 
 ALOCCharacter::ALOCCharacter()
 {
 	GetCapsuleComponent()->SetGenerateOverlapEvents(true);
-
-	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
 
-	// set our turn rates for input
 	BaseTurnRate = 45.f;
 	BaseLookUpRate = 45.f;
 
-	// Don't rotate when the controller rotates. Let that just affect the camera.
 	bUseControllerRotationPitch = false;
 	bUseControllerRotationYaw = false;
 	bUseControllerRotationRoll = false;
 
-	// Configure character movement
-	GetCharacterMovement()->bOrientRotationToMovement = true; // Character moves in the direction of input...	
-	GetCharacterMovement()->RotationRate = FRotator(0.0f, 540.0f, 0.0f); // ...at this rotation rate
+	GetCharacterMovement()->bOrientRotationToMovement = true; 
+	GetCharacterMovement()->RotationRate = FRotator(0.0f, 540.0f, 0.0f); 
 	GetCharacterMovement()->JumpZVelocity = 600.f;
 	GetCharacterMovement()->AirControl = 0.2f;
 
-	// Create a camera boom (pulls in towards the player if there is a collision)
 	CameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraBoom"));
 	CameraBoom->SetupAttachment(RootComponent);
-	CameraBoom->TargetArmLength = 500.0f; // The camera follows at this distance behind the character	
-	CameraBoom->bUsePawnControlRotation = true; // Rotate the arm based on the controller
+	CameraBoom->TargetArmLength = 500.0f;
+	CameraBoom->bUsePawnControlRotation = true; 
 	
-
-	// Create a follow camera
 	FollowCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("FollowCamera"));
-	FollowCamera->bUsePawnControlRotation = false; // Camera does not rotate relative to arm
-	FollowCamera->SetupAttachment(CameraBoom, USpringArmComponent::SocketName); // Attach the camera to the end of the boom and let the boom adjust to match the controller orientation
-
-
-	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
-	// are set in the derived blueprint asset named MyCharacter (to avoid direct content references in C++)
-
-	// AbilitySystem 컴포넌트를 추가해줍니다.
+	FollowCamera->bUsePawnControlRotation = false; 
+	FollowCamera->SetupAttachment(CameraBoom, USpringArmComponent::SocketName); 
 	AbilitySystemComponent = CreateDefaultSubobject<UAbilitySystemComponent>(TEXT("Ability System Componenet"));
 }
 void ALOCCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 
-	//Initializes the attribute set using a data table.
 	if (IsValid(AbilitySystemComponent))
 	{
 		AttributeSet = AbilitySystemComponent->GetSet<ULOCAttributeSet>();
 
 		//GetGameplayAttributeValueChangeDelegate를 통해 Attribute이 변화하면 내부 On#Property#ChangedInternal을 호출하도록 바인딩합니다.
+		#define AddGAValueChangeDelegate(Attribute,Inter) 
 		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetLevelAttribute()).AddUObject(this, &ALOCCharacter::OnLevelChangedInternal);
 		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetExperienceAttribute()).AddUObject(this, &ALOCCharacter::OnExperienceChangedInternal);
 		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetMaxExperienceAttribute()).AddUObject(this, &ALOCCharacter::OnMaxExperienceChangedInternal);
@@ -201,7 +177,7 @@ void ALOCCharacter::RemoveLooseGameplayTags(FGameplayTag TagsToRemove)
 	GetAbilitySystemComponent()->RemoveLooseGameplayTag(TagsToRemove);
 }
 
-void ALOCCharacter::ApplyGETOTargetData(const FGameplayEffectSpecHandle& GESpec, const FGameplayAbilityTargetDataHandle& TargetData)
+void ALOCCharacter::ApplyGEToTargetData(const FGameplayEffectSpecHandle& GESpec, const FGameplayAbilityTargetDataHandle& TargetData)
 {
 	for (TSharedPtr<FGameplayAbilityTargetData> Data : TargetData.Data)
 	{

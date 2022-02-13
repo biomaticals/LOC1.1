@@ -13,12 +13,197 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeLOCAttributeSet() {}
 // Cross Module References
+	LOC_API UScriptStruct* Z_Construct_UScriptStruct_FLOCAttributeData();
+	UPackage* Z_Construct_UPackage__Script_LOC();
+	LOC_API UScriptStruct* Z_Construct_UScriptStruct_FLOCAttributeDetailData();
 	LOC_API UClass* Z_Construct_UClass_ULOCAttributeSet_NoRegister();
 	LOC_API UClass* Z_Construct_UClass_ULOCAttributeSet();
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UAttributeSet();
-	UPackage* Z_Construct_UPackage__Script_LOC();
 	GAMEPLAYABILITIES_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayAttributeData();
 // End Cross Module References
+class UScriptStruct* FLOCAttributeData::StaticStruct()
+{
+	static class UScriptStruct* Singleton = NULL;
+	if (!Singleton)
+	{
+		extern LOC_API uint32 Get_Z_Construct_UScriptStruct_FLOCAttributeData_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FLOCAttributeData, Z_Construct_UPackage__Script_LOC(), TEXT("LOCAttributeData"), sizeof(FLOCAttributeData), Get_Z_Construct_UScriptStruct_FLOCAttributeData_Hash());
+	}
+	return Singleton;
+}
+template<> LOC_API UScriptStruct* StaticStruct<FLOCAttributeData>()
+{
+	return FLOCAttributeData::StaticStruct();
+}
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FLOCAttributeData(FLOCAttributeData::StaticStruct, TEXT("/Script/LOC"), TEXT("LOCAttributeData"), false, nullptr, nullptr);
+static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeData
+{
+	FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeData()
+	{
+		UScriptStruct::DeferCppStructOps(FName(TEXT("LOCAttributeData")),new UScriptStruct::TCppStructOps<FLOCAttributeData>);
+	}
+} ScriptStruct_LOC_StaticRegisterNativesFLOCAttributeData;
+	struct Z_Construct_UScriptStruct_FLOCAttributeData_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
+#endif
+		static void* NewStructOps();
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_Details_Inner;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Details_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_Details;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FLOCAttributeData_Statics::Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "GameplayAbilitySystem/AttributeSet/Public/LOCAttributeSet.h" },
+	};
+#endif
+	void* Z_Construct_UScriptStruct_FLOCAttributeData_Statics::NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FLOCAttributeData>();
+	}
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FLOCAttributeData_Statics::NewProp_Details_Inner = { "Details", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FLOCAttributeDetailData, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FLOCAttributeData_Statics::NewProp_Details_MetaData[] = {
+		{ "Category", "AttributeData" },
+		{ "ModuleRelativePath", "GameplayAbilitySystem/AttributeSet/Public/LOCAttributeSet.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FLOCAttributeData_Statics::NewProp_Details = { "Details", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FLOCAttributeData, Details), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FLOCAttributeData_Statics::NewProp_Details_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FLOCAttributeData_Statics::NewProp_Details_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FLOCAttributeData_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FLOCAttributeData_Statics::NewProp_Details_Inner,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FLOCAttributeData_Statics::NewProp_Details,
+	};
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FLOCAttributeData_Statics::ReturnStructParams = {
+		(UObject* (*)())Z_Construct_UPackage__Script_LOC,
+		nullptr,
+		&NewStructOps,
+		"LOCAttributeData",
+		sizeof(FLOCAttributeData),
+		alignof(FLOCAttributeData),
+		Z_Construct_UScriptStruct_FLOCAttributeData_Statics::PropPointers,
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FLOCAttributeData_Statics::PropPointers),
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EStructFlags(0x00000001),
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FLOCAttributeData_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FLOCAttributeData_Statics::Struct_MetaDataParams))
+	};
+	UScriptStruct* Z_Construct_UScriptStruct_FLOCAttributeData()
+	{
+#if WITH_HOT_RELOAD
+		extern uint32 Get_Z_Construct_UScriptStruct_FLOCAttributeData_Hash();
+		UPackage* Outer = Z_Construct_UPackage__Script_LOC();
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("LOCAttributeData"), sizeof(FLOCAttributeData), Get_Z_Construct_UScriptStruct_FLOCAttributeData_Hash(), false);
+#else
+		static UScriptStruct* ReturnStruct = nullptr;
+#endif
+		if (!ReturnStruct)
+		{
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FLOCAttributeData_Statics::ReturnStructParams);
+		}
+		return ReturnStruct;
+	}
+	uint32 Get_Z_Construct_UScriptStruct_FLOCAttributeData_Hash() { return 1078179248U; }
+class UScriptStruct* FLOCAttributeDetailData::StaticStruct()
+{
+	static class UScriptStruct* Singleton = NULL;
+	if (!Singleton)
+	{
+		extern LOC_API uint32 Get_Z_Construct_UScriptStruct_FLOCAttributeDetailData_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FLOCAttributeDetailData, Z_Construct_UPackage__Script_LOC(), TEXT("LOCAttributeDetailData"), sizeof(FLOCAttributeDetailData), Get_Z_Construct_UScriptStruct_FLOCAttributeDetailData_Hash());
+	}
+	return Singleton;
+}
+template<> LOC_API UScriptStruct* StaticStruct<FLOCAttributeDetailData>()
+{
+	return FLOCAttributeDetailData::StaticStruct();
+}
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FLOCAttributeDetailData(FLOCAttributeDetailData::StaticStruct, TEXT("/Script/LOC"), TEXT("LOCAttributeDetailData"), false, nullptr, nullptr);
+static struct FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData
+{
+	FScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData()
+	{
+		UScriptStruct::DeferCppStructOps(FName(TEXT("LOCAttributeDetailData")),new UScriptStruct::TCppStructOps<FLOCAttributeDetailData>);
+	}
+} ScriptStruct_LOC_StaticRegisterNativesFLOCAttributeDetailData;
+	struct Z_Construct_UScriptStruct_FLOCAttributeDetailData_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
+#endif
+		static void* NewStructOps();
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AttributeName_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_AttributeName;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AttributeValue_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_AttributeValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FLOCAttributeDetailData_Statics::Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "GameplayAbilitySystem/AttributeSet/Public/LOCAttributeSet.h" },
+	};
+#endif
+	void* Z_Construct_UScriptStruct_FLOCAttributeDetailData_Statics::NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FLOCAttributeDetailData>();
+	}
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FLOCAttributeDetailData_Statics::NewProp_AttributeName_MetaData[] = {
+		{ "Category", "AttributeData" },
+		{ "ModuleRelativePath", "GameplayAbilitySystem/AttributeSet/Public/LOCAttributeSet.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FLOCAttributeDetailData_Statics::NewProp_AttributeName = { "AttributeName", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FLOCAttributeDetailData, AttributeName), METADATA_PARAMS(Z_Construct_UScriptStruct_FLOCAttributeDetailData_Statics::NewProp_AttributeName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FLOCAttributeDetailData_Statics::NewProp_AttributeName_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FLOCAttributeDetailData_Statics::NewProp_AttributeValue_MetaData[] = {
+		{ "Category", "AttributeData" },
+		{ "ModuleRelativePath", "GameplayAbilitySystem/AttributeSet/Public/LOCAttributeSet.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FLOCAttributeDetailData_Statics::NewProp_AttributeValue = { "AttributeValue", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FLOCAttributeDetailData, AttributeValue), METADATA_PARAMS(Z_Construct_UScriptStruct_FLOCAttributeDetailData_Statics::NewProp_AttributeValue_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FLOCAttributeDetailData_Statics::NewProp_AttributeValue_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FLOCAttributeDetailData_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FLOCAttributeDetailData_Statics::NewProp_AttributeName,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FLOCAttributeDetailData_Statics::NewProp_AttributeValue,
+	};
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FLOCAttributeDetailData_Statics::ReturnStructParams = {
+		(UObject* (*)())Z_Construct_UPackage__Script_LOC,
+		nullptr,
+		&NewStructOps,
+		"LOCAttributeDetailData",
+		sizeof(FLOCAttributeDetailData),
+		alignof(FLOCAttributeDetailData),
+		Z_Construct_UScriptStruct_FLOCAttributeDetailData_Statics::PropPointers,
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FLOCAttributeDetailData_Statics::PropPointers),
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EStructFlags(0x00000001),
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FLOCAttributeDetailData_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FLOCAttributeDetailData_Statics::Struct_MetaDataParams))
+	};
+	UScriptStruct* Z_Construct_UScriptStruct_FLOCAttributeDetailData()
+	{
+#if WITH_HOT_RELOAD
+		extern uint32 Get_Z_Construct_UScriptStruct_FLOCAttributeDetailData_Hash();
+		UPackage* Outer = Z_Construct_UPackage__Script_LOC();
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("LOCAttributeDetailData"), sizeof(FLOCAttributeDetailData), Get_Z_Construct_UScriptStruct_FLOCAttributeDetailData_Hash(), false);
+#else
+		static UScriptStruct* ReturnStruct = nullptr;
+#endif
+		if (!ReturnStruct)
+		{
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FLOCAttributeDetailData_Statics::ReturnStructParams);
+		}
+		return ReturnStruct;
+	}
+	uint32 Get_Z_Construct_UScriptStruct_FLOCAttributeDetailData_Hash() { return 539101282U; }
 	void ULOCAttributeSet::StaticRegisterNativesULOCAttributeSet()
 	{
 	}

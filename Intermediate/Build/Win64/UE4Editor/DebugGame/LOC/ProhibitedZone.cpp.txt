@@ -1,6 +1,6 @@
-C:\Users\bioma\Documents\Unreal Projects\LOC\Intermediate\Build\Win64\UE4Editor\DebugGame\LOC\Definitions.LOC.h
-C:\Users\bioma\Documents\Unreal Projects\LOC\Source\LOC\Public\Zone/ProhibitedZone.h
-C:\Users\bioma\Documents\Unreal Projects\LOC\Source\LOC\Public\Zone/Zone.h
+C:\Users\bioma\Documents\GitHub\LOC\Intermediate\Build\Win64\UE4Editor\DebugGame\LOC\Definitions.LOC.h
+C:\Users\bioma\Documents\GitHub\LOC\Source\Zone\Private\..\public\ProhibitedZone.h
+C:\Users\bioma\Documents\GitHub\LOC\Source\Zone\public\Zone.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Components/BoxComponent.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h
@@ -9,5 +9,5 @@ C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\NavigationSystem\Publi
 C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\NavigationSystem\NavMeshBoundsVolume.generated.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\GameplayTags\Classes\GameplayTagContainer.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\GameplayTags\GameplayTagContainer.generated.h
-C:\Users\bioma\Documents\Unreal Projects\LOC\Intermediate\Build\Win64\UE4Editor\Inc\LOC\Zone.generated.h
-C:\Users\bioma\Documents\Unreal Projects\LOC\Intermediate\Build\Win64\UE4Editor\Inc\LOC\ProhibitedZone.generated.h
+C:\Users\bioma\Documents\GitHub\LOC\Intermediate\Build\Win64\UE4Editor\Inc\LOC\Zone.generated.h
+C:\Users\bioma\Documents\GitHub\LOC\Intermediate\Build\Win64\UE4Editor\Inc\LOC\ProhibitedZone.generated.h

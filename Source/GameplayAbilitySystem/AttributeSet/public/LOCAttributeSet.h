@@ -1,5 +1,3 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
 #include "CoreMinimal.h"
@@ -7,6 +5,29 @@
 #include "AbilitySystemComponent.h"
 #include "LOCAttributeSet.generated.h"
 
+USTRUCT(BlueprintType)
+struct FLOCAttributeDetailData
+{
+	GENERATED_BODY();
+
+public:
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = AttributeData)
+		FString AttributeName;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = AttributeData)
+		float AttributeValue;
+};
+
+USTRUCT(BlueprintType)
+struct FLOCAttributeData
+{
+	GENERATED_BODY()
+public:
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = AttributeData)
+		TArray<FLOCAttributeDetailData> Details;
+};
 
 UCLASS()
 class LOC_API ULOCAttributeSet : public UAttributeSet
@@ -233,11 +254,6 @@ public:
 	GAMEPLAYATTRIBUTE_VALUE_SETTER(MaxSpeed);
 	GAMEPLAYATTRIBUTE_VALUE_INITTER(MaxSpeed);
 	GAMEPLAYATTRIBUTE_PROPERTY_GETTER(ULOCAttributeSet, MaxSpeed);
-
-	///////////////////////////////////////////////
-	// 최종 데미지 = 기본 데미지 - 방어력
-	// 기본 데미지 = ( 힘 + 무기 공격력 ) / 인내
-	///////////////////////////////////////////////
 
 	/* 무기 공격력  */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Abilities|Attributes")
