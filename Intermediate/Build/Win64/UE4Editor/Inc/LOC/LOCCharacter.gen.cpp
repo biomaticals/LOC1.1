@@ -28,6 +28,7 @@ void EmptyLinkFunctionForGeneratedCodeLOCCharacter() {}
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UAbilitySystemComponent_NoRegister();
 	LOC_API UScriptStruct* Z_Construct_UScriptStruct_FLOCAttributeData();
+	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UGameplayEffect_NoRegister();
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UAbilitySystemInterface_NoRegister();
 // End Cross Module References
 	DEFINE_FUNCTION(ALOCCharacter::execSetMaxArmor)
@@ -4487,6 +4488,11 @@ void EmptyLinkFunctionForGeneratedCodeLOCCharacter() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BaseLookUpRate_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_BaseLookUpRate;
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_PassiveGameplayEffects_Inner;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PassiveGameplayEffects_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_PassiveGameplayEffects;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
@@ -4606,9 +4612,11 @@ void EmptyLinkFunctionForGeneratedCodeLOCCharacter() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ALOCCharacter_Statics::Class_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
 		{ "Comment", "/*\n// LOC???? ?????\xc7\xb4? ???? \xc4\xb3???\xcd\xb5??? ?\xd6\xbb??? \xc5\xac????\n*/" },
 		{ "HideCategories", "Navigation" },
 		{ "IncludePath", "Character/Public/LOCCharacter.h" },
+		{ "IsBlueprintBase", "true" },
 		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 		{ "ToolTip", "// LOC???? ?????\xc7\xb4? ???? \xc4\xb3???\xcd\xb5??? ?\xd6\xbb??? \xc5\xac????" },
 	};
@@ -4641,12 +4649,11 @@ void EmptyLinkFunctionForGeneratedCodeLOCCharacter() {}
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ALOCCharacter_Statics::NewProp_FollowCamera = { "FollowCamera", nullptr, (EPropertyFlags)0x002008000008000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ALOCCharacter, FollowCamera), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ALOCCharacter_Statics::NewProp_FollowCamera_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ALOCCharacter_Statics::NewProp_FollowCamera_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ALOCCharacter_Statics::NewProp_AbilitySystemComponent_MetaData[] = {
-		{ "Category", "Abilities" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ALOCCharacter_Statics::NewProp_AbilitySystemComponent = { "AbilitySystemComponent", nullptr, (EPropertyFlags)0x00200800000a000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ALOCCharacter, AbilitySystemComponent), Z_Construct_UClass_UAbilitySystemComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ALOCCharacter_Statics::NewProp_AbilitySystemComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ALOCCharacter_Statics::NewProp_AbilitySystemComponent_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ALOCCharacter_Statics::NewProp_AbilitySystemComponent = { "AbilitySystemComponent", nullptr, (EPropertyFlags)0x0020080000082008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ALOCCharacter, AbilitySystemComponent), Z_Construct_UClass_UAbilitySystemComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ALOCCharacter_Statics::NewProp_AbilitySystemComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ALOCCharacter_Statics::NewProp_AbilitySystemComponent_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ALOCCharacter_Statics::NewProp_AttributeData_MetaData[] = {
 		{ "Category", "JsonData" },
@@ -4668,6 +4675,16 @@ void EmptyLinkFunctionForGeneratedCodeLOCCharacter() {}
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ALOCCharacter_Statics::NewProp_BaseLookUpRate = { "BaseLookUpRate", nullptr, (EPropertyFlags)0x0020080000020015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ALOCCharacter, BaseLookUpRate), METADATA_PARAMS(Z_Construct_UClass_ALOCCharacter_Statics::NewProp_BaseLookUpRate_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ALOCCharacter_Statics::NewProp_BaseLookUpRate_MetaData)) };
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_ALOCCharacter_Statics::NewProp_PassiveGameplayEffects_Inner = { "PassiveGameplayEffects", nullptr, (EPropertyFlags)0x0004000000000000, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_UGameplayEffect_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ALOCCharacter_Statics::NewProp_PassiveGameplayEffects_MetaData[] = {
+		{ "Category", "Abilities" },
+		{ "Comment", "/** Passive gameplay effects applied on creation */" },
+		{ "ModuleRelativePath", "Character/Public/LOCCharacter.h" },
+		{ "ToolTip", "Passive gameplay effects applied on creation" },
+	};
+#endif
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_ALOCCharacter_Statics::NewProp_PassiveGameplayEffects = { "PassiveGameplayEffects", nullptr, (EPropertyFlags)0x0024080000010015, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ALOCCharacter, PassiveGameplayEffects), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_ALOCCharacter_Statics::NewProp_PassiveGameplayEffects_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ALOCCharacter_Statics::NewProp_PassiveGameplayEffects_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ALOCCharacter_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALOCCharacter_Statics::NewProp_AttributeSet,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALOCCharacter_Statics::NewProp_CameraBoom,
@@ -4676,6 +4693,8 @@ void EmptyLinkFunctionForGeneratedCodeLOCCharacter() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALOCCharacter_Statics::NewProp_AttributeData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALOCCharacter_Statics::NewProp_BaseTurnRate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALOCCharacter_Statics::NewProp_BaseLookUpRate,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALOCCharacter_Statics::NewProp_PassiveGameplayEffects_Inner,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALOCCharacter_Statics::NewProp_PassiveGameplayEffects,
 	};
 		const UE4CodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_ALOCCharacter_Statics::InterfaceParams[] = {
 			{ Z_Construct_UClass_UAbilitySystemInterface_NoRegister, (int32)VTABLE_OFFSET(ALOCCharacter, IAbilitySystemInterface), false },
@@ -4707,7 +4726,7 @@ void EmptyLinkFunctionForGeneratedCodeLOCCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ALOCCharacter, 2635354232);
+	IMPLEMENT_CLASS(ALOCCharacter, 2978459081);
 	template<> LOC_API UClass* StaticClass<ALOCCharacter>()
 	{
 		return ALOCCharacter::StaticClass();

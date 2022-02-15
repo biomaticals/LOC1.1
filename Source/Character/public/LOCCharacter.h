@@ -10,10 +10,24 @@
 #include "GameplayAbilitySystem/AttributeSet/Public/LOCAttributeSet.h"
 #include "LOCCharacter.generated.h"
 
+//#define GAMEPLAYATTRIBUTE_VALUE_CHANGED_EVENT(PropertyName) \
+//UFUNCTION(BlueprintImplementableEvent, Category = "Abilities|Attributes")\
+//	void On##PropertyName##Changed(float OldValue, float NewValue);	
+//
+//UFUNCTION(BlueprintImplementableEvent, Category = "Abilities|Attributes") \
+	//void On##PropertyName##Changed(float oldValue, float newValue){}; \
+	//void On##PropertyName##Changed_Implementation(float OldValue, float NewValue){};
+
+#define GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(PropertyName) \
+	FORCEINLINE void On##PropertyName##ChangedInternal(const FOnAttributeChangeData& Data) \
+	{ \
+		return On##PropertyName##Changed(Data.OldValue, Data.NewValue); \
+	};
+
 /*
 // LOC에서 사용되는 모든 캐릭터들의 최상위 클래스
 */
-UCLASS(config = Game)
+UCLASS(Blueprintable,config = Game)
 class ALOCCharacter : public ACharacter, public IAbilitySystemInterface
 {
 	GENERATED_BODY()
@@ -21,6 +35,7 @@ class ALOCCharacter : public ACharacter, public IAbilitySystemInterface
 public:
 	ALOCCharacter();
 	virtual void BeginPlay() override;
+	virtual void PossessedBy(AController* NewController) override;
 
 	FORCEINLINE virtual class UAbilitySystemComponent* GetAbilitySystemComponent() const { return AbilitySystemComponent; }
 
@@ -66,47 +81,6 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = Json)
 		void LoadAttributeSetFromJson();
-
-	/** On##Property##ChangedInternal */
-
-#define GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(PropertyName) \
-	FORCEINLINE void On##PropertyName##ChangedInternal(const FOnAttributeChangeData& Data) \
-	{ \
-		return On##PropertyName##Changed(Data.OldValue, Data.NewValue); \
-	};
-
-	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(Level);
-	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(Experience);
-	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxExperience);
-	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(Health);
-	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxHealth);
-	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(HealthRegen);
-	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxHealthRegen);
-	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(Mana);
-	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxMana);
-	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(ManaRegen);
-	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxManaRegen);
-	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(Stamina);
-	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxStamina);
-	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(StaminaRegen);
-	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxStaminaRegen);
-	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(Critical);
-	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxCritical);
-	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(CriticalProb);
-	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxCriticalProb);
-	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(Strength);
-	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxStrength);
-	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(Endurance);
-	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxEndurance);
-	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(Intellect);
-	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxIntellect);
-	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(Speed);
-	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxSpeed);
-	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(WeaponDamage);
-	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxWeaponDamage);
-	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(Armor);
-	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxArmor);
-	
 
 	/** On"Property"Changed */
 	UFUNCTION(BlueprintImplementableEvent, Category = "Abilities|Attributes")
@@ -172,6 +146,42 @@ public:
 	UFUNCTION(BlueprintImplementableEvent, Category = "Abilities|Attributes")
 		void OnMaxArmorChanged(float oldValue, float newValue);
 
+	
+	
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(Level);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(Experience);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxExperience);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(Health);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxHealth);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(HealthRegen);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxHealthRegen);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(Mana);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxMana);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(ManaRegen);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxManaRegen);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(Stamina);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxStamina);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(StaminaRegen);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxStaminaRegen);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(Critical);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxCritical);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(CriticalProb);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxCriticalProb);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(Strength);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxStrength);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(Endurance);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxEndurance);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(Intellect);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxIntellect);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(Speed);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxSpeed);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(WeaponDamage);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxWeaponDamage);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(Armor);
+	GAMEPLAYATTRIBUTE_VALUE_CHANGED_INTERNAL(MaxArmor);
+
+
+
 	// Get"Property", 블루프린트용
 	UFUNCTION(BlueprintPure, Category = "Abilities|Attributes")
 		float GetLevel() const;
@@ -235,7 +245,7 @@ public:
 		float GetArmor() const;
 	UFUNCTION(BlueprintPure, Category = "Abilities|Attributes")
 		float GetMaxArmor() const;
-
+	
 	UFUNCTION(BlueprintCallable, Category = "Abilities|Attributes")
 		void SetLevel(float NewValue);
 	UFUNCTION(BlueprintCallable, Category = "Abilities|Attributes")
@@ -309,7 +319,7 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Camera, meta = (AllowPrivateAccess = "true"))
 		class UCameraComponent* FollowCamera;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Abilities")
+	UPROPERTY(transient)
 		class UAbilitySystemComponent* AbilitySystemComponent;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = JsonData)
@@ -320,6 +330,10 @@ protected:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
 		float BaseLookUpRate;
+
+	/** Passive gameplay effects applied on creation */
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = Abilities)
+		TArray<TSubclassOf<UGameplayEffect>> PassiveGameplayEffects;
 
 protected:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;

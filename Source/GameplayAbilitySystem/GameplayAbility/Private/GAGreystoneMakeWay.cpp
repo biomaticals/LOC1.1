@@ -55,7 +55,7 @@ void UGAGreystoneMakeway::ActivateAbility(const FGameplayAbilitySpecHandle Handl
 			UAbilityTask_WaitGameplayEvent* WaitEventTask = UAbilityTask_WaitGameplayEvent::WaitGameplayEvent(this, HitTag);
 			WaitEventTask->EventReceived.AddDynamic(this, &UGAGreystoneMakeway::OnHitStart);
 			WaitEventTask->ReadyForActivation();
-			//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("WaitEventTask"));
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("WaitEventTask"));
 		}
 	}
 }

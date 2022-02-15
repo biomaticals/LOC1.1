@@ -73,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeLOCPlayerCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ALOCPlayerCharacter, 3744088158);
+	IMPLEMENT_CLASS(ALOCPlayerCharacter, 1939026564);
 	template<> LOC_API UClass* StaticClass<ALOCPlayerCharacter>()
 	{
 		return ALOCPlayerCharacter::StaticClass();

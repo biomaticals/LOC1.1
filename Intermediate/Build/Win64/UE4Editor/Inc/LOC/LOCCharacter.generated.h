@@ -18,8 +18,8 @@ class UGameplayAbility;
 #endif
 #define LOC_LOCCharacter_generated_h
 
-#define LOC_Source_Character_Public_LOCCharacter_h_19_SPARSE_DATA
-#define LOC_Source_Character_Public_LOCCharacter_h_19_RPC_WRAPPERS \
+#define LOC_Source_Character_Public_LOCCharacter_h_33_SPARSE_DATA
+#define LOC_Source_Character_Public_LOCCharacter_h_33_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execSetMaxArmor); \
 	DECLARE_FUNCTION(execSetArmor); \
@@ -98,7 +98,7 @@ class UGameplayAbility;
 	DECLARE_FUNCTION(execGrantAbility);
 
 
-#define LOC_Source_Character_Public_LOCCharacter_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
+#define LOC_Source_Character_Public_LOCCharacter_h_33_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execSetMaxArmor); \
 	DECLARE_FUNCTION(execSetArmor); \
@@ -177,7 +177,7 @@ class UGameplayAbility;
 	DECLARE_FUNCTION(execGrantAbility);
 
 
-#define LOC_Source_Character_Public_LOCCharacter_h_19_EVENT_PARMS \
+#define LOC_Source_Character_Public_LOCCharacter_h_33_EVENT_PARMS \
 	struct LOCCharacter_eventOnArmorChanged_Parms \
 	{ \
 		float oldValue; \
@@ -335,8 +335,8 @@ class UGameplayAbility;
 	};
 
 
-#define LOC_Source_Character_Public_LOCCharacter_h_19_CALLBACK_WRAPPERS
-#define LOC_Source_Character_Public_LOCCharacter_h_19_INCLASS_NO_PURE_DECLS \
+#define LOC_Source_Character_Public_LOCCharacter_h_33_CALLBACK_WRAPPERS
+#define LOC_Source_Character_Public_LOCCharacter_h_33_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesALOCCharacter(); \
 	friend struct Z_Construct_UClass_ALOCCharacter_Statics; \
@@ -346,7 +346,7 @@ public: \
 	virtual UObject* _getUObject() const override { return const_cast<ALOCCharacter*>(this); }
 
 
-#define LOC_Source_Character_Public_LOCCharacter_h_19_INCLASS \
+#define LOC_Source_Character_Public_LOCCharacter_h_33_INCLASS \
 private: \
 	static void StaticRegisterNativesALOCCharacter(); \
 	friend struct Z_Construct_UClass_ALOCCharacter_Statics; \
@@ -356,7 +356,7 @@ public: \
 	virtual UObject* _getUObject() const override { return const_cast<ALOCCharacter*>(this); }
 
 
-#define LOC_Source_Character_Public_LOCCharacter_h_19_STANDARD_CONSTRUCTORS \
+#define LOC_Source_Character_Public_LOCCharacter_h_33_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ALOCCharacter(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ALOCCharacter) \
@@ -369,7 +369,7 @@ private: \
 public:
 
 
-#define LOC_Source_Character_Public_LOCCharacter_h_19_ENHANCED_CONSTRUCTORS \
+#define LOC_Source_Character_Public_LOCCharacter_h_33_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ALOCCharacter(ALOCCharacter&&); \
@@ -380,42 +380,43 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ALOCCharacter); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ALOCCharacter)
 
 
-#define LOC_Source_Character_Public_LOCCharacter_h_19_PRIVATE_PROPERTY_OFFSET \
+#define LOC_Source_Character_Public_LOCCharacter_h_33_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__AttributeSet() { return STRUCT_OFFSET(ALOCCharacter, AttributeSet); } \
 	FORCEINLINE static uint32 __PPO__CameraBoom() { return STRUCT_OFFSET(ALOCCharacter, CameraBoom); } \
 	FORCEINLINE static uint32 __PPO__FollowCamera() { return STRUCT_OFFSET(ALOCCharacter, FollowCamera); } \
 	FORCEINLINE static uint32 __PPO__AbilitySystemComponent() { return STRUCT_OFFSET(ALOCCharacter, AbilitySystemComponent); } \
 	FORCEINLINE static uint32 __PPO__AttributeData() { return STRUCT_OFFSET(ALOCCharacter, AttributeData); } \
 	FORCEINLINE static uint32 __PPO__BaseTurnRate() { return STRUCT_OFFSET(ALOCCharacter, BaseTurnRate); } \
-	FORCEINLINE static uint32 __PPO__BaseLookUpRate() { return STRUCT_OFFSET(ALOCCharacter, BaseLookUpRate); }
+	FORCEINLINE static uint32 __PPO__BaseLookUpRate() { return STRUCT_OFFSET(ALOCCharacter, BaseLookUpRate); } \
+	FORCEINLINE static uint32 __PPO__PassiveGameplayEffects() { return STRUCT_OFFSET(ALOCCharacter, PassiveGameplayEffects); }
 
 
-#define LOC_Source_Character_Public_LOCCharacter_h_16_PROLOG \
-	LOC_Source_Character_Public_LOCCharacter_h_19_EVENT_PARMS
+#define LOC_Source_Character_Public_LOCCharacter_h_30_PROLOG \
+	LOC_Source_Character_Public_LOCCharacter_h_33_EVENT_PARMS
 
 
-#define LOC_Source_Character_Public_LOCCharacter_h_19_GENERATED_BODY_LEGACY \
+#define LOC_Source_Character_Public_LOCCharacter_h_33_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	LOC_Source_Character_Public_LOCCharacter_h_19_PRIVATE_PROPERTY_OFFSET \
-	LOC_Source_Character_Public_LOCCharacter_h_19_SPARSE_DATA \
-	LOC_Source_Character_Public_LOCCharacter_h_19_RPC_WRAPPERS \
-	LOC_Source_Character_Public_LOCCharacter_h_19_CALLBACK_WRAPPERS \
-	LOC_Source_Character_Public_LOCCharacter_h_19_INCLASS \
-	LOC_Source_Character_Public_LOCCharacter_h_19_STANDARD_CONSTRUCTORS \
+	LOC_Source_Character_Public_LOCCharacter_h_33_PRIVATE_PROPERTY_OFFSET \
+	LOC_Source_Character_Public_LOCCharacter_h_33_SPARSE_DATA \
+	LOC_Source_Character_Public_LOCCharacter_h_33_RPC_WRAPPERS \
+	LOC_Source_Character_Public_LOCCharacter_h_33_CALLBACK_WRAPPERS \
+	LOC_Source_Character_Public_LOCCharacter_h_33_INCLASS \
+	LOC_Source_Character_Public_LOCCharacter_h_33_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define LOC_Source_Character_Public_LOCCharacter_h_19_GENERATED_BODY \
+#define LOC_Source_Character_Public_LOCCharacter_h_33_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	LOC_Source_Character_Public_LOCCharacter_h_19_PRIVATE_PROPERTY_OFFSET \
-	LOC_Source_Character_Public_LOCCharacter_h_19_SPARSE_DATA \
-	LOC_Source_Character_Public_LOCCharacter_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
-	LOC_Source_Character_Public_LOCCharacter_h_19_CALLBACK_WRAPPERS \
-	LOC_Source_Character_Public_LOCCharacter_h_19_INCLASS_NO_PURE_DECLS \
-	LOC_Source_Character_Public_LOCCharacter_h_19_ENHANCED_CONSTRUCTORS \
+	LOC_Source_Character_Public_LOCCharacter_h_33_PRIVATE_PROPERTY_OFFSET \
+	LOC_Source_Character_Public_LOCCharacter_h_33_SPARSE_DATA \
+	LOC_Source_Character_Public_LOCCharacter_h_33_RPC_WRAPPERS_NO_PURE_DECLS \
+	LOC_Source_Character_Public_LOCCharacter_h_33_CALLBACK_WRAPPERS \
+	LOC_Source_Character_Public_LOCCharacter_h_33_INCLASS_NO_PURE_DECLS \
+	LOC_Source_Character_Public_LOCCharacter_h_33_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
